@@ -19,13 +19,26 @@
     <div class="card shadow">
         <div class="card-body">
             <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
+                <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab" style="text-align: left !important">
+                    <usc:LabelUsc runat="server" ID="lbl_title_control" Text ="Questionário de Prontidão para Atividade Física(PAR-Q):"/>
+                    <br />
                     <form>
-                        <usc:RadioButtonUsc ID="RadioButtonUsc1" runat="server"/>
+
+                        <usc:RadioButtonUsc runat="server" ID="Question1"/>
+                        <usc:RadioButtonUsc runat="server" ID="Question2"/>
+                        <usc:RadioButtonUsc runat="server" ID="Question3"/>
+                        <usc:RadioButtonUsc runat="server" ID="Question4"/>
+                        <usc:RadioButtonUsc runat="server" ID="Question5"/>
+                        <usc:RadioButtonUsc runat="server" ID="Question6"/>
+                        <usc:RadioButtonUsc runat="server" ID="Question7"/>
+                        <usc:RadioButtonUsc runat="server" ID="Question8"/>
+                        <usc:RadioButtonUsc runat="server" ID="Question9"/>
+                        <usc:RadioButtonUsc runat="server" ID="Question10"/>
+                        
                     </form>
                 </div>
                 <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
-                    <p class="description">Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                    <usc:BioImpedanciaUsc runat="server" ID="BioImpedanciaUsc"/>
                 </div>
                 <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
                     <p class="description">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>

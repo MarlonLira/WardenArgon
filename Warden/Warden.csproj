@@ -69,9 +69,11 @@
   <ItemGroup>
     <Content Include="Component\Common\Button\ButtonUsc.ascx" />
     <Content Include="Component\Common\Button\RadioButtonUsc.ascx" />
+    <Content Include="Component\Common\Label\LabelUsc.ascx" />
     <Content Include="Component\Common\Tabs\TabEtapaUsc.ascx" />
     <Content Include="Component\Common\Tabs\TabsUsc.ascx" />
     <Content Include="Component\Common\TextBox\TextBoxUsc.ascx" />
+    <Content Include="Component\UserControls\BioImpedancia\BioImpedanciaUsc.ascx" />
     <Content Include="Component\UserControls\Login\LoginUsc.ascx" />
     <Content Include="Global.asax" />
     <Content Include="Views\Default.aspx" />
@@ -94,6 +96,13 @@
     <Compile Include="Component\Common\Button\RadioButtonUsc.ascx.designer.cs">
       <DependentUpon>RadioButtonUsc.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Component\Common\Label\LabelUsc.ascx.cs">
+      <DependentUpon>LabelUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\Common\Label\LabelUsc.ascx.designer.cs">
+      <DependentUpon>LabelUsc.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Component\Common\Tabs\TabEtapaUsc.ascx.cs">
       <DependentUpon>TabEtapaUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -114,6 +123,13 @@
     </Compile>
     <Compile Include="Component\Common\TextBox\TextBoxUsc.ascx.designer.cs">
       <DependentUpon>TextBoxUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\UserControls\BioImpedancia\BioImpedanciaUsc.ascx.cs">
+      <DependentUpon>BioImpedanciaUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\UserControls\BioImpedancia\BioImpedanciaUsc.ascx.designer.cs">
+      <DependentUpon>BioImpedanciaUsc.ascx</DependentUpon>
     </Compile>
     <Compile Include="Component\UserControls\Login\LoginUsc.ascx.cs">
       <DependentUpon>LoginUsc.ascx</DependentUpon>

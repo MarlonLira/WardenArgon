@@ -9,7 +9,6 @@ namespace Warden.Component.Common.TextBox {
     public partial class TextBoxUsc : UserControl {
         protected void Page_Load(object sender, EventArgs e) {
             LoadTextBox();
-            
         }
 
         public String Style { get; set; }
@@ -25,7 +24,7 @@ namespace Warden.Component.Common.TextBox {
 
         public String LoadIcon() {
             String CreateIcon = "";
-
+            if (String.IsNullOrEmpty(Icon)) { Icon = ""; }
             switch (Icon.ToUpper()) {
                 case "EMAIL": {
 

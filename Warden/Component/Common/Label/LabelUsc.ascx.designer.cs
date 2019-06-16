@@ -7,10 +7,10 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Warden.Component.Common.Button {
+namespace Warden.Component.Common.Label {
     
     
-    public partial class RadioButtonUsc {
+    public partial class LabelUsc {
         
         /// <summary>
         /// Controle pnl_control.
@@ -29,14 +29,5 @@ namespace Warden.Component.Common.Button {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_control;
-        
-        /// <summary>
-        /// Controle rb_control.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rb_control;
     }
 }

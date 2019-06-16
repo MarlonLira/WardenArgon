@@ -9,7 +9,10 @@ namespace Warden.Component.Common.Button {
         }
 
         public String Text { get; set; }
-        public String Title { get; set; }
+        public String Title {
+            get { return lbl_control.Text; }
+            set { this.lbl_control.Text = value; }
+        }
 
         public RadioButtonList Control {
             get { return rb_control; }

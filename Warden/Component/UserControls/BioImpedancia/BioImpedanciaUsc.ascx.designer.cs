@@ -7,126 +7,90 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Warden.Component.Common.Tabs {
+namespace Warden.Component.UserControls.BioImpedancia {
     
     
-    public partial class TabEtapaUsc {
+    public partial class BioImpedanciaUsc {
         
         /// <summary>
-        /// Controle pnl_control.
+        /// Controle txt_imc.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnl_control;
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_imc;
         
         /// <summary>
-        /// Controle lbl_title_control.
+        /// Controle txt_gordura.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.Label.LabelUsc lbl_title_control;
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_gordura;
         
         /// <summary>
-        /// Controle Question1.
+        /// Controle txt_massa.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.Button.RadioButtonUsc Question1;
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_massa;
         
         /// <summary>
-        /// Controle Question2.
+        /// Controle txt_metabolismo.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.Button.RadioButtonUsc Question2;
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_metabolismo;
         
         /// <summary>
-        /// Controle Question3.
+        /// Controle txt_biologica.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.Button.RadioButtonUsc Question3;
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_biologica;
         
         /// <summary>
-        /// Controle Question4.
+        /// Controle txt_visceral.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.Button.RadioButtonUsc Question4;
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_visceral;
         
         /// <summary>
-        /// Controle Question5.
+        /// Controle txt_peso.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.Button.RadioButtonUsc Question5;
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_peso;
         
         /// <summary>
-        /// Controle Question6.
+        /// Controle txt_altura.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.Button.RadioButtonUsc Question6;
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_altura;
         
         /// <summary>
-        /// Controle Question7.
+        /// Controle btn_confirmar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.Button.RadioButtonUsc Question7;
-        
-        /// <summary>
-        /// Controle Question8.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::Warden.Component.Common.Button.RadioButtonUsc Question8;
-        
-        /// <summary>
-        /// Controle Question9.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::Warden.Component.Common.Button.RadioButtonUsc Question9;
-        
-        /// <summary>
-        /// Controle Question10.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::Warden.Component.Common.Button.RadioButtonUsc Question10;
-        
-        /// <summary>
-        /// Controle BioImpedanciaUsc.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::Warden.Component.UserControls.BioImpedancia.BioImpedanciaUsc BioImpedanciaUsc;
+        protected global::Warden.Component.Common.Button.ButtonUsc btn_confirmar;
     }
 }
