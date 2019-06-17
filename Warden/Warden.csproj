@@ -74,6 +74,7 @@
     <Content Include="Component\Common\Tabs\TabsUsc.ascx" />
     <Content Include="Component\Common\TextBox\TextBoxUsc.ascx" />
     <Content Include="Component\UserControls\BioImpedancia\BioImpedanciaUsc.ascx" />
+    <Content Include="Component\UserControls\Form\UserFormUsc.ascx" />
     <Content Include="Component\UserControls\Login\LoginUsc.ascx" />
     <Content Include="Global.asax" />
     <Content Include="Views\Default.aspx" />
@@ -131,6 +132,13 @@
     <Compile Include="Component\UserControls\BioImpedancia\BioImpedanciaUsc.ascx.designer.cs">
       <DependentUpon>BioImpedanciaUsc.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Component\UserControls\Form\UserFormUsc.ascx.cs">
+      <DependentUpon>UserFormUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\UserControls\Form\UserFormUsc.ascx.designer.cs">
+      <DependentUpon>UserFormUsc.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Component\UserControls\Login\LoginUsc.ascx.cs">
       <DependentUpon>LoginUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -182,7 +190,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Telemarketing\" />
   </ItemGroup>

@@ -7,10 +7,10 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Warden.Component.UserControls.BioImpedancia {
+namespace Warden.Component.UserControls.Form {
     
     
-    public partial class BioImpedanciaUsc {
+    public partial class UserFormUsc {
         
         /// <summary>
         /// Controle pnl_control.
@@ -20,6 +20,15 @@ namespace Warden.Component.UserControls.BioImpedancia {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnl_control;
+        
+        /// <summary>
+        /// Controle LabelUsc.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.Label.LabelUsc LabelUsc;
         
         /// <summary>
         /// Controle txt_email.

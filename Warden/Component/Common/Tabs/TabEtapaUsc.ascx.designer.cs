@@ -121,6 +121,15 @@ namespace Warden.Component.Common.Tabs {
         protected global::Warden.Component.Common.Button.RadioButtonUsc Question10;
         
         /// <summary>
+        /// Controle btn_anamnese_salvar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.Button.ButtonUsc btn_anamnese_salvar;
+        
+        /// <summary>
         /// Controle BioImpedanciaUsc.
         /// </summary>
         /// <remarks>
