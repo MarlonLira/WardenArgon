@@ -91,6 +91,8 @@
     <Content Include="Component\Common\Button\ButtonUsc.ascx" />
     <Content Include="Component\Common\Button\RadioButtonUsc.ascx" />
     <Content Include="Component\Common\Label\LabelUsc.ascx" />
+    <Content Include="Component\Common\Modal\ModalUsc.ascx" />
+    <Content Include="Component\Common\Table\TableUsc.ascx" />
     <Content Include="Component\Common\Tabs\TabEtapaUsc.ascx" />
     <Content Include="Component\Common\Tabs\TabsUsc.ascx" />
     <Content Include="Component\Common\TextBox\TextBoxUsc.ascx" />
@@ -126,6 +128,20 @@
     </Compile>
     <Compile Include="Component\Common\Label\LabelUsc.ascx.designer.cs">
       <DependentUpon>LabelUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Common\Modal\ModalUsc.ascx.cs">
+      <DependentUpon>ModalUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\Common\Modal\ModalUsc.ascx.designer.cs">
+      <DependentUpon>ModalUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Common\Table\TableUsc.ascx.cs">
+      <DependentUpon>TableUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\Common\Table\TableUsc.ascx.designer.cs">
+      <DependentUpon>TableUsc.ascx</DependentUpon>
     </Compile>
     <Compile Include="Component\Common\Tabs\TabEtapaUsc.ascx.cs">
       <DependentUpon>TabEtapaUsc.ascx</DependentUpon>

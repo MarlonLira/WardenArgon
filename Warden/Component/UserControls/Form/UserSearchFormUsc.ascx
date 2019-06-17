@@ -4,8 +4,9 @@
 <asp:Panel ID="pnl_control" runat="server">
     
     <form class="card shadow" >
-        <div class="card-body" style="text-align: left !important">
-            <usc:LabelUsc ID="LabelUsc" runat="server" Text="Pesquisa de Alunos"/>            
+        <div class="card-body" style="text-align: left !important">        
+            <usc:TableUsc ID="TableUsc" runat="server" />
+            <br />
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
@@ -19,6 +20,7 @@
             </div>
           </div>       
               <usc:ButtonUsc ID="btn_pesquisar" runat="server" Text="Pesquisar" OnClick="BtnPesquisar_Click"/>
+            
           </div>
     </form>
 </asp:Panel>

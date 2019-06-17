@@ -33,7 +33,9 @@ namespace Warden.Component.UserControls.Form {
             //Aluno.Filters.Add(new BaseMdl.Filter("[empresa_id]", CompareModeTypes.EQUAL, Convert.ToInt32(cmbEmpresa.SelectedValue)));
 
             Table = Aluno.Pesquisar();
+            
             Session.Add("AlunoTable", Table);
+            //ScriptManager.RegisterStartupScript(this, this.GetType(), "LoginUsc", "$(function(){$('#modal-form').modal('show');})", true);
         }
     }
 }

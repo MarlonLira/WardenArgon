@@ -20,6 +20,8 @@
 
         <!-- Argon CSS -->
         <link type="text/css" href="<%=FormatUrl("../assets/css/argon.css") %>" rel="stylesheet">
+        <!-- Paper CSS -->
+        
         <!-- Docs CSS -->
         <link type="text/css" href="<%=FormatUrl("../assets/css/docs.min.css") %>" rel="stylesheet">
     </head>
@@ -128,10 +130,13 @@
       <script src="<%=FormatUrl("../assets/vendor/popper/popper.min.js") %>"></script>
       <script src="<%=FormatUrl("../assets/vendor/bootstrap/bootstrap.min.js") %>"></script>
       <script src="<%=FormatUrl("../assets/vendor/headroom/headroom.min.js") %>"></script>
+      <script src="<%=FormatUrl("../assets/js/plugins/perfect-scrollbar.jquery.min.js") %>"></script>
       <!-- Optional JS -->
       <script src="<%=FormatUrl("../assets/vendor/onscreen/onscreen.min.js") %>"></script>
       <script src="<%=FormatUrl("../assets/vendor/nouislider/js/nouislider.min.js") %>"></script>
       <script src="<%=FormatUrl("../assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js") %>"></script>
+      <!-- Charts JS -->
+      <script src="<%=FormatUrl("../assets/js/plugins/chartjs.min.js") %>"></script>
       <!-- Argon JS -->
       <script src="<%=FormatUrl("../assets/js/argon.js?v=1.0.1") %>"></script>
     </body>

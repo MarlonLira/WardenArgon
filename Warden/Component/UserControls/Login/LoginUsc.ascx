@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LoginUsc.ascx.cs" Inherits="Warden.Component.UserControls.Login.LoginUsc" %>
 
 <div class="col-md-4">
-<button type="button" class="btn btn-block btn-default" data-toggle="modal" data-target="#modal-form">Form</button>
+<!--<button type="button" class="btn btn-block btn-default" data-toggle="modal" data-target="#modal-form">Form</button>-->
     <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
         <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
         <div class="modal-content">
