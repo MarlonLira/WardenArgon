@@ -101,6 +101,7 @@
     <Content Include="Component\UserControls\Form\UserSearchFormUsc.ascx" />
     <Content Include="Component\UserControls\Login\LoginUsc.ascx" />
     <Content Include="Global.asax" />
+    <Content Include="Index.html" />
     <Content Include="Settings.xml" />
     <Content Include="Views\Default.aspx" />
     <Content Include="Views\Fitness\Etapas.aspx" />

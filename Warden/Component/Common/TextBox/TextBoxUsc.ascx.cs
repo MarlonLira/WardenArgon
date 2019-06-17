@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -15,7 +12,7 @@ namespace Warden.Component.Common.TextBox {
             set { this.txt_control.Text = value; }
         }
 
-        
+        public Boolean ReadOnly { set { txt_control.ReadOnly = value; } }
         public String Style { get; set; }
         public String Icon { get; set; }
         public String Placeholder { get; set; }

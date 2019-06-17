@@ -8,14 +8,10 @@
         </div>
         <div class="card-body">
         <div class="table-responsive">
-            <asp:Table ID="tbl_control" runat="server" class="table" Font-Bold="true"> 
-                <asp:TableHeaderRow CssClass=" text-primary">
-                    <asp:TableCell Text="Nome"></asp:TableCell>
-                    <asp:TableCell Text="Matricula"></asp:TableCell>
-                    <asp:TableCell Text="Email"></asp:TableCell>
+            <asp:Table ID="tbl_control" runat="server" class="table"> 
+                <asp:TableHeaderRow CssClass=" text-primary" ID="tbh_control">
                 </asp:TableHeaderRow>
-                <asp:TableRow Font-Bold="false">
-                    
+                <asp:TableRow ID="tbr_control">
                 </asp:TableRow>
             </asp:Table>
         </div>

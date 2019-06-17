@@ -31,6 +31,15 @@ namespace Warden.Component.UserControls.Form {
         protected global::Warden.Component.Common.Label.LabelUsc LabelUsc;
         
         /// <summary>
+        /// Controle txt_nome.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_nome;
+        
+        /// <summary>
         /// Controle txt_email.
         /// </summary>
         /// <remarks>
@@ -40,49 +49,40 @@ namespace Warden.Component.UserControls.Form {
         protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_email;
         
         /// <summary>
-        /// Controle TextBoxUsc1.
+        /// Controle txt_tel.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.TextBox.TextBoxUsc TextBoxUsc1;
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_tel;
         
         /// <summary>
-        /// Controle TextBoxUsc2.
+        /// Controle txt_idade.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.TextBox.TextBoxUsc TextBoxUsc2;
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_idade;
         
         /// <summary>
-        /// Controle TextBoxUsc3.
+        /// Controle txt_sexo.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.TextBox.TextBoxUsc TextBoxUsc3;
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_sexo;
         
         /// <summary>
-        /// Controle TextBoxUsc4.
+        /// Controle txt_data.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.TextBox.TextBoxUsc TextBoxUsc4;
-        
-        /// <summary>
-        /// Controle TextBoxUsc5.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::Warden.Component.Common.TextBox.TextBoxUsc TextBoxUsc5;
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_data;
         
         /// <summary>
         /// Controle btn_confirmar.

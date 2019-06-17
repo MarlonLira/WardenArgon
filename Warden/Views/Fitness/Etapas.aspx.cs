@@ -1,14 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using Brasdat.Gestor.Library.Business.Classes.Fitness;
 
 namespace Warden.Views.Fitness {
-    public partial class Etapas : System.Web.UI.Page {
-        protected void Page_Load(object sender, EventArgs e) {
+    public partial class Etapas : Page {
 
+        protected void Page_Load(object sender, EventArgs e) {
+            if (Session["Aluno"] != null) {
+                UserFormUsc.LoadForm((AlunoPst)Session["Aluno"]);                
+            }
         }
+
     }
 }

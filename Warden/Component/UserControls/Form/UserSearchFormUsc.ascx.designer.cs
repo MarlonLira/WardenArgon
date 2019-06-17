@@ -22,13 +22,13 @@ namespace Warden.Component.UserControls.Form {
         protected global::System.Web.UI.WebControls.Panel pnl_control;
         
         /// <summary>
-        /// Controle TableUsc.
+        /// Controle tbl_control.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.Table.TableUsc TableUsc;
+        protected global::Warden.Component.Common.Table.TableUsc tbl_control;
         
         /// <summary>
         /// Controle txt_nome.
