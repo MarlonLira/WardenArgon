@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Warden.Views.Login" %>
-
+<%@ Import Namespace="Warden.Helper" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -38,33 +38,22 @@
             <div class="card bg-secondary shadow border-0">
               <div class="card-header bg-white pb-5">
                 <div class="text-muted text-center mb-3">
-                  <small>Sign in with</small>
+                  <small></small>
                 </div>
-                <div class="btn-wrapper text-center">
-                  <a href="#" class="btn btn-neutral btn-icon">
-                    <span class="btn-inner--icon">
-                      <img src="../assets/img/icons/common/github.svg">
-                    </span>
-                    <span class="btn-inner--text">Github</span>
-                  </a>
-                  <a href="#" class="btn btn-neutral btn-icon">
-                    <span class="btn-inner--icon">
-                      <img src="../assets/img/icons/common/google.svg">
-                    </span>
-                    <span class="btn-inner--text">Google</span>
-                  </a>
-                </div>
+                  <div style="align-items:center !important">
+                    <img width="250" height="100" style="position:relative; left:15%; top:15%;" src="<%=Help.FormatUrl("../assets/img/logo/white.png")%>"/>
+                  </div>
               </div>
               <div class="card-body px-lg-5 py-lg-5">
                 <div class="text-center text-muted mb-4">
-                  <small>Or sign in with credentials</small>
+                  <small>Login</small>
                 </div>
-                <form role="form">
+                <div role="form">
                   <div class="form-group mb-3">
                     <usc:TextBoxUsc ID="txt_email" runat="server" Icon="email" Placeholder="E-mail"/>
                   </div>
                   <div class="form-group">
-                    <usc:TextBoxUsc ID="txt_password" runat="server" Icon="password" Placeholder="Senha"/>
+                    <usc:TextBoxUsc ID="txt_password" runat="server" Icon="password" Placeholder="Senha" TextMode="Password"/>
                   </div>
                   <div class="custom-control custom-control-alternative custom-checkbox">
                     <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
@@ -76,7 +65,7 @@
                       <br />
                       <usc:ButtonUsc ID="ButtonUsc" runat="server" Text="Confirmar" OnClick="ButtonUsc_Click"/>
                   </div>
-                </form>
+                </div>
               </div>
             </div>
             <div class="row mt-3">

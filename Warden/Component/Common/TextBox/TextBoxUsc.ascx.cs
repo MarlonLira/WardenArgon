@@ -10,10 +10,24 @@ namespace Warden.Component.Common.TextBox {
         protected void Page_Load(object sender, EventArgs e) {
             LoadTextBox();
         }
+        public String Text {
+            get { return txt_control.Text; }
+            set { this.txt_control.Text = value; }
+        }
 
+        
         public String Style { get; set; }
         public String Icon { get; set; }
         public String Placeholder { get; set; }
+
+        public TextBoxMode TextMode {
+            get {
+                return txt_control.TextMode;
+            }
+            set {
+                txt_control.TextMode = value;
+            }
+        }
 
         public void LoadTextBox() {
             if (String.IsNullOrEmpty(Style)) { Style = ""; }

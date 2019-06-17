@@ -1,14 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Warden.Views {
-    public partial class WebMst : System.Web.UI.MasterPage {
+    public partial class WebMst : MasterPage {
         protected void Page_Load(object sender, EventArgs e) {
+            /*if (Global.Funcionario == null & Global.Aluno == null) {
+                Response.Redirect("~/Views/Login.aspx", false);
+            }*/
+        }
 
+        public String Usuario() {
+            return (Global.Funcionario != null ? Global.Funcionario.Nome : "");
         }
 
         public String FormatUrl(String Url) {

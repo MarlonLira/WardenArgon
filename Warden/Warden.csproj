@@ -15,7 +15,8 @@
     <AssemblyName>Warden</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress />
+    <Use64BitIISExpress>
+    </Use64BitIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -43,6 +44,26 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Cielo, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\Cielo.dll</HintPath>
+    </Reference>
+    <Reference Include="Gestor.Business, Version=2.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\Gestor.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="Gestor.Core, Version=2.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\Gestor.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Gestor.Gateway, Version=2.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\Gestor.Gateway.dll</HintPath>
+    </Reference>
+    <Reference Include="Gestor.Sinc, Version=2.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\Gestor.Sinc.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -75,8 +96,10 @@
     <Content Include="Component\Common\TextBox\TextBoxUsc.ascx" />
     <Content Include="Component\UserControls\BioImpedancia\BioImpedanciaUsc.ascx" />
     <Content Include="Component\UserControls\Form\UserFormUsc.ascx" />
+    <Content Include="Component\UserControls\Form\UserSearchFormUsc.ascx" />
     <Content Include="Component\UserControls\Login\LoginUsc.ascx" />
     <Content Include="Global.asax" />
+    <Content Include="Settings.xml" />
     <Content Include="Views\Default.aspx" />
     <Content Include="Views\Fitness\Etapas.aspx" />
     <Content Include="Views\Login.aspx" />
@@ -139,6 +162,13 @@
     <Compile Include="Component\UserControls\Form\UserFormUsc.ascx.designer.cs">
       <DependentUpon>UserFormUsc.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Component\UserControls\Form\UserSearchFormUsc.ascx.cs">
+      <DependentUpon>UserSearchFormUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\UserControls\Form\UserSearchFormUsc.ascx.designer.cs">
+      <DependentUpon>UserSearchFormUsc.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Component\UserControls\Login\LoginUsc.ascx.cs">
       <DependentUpon>LoginUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -149,6 +179,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\Help.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -180,7 +211,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Views\WebMst.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -208,7 +241,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>53656</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:53656/</IISUrl>
+          <IISUrl>http://localhost:53657</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

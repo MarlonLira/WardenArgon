@@ -27,10 +27,14 @@ C:\Web\Warden\Warden\bin\roslyn\vbc.exe.config
 C:\Web\Warden\Warden\bin\roslyn\vbc.rsp
 C:\Web\Warden\Warden\bin\roslyn\VBCSCompiler.exe
 C:\Web\Warden\Warden\bin\roslyn\VBCSCompiler.exe.config
+C:\Web\Warden\Warden\bin\Cielo.dll
+C:\Web\Warden\Warden\bin\Gestor.Business.dll
+C:\Web\Warden\Warden\bin\Gestor.Core.dll
+C:\Web\Warden\Warden\bin\Gestor.Gateway.dll
+C:\Web\Warden\Warden\bin\Gestor.Sinc.dll
 C:\Web\Warden\Warden\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Web\Warden\Warden\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Web\Warden\Warden\obj\Debug\Warden.csproj.CoreCompileInputs.cache
 C:\Web\Warden\Warden\obj\Debug\Warden.csproj.CopyComplete
 C:\Web\Warden\Warden\obj\Debug\Warden.dll
 C:\Web\Warden\Warden\obj\Debug\Warden.pdb
-C:\Web\Warden\Warden\obj\Debug\Warden.csprojAssemblyReference.cache
