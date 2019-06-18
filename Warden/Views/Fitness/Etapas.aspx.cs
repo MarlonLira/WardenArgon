@@ -7,7 +7,8 @@ namespace Warden.Views.Fitness {
 
         protected void Page_Load(object sender, EventArgs e) {
             if (Session["Aluno"] != null) {
-                UserFormUsc.LoadForm((AlunoPst)Session["Aluno"]);                
+                UserFormUsc.LoadForm((AlunoPst)Session["Aluno"]);
+                UserFormUsc.BtnText = "Editar";
             }
         }
 

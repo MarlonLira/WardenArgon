@@ -22,15 +22,14 @@
         <link type="text/css" href="<%=FormatUrl("../assets/css/argon.css") %>" rel="stylesheet">
         <!-- Paper CSS -->
         
-        <!-- Docs CSS -->
-        <link type="text/css" href="<%=FormatUrl("../assets/css/docs.min.css") %>" rel="stylesheet">
+        
     </head>
     <body>
         <form runat="server">
             <header class="header-global" style="background-color: black !important">
                 <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
                   <div class="container">
-                    <a class="navbar-brand mr-lg-5" href="../index.html">
+                    <a class="navbar-brand mr-lg-5" href=" <%=FormatUrl("./index.html") %>">
                       <img src="<%=FormatUrl("../assets/img/brand/white.png") %>">
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,7 +68,7 @@
                                       <p class="description d-none d-md-inline-block mb-0">Cadastre as informações do seu aluno aqui.</p>
                                     </div>
                                   </a>
-                                  <a href="#" class="media d-flex align-items-center">
+                                  <a href="<%=FormatUrl("./Views/Fitness/Graficos.aspx") %>" class="media d-flex align-items-center">
                                     <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
                                       <i class="ni ni-palette"></i>
                                     </div>
@@ -78,13 +77,13 @@
                                       <p class="description d-none d-md-inline-block mb-0">Aqui você vera graficos relacionado a um determinado aluno</p>
                                     </div>
                                   </a>
-                                  <a href="#" class="media d-flex align-items-center">
+                                  <a href="<%=FormatUrl("./Views/Telemarketing/ContactLeads.aspx") %>" class="media d-flex align-items-center">
                                     <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
                                       <i class="ni ni-ui-04"></i>
                                     </div>
                                     <div class="media-body ml-3">
-                                      <h5 class="heading text-warning mb-md-1">Relatorios</h5>
-                                      <p class="description d-none d-md-inline-block mb-0">Relatorios referente ao aluno</p>
+                                      <h5 class="heading text-warning mb-md-1">Leads</h5>
+                                      <p class="description d-none d-md-inline-block mb-0">....Leads</p>
                                     </div>
                                   </a>
                                 </div>
@@ -139,5 +138,10 @@
       <script src="<%=FormatUrl("../assets/js/plugins/chartjs.min.js") %>"></script>
       <!-- Argon JS -->
       <script src="<%=FormatUrl("../assets/js/argon.js?v=1.0.1") %>"></script>
+      <!-- Chart -->
+      <script src="<%=FormatUrl("../assets/js/charts/Chart.js") %>"></script>
+      <script src="<%=FormatUrl("../assets/js/charts/bar-chart.js") %>"></script>
+      <script src="<%=FormatUrl("../assets/js/charts/area-chart.js") %>"></script>
+      <script src="<%=FormatUrl("../assets/js/charts/line-chart.js") %>"></script>
     </body>
 </html>

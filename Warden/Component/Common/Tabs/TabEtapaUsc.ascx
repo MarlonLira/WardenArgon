@@ -23,7 +23,6 @@
                     <usc:LabelUsc runat="server" ID="lbl_title_control" Text ="Questionário de Prontidão para Atividade Física(PAR-Q):"/>
                     <br />
                     <form>
-
                         <usc:RadioButtonUsc runat="server" ID="Question1"/>
                         <usc:RadioButtonUsc runat="server" ID="Question2"/>
                         <usc:RadioButtonUsc runat="server" ID="Question3"/>
@@ -35,7 +34,7 @@
                         <usc:RadioButtonUsc runat="server" ID="Question9"/>
                         <usc:RadioButtonUsc runat="server" ID="Question10"/>
                         <br />
-                        <usc:ButtonUsc runat="server" ID="btn_anamnese_salvar" Text="Salvar"/>
+                        <usc:ButtonUsc runat="server" ID="btn_anamnese_salvar" Text="Salvar" OnClick="BtnAnamneseSalvar_Click"/>
                     </form>
                 </div>
                 <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">

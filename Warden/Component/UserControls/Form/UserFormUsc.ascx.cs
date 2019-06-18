@@ -8,6 +8,11 @@ namespace Warden.Component.UserControls.Form {
             
         }
 
+        public String BtnText {
+            get { return this.btn_confirmar.Text; }
+            set { this.btn_confirmar.Text = value; }
+        }
+
         public void LoadForm(AlunoPst AlunoEdit) {
             AlunoPst Aluno;
             DateTime CurrentDate = DateTime.Now;
@@ -20,7 +25,6 @@ namespace Warden.Component.UserControls.Form {
                 txt_data.Text = CurrentDate.ToShortDateString();
                 txt_sexo.Text = Aluno.Sexo;
                 txt_tel.Text = Aluno.TelCelular;
-
 
             } catch(Exception Err) {
 

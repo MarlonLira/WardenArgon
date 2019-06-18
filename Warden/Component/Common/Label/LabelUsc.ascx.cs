@@ -12,10 +12,16 @@ namespace Warden.Component.Common.Label {
             set { this.lbl_control.Text = value; }
         }
 
-        public String FontSize {get; set;}
+        public Int32 FontSize {
+            set { lbl_control.Font.Size = new System.Web.UI.WebControls.FontUnit(value) ; }
+        }
+
+        public Boolean Bold {
+            set { lbl_control.Font.Bold = value; }
+        }
     
         public void LoadLabel() {
-            lbl_control.Attributes.Add("Font-Size", FontSize);
+           
         }
     }
 }

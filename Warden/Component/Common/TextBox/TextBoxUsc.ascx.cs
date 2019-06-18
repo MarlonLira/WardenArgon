@@ -82,6 +82,10 @@ namespace Warden.Component.Common.TextBox {
                         CreateIcon = "ni ni-atom";
                         break;
                 }
+                case "WORLD": {
+                        CreateIcon = "ni ni-world";
+                        break;
+                }
                 case "SUPPORT": {
                         CreateIcon = "ni ni-support-16";
                         break;
@@ -94,8 +98,24 @@ namespace Warden.Component.Common.TextBox {
                         CreateIcon = "ni ni-calendar-grid-58";
                         break;
                 }
+                case "CITY": {
+                        CreateIcon = "ni ni-istanbul";
+                        break;
+                }
+                case "CEP": {
+                        CreateIcon = "ni ni-square-pin";
+                        break;
+                }
                 case "GENDER": {
                         CreateIcon = "fa fa-venus-mars";
+                        break;
+                }
+                case "COMPANY": {
+                        CreateIcon = "fa fa-building";
+                        break;
+                }
+                case "ADRESS": {
+                        CreateIcon = "fa fa-map-marker";
                         break;
                 }
                 default: {

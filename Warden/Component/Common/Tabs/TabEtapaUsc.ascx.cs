@@ -4,6 +4,7 @@ using System.Web.UI;
 namespace Warden.Component.Common.Tabs {
     public partial class TabEtapaUsc : UserControl {
         protected void Page_Load(object sender, EventArgs e) {
+            btn_anamnese_salvar.BtnControl_Click += new EventHandler(BtnAnamneseSalvar_Click);
             LoadEtapas();
         }
 
@@ -19,6 +20,10 @@ namespace Warden.Component.Common.Tabs {
             Question8.Title = Question(8);
             Question9.Title = Question(9);
             Question10.Title = Question(10);
+
+        }
+
+        private void SalvarAnamnese() {
 
         }
 
@@ -71,6 +76,10 @@ namespace Warden.Component.Common.Tabs {
                     }
             }
             return SelectedQuestion;
+        }
+
+        protected void BtnAnamneseSalvar_Click(object sender, EventArgs e) {
+            
         }
     }
 }
