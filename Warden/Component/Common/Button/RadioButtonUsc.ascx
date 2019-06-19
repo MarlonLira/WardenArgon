@@ -7,11 +7,8 @@
         </div>
         <div class="custom-control custom-radio mb-3">
             <asp:RadioButtonList  ID="rb_control" runat="server">
-                <asp:ListItem Text="Sim"></asp:ListItem>
-                <asp:ListItem Text="Não"></asp:ListItem>
             </asp:RadioButtonList>
         </div>
-    
 </asp:Panel>
 
 <!--RadioButtom: class="custom-control-input"-->

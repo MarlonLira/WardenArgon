@@ -1,29 +1,61 @@
 ﻿using System;
 using System.Web.UI;
+using Warden.Component.Common.Button;
 
 namespace Warden.Component.Common.Tabs {
     public partial class TabEtapaUsc : UserControl {
+
         protected void Page_Load(object sender, EventArgs e) {
-            btn_anamnese_salvar.BtnControl_Click += new EventHandler(BtnAnamneseSalvar_Click);
+
+            btn_anamnese_salvar.OnClick += new ButtonUsc.OnClickEvent(BtnAnamneseSalvar_Click);
             LoadEtapas();
         }
 
-        public void LoadEtapas() {
-
-            Question1.Title = Question(1);
-            Question2.Title = Question(2);
-            Question3.Title = Question(3);
-            Question4.Title = Question(4);
-            Question5.Title = Question(5);
-            Question6.Title = Question(6);
-            Question7.Title = Question(7);
-            Question8.Title = Question(8);
-            Question9.Title = Question(9);
-            Question10.Title = Question(10);
-
+        protected void BtnAnamneseSalvar_Click() {
+            SalvarAnamnese();
         }
 
         private void SalvarAnamnese() {
+            RadioButtonUsc Q1 = Question1;
+
+            String Teste = Question1.Value;
+        }
+
+        public void LoadEtapas() {
+            RadioButtonUsc.Item Item1 = new RadioButtonUsc.Item() { Text = "Sim"};
+            RadioButtonUsc.Item Item2 = new RadioButtonUsc.Item() { Text = "Não"};
+            RadioButtonUsc.Item [] Itens = new RadioButtonUsc.Item[] { Item1, Item2 };
+
+            Question1.Title = Question(1);
+            Question1.LoadDataSource(Itens);
+
+            Question2.Title = Question(2);
+            Question2.LoadDataSource(Itens);
+
+            Question3.Title = Question(3);
+            Question3.LoadDataSource(Itens);
+
+            Question4.Title = Question(4);
+            Question4.LoadDataSource(Itens);
+
+            Question5.Title = Question(5);
+            Question5.LoadDataSource(Itens);
+
+            Question6.Title = Question(6);
+            Question6.LoadDataSource(Itens);
+
+            Question7.Title = Question(7);
+            Question7.LoadDataSource(Itens);
+
+            Question8.Title = Question(8);
+            Question8.LoadDataSource(Itens);
+
+            Question9.Title = Question(9);
+            Question9.LoadDataSource(Itens);
+
+            Question10.Title = Question(10);
+            Question10.LoadDataSource(Itens);
+
 
         }
 
@@ -78,8 +110,6 @@ namespace Warden.Component.Common.Tabs {
             return SelectedQuestion;
         }
 
-        protected void BtnAnamneseSalvar_Click(object sender, EventArgs e) {
-            
-        }
+        
     }
 }

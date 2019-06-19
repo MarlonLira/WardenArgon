@@ -17,7 +17,7 @@
               </div>
             </div>
           </div>       
-              <usc:ButtonUsc ID="btn_pesquisar" runat="server" Text="Pesquisar" OnClick="BtnPesquisar_Click"/>
+              <usc:ButtonUsc ID="btn_pesquisar" runat="server" Text="Pesquisar"/>
           </div>
     </form>
 </asp:Panel>

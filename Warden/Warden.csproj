@@ -48,8 +48,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>dll\Cielo.dll</HintPath>
     </Reference>
-    <Reference Include="Gestor.Business, Version=2.1.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Gestor.Business">
       <HintPath>dll\Gestor.Business.dll</HintPath>
     </Reference>
     <Reference Include="Gestor.Core, Version=2.1.3.0, Culture=neutral, processorArchitecture=MSIL">

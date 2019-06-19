@@ -2,14 +2,15 @@
 using Brasdat.Gestor.Library.Core.Classes.Helpers;
 using System;
 using System.Web.UI;
+using Warden.Component.Common.Button;
 
 namespace Warden.Views {
     public partial class Login : Page {
         protected void Page_Load(object sender, EventArgs e) {
-            ButtonUsc.BtnControl_Click += new EventHandler(ButtonUsc_Click);
+            ButtonUsc.OnClick += new ButtonUsc.OnClickEvent(ButtonUsc_Click);
         }
 
-        protected void ButtonUsc_Click(object sender, EventArgs e) {
+        protected void ButtonUsc_Click() {
             if (!(String.IsNullOrEmpty(txt_email.Text) || String.IsNullOrEmpty(txt_password.Text))) {
                 ColaboradorEntrar(txt_email.Text, txt_password.Text);
             }

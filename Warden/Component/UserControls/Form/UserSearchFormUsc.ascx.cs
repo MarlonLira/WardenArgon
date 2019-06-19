@@ -4,6 +4,7 @@ using System.Data;
 using System.Web.UI;
 using Brasdat.Gestor.Library.Business.Classes.Fitness;
 using Brasdat.Gestor.Library.Core.Classes.Model;
+using Warden.Component.Common.Button;
 using Warden.Component.Common.Table;
 
 namespace Warden.Component.UserControls.Form {
@@ -12,12 +13,11 @@ namespace Warden.Component.UserControls.Form {
         public delegate void OnFindEvent(DataRow SelectedRow);
         public event OnFindEvent OnFind;
 
-
         protected void Page_Load(object sender, EventArgs e) {
-            btn_pesquisar.BtnControl_Click += new EventHandler(BtnPesquisar_Click);
+            btn_pesquisar.OnClick += new ButtonUsc.OnClickEvent(BtnPesquisar_Click);
         }
 
-        protected void BtnPesquisar_Click(object sender, EventArgs e) {
+        protected void BtnPesquisar_Click() {
             if (!String.IsNullOrEmpty(txt_matricula.Text) || !String.IsNullOrEmpty(txt_nome.Text)) {
                 CarregarAluno();
             }

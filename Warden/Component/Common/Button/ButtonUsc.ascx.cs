@@ -6,9 +6,12 @@ namespace Warden.Component.Common.Button {
         protected void Page_Load(object sender, EventArgs e) {
             LoadButton();
         }
-        public event EventHandler BtnControl_Click;
+        //public event EventHandler BtnControl_Click;
 
-        public String OnClick { get; set; }
+        public delegate void OnClickEvent();
+        public event OnClickEvent OnClick;
+
+        //public String OnClick { get; set; }
         public String Style { get; set; }
         public String Type { get; set; }
 
@@ -41,7 +44,13 @@ namespace Warden.Component.Common.Button {
         }
 
         protected void btn_control_Click(object sender, EventArgs e) {
-            BtnControl_Click(sender, e);
+            try {
+                if (OnClick != null) {
+                    OnClick();
+                }
+            } catch (Exception Except) {
+
+            }
         }
     }
 }

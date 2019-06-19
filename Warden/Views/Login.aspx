@@ -63,7 +63,7 @@
                   </div>
                   <div class="text-center">
                       <br />
-                      <usc:ButtonUsc ID="ButtonUsc" runat="server" Text="Confirmar" OnClick="ButtonUsc_Click"/>
+                      <usc:ButtonUsc ID="ButtonUsc" runat="server" Text="Confirmar"/>
                   </div>
                 </div>
               </div>

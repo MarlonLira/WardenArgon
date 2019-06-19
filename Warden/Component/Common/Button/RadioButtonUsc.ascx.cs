@@ -4,43 +4,39 @@ using System.Web.UI.WebControls;
 
 namespace Warden.Component.Common.Button {
     public partial class RadioButtonUsc : UserControl {
+
+        public class Item {
+            public String Text { get; set; }
+            public String Value { get; set; }
+            
+        } 
         protected void Page_Load(object sender, EventArgs e) {
             
         }
 
-        public String Text { get; set; }
-        public String Title {
-            get { return lbl_control.Text; }
-            set { this.lbl_control.Text = value; }
-        }
+        public void LoadDataSource(Item[] Itens) {
 
-        public RadioButtonList Control {
-            get { return rb_control; }
-            set { rb_control = value; }
-        }
-        public String Itens { get; set; }
-
-        public void LoadTitle() {
-            String[] Title;
-            if (!String.IsNullOrEmpty(Itens)) {
-                Title = Itens.Split('/');
-                foreach (String item in Title) {
-                    rb_control.Items.Add(item);
-                }
-            } else {
-                rb_control.Text = "Title";
+            foreach (Item Item in Itens) {
+                rb_control.Items.Add(Item.Text);
             }
         }
+       
+        public String Title {
+            get { return lbl_control.Text; }
+            set { lbl_control.Text = value; }
+        }
 
-        public void LoadTitle(String Array) {
-            String[] Title;
-            if (!String.IsNullOrEmpty(Array)) {
-                Title = Array.Split('/');
-                foreach (String item in Title) {
-                    Control.Items.Add(item);
-                }
-            } else {
-                Control.Text = "Title";
+        public String Value {
+            get {
+                Int32 select = rb_control.SelectedIndex;
+
+
+                String item = rb_control.SelectedItem.Value ;
+                String item2 = rb_control.SelectedItem.Text;
+
+
+                return rb_control.SelectedValue;
+
             }
         }
     }

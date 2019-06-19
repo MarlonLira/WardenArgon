@@ -1,14 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using Warden.Component.Common.Button;
 
 namespace Warden.Views.Fitness {
-    public partial class Graficos : System.Web.UI.Page {
+    public partial class Graficos : Page {
         protected void Page_Load(object sender, EventArgs e) {
+            btnteste.OnClick += new ButtonUsc.OnClickEvent (Btnteste_OnClick);
+        }
 
+        private void Btnteste_OnClick() {
+            Int16 kk = 15;
+            throw new NotImplementedException();
         }
     }
 }

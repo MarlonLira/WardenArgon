@@ -22,58 +22,58 @@ namespace Warden.Component.UserControls.BioImpedancia {
         protected global::System.Web.UI.WebControls.Panel pnl_control;
         
         /// <summary>
-        /// Controle txt_email.
+        /// Controle txt_imc.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_email;
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_imc;
         
         /// <summary>
-        /// Controle TextBoxUsc1.
+        /// Controle txt_gordura.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.TextBox.TextBoxUsc TextBoxUsc1;
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_gordura;
         
         /// <summary>
-        /// Controle TextBoxUsc2.
+        /// Controle txt_massa.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.TextBox.TextBoxUsc TextBoxUsc2;
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_massa;
         
         /// <summary>
-        /// Controle TextBoxUsc3.
+        /// Controle txt_metabolismo.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.TextBox.TextBoxUsc TextBoxUsc3;
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_metabolismo;
         
         /// <summary>
-        /// Controle TextBoxUsc4.
+        /// Controle txt_bioIdade.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.TextBox.TextBoxUsc TextBoxUsc4;
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_bioIdade;
         
         /// <summary>
-        /// Controle TextBoxUsc5.
+        /// Controle txt_visceral.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.TextBox.TextBoxUsc TextBoxUsc5;
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_visceral;
         
         /// <summary>
         /// Controle btn_confirmar.

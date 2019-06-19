@@ -8,7 +8,7 @@ namespace Warden.Component.Common.TextBox {
             LoadTextBox();
         }
         public String Text {
-            get { return txt_control.Text; }
+            get { return this.txt_control.Text; }
             set { this.txt_control.Text = value; }
         }
 
