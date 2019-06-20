@@ -25,7 +25,7 @@
         
     </head>
     <body>
-        <form runat="server">
+        <form runat="server" >
             <header class="header-global" style="background-color: black !important">
                 <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
                   <div class="container">
@@ -59,7 +59,7 @@
                               </a>
                               <div class="dropdown-menu dropdown-menu-xl">
                                 <div class="dropdown-menu-inner">
-                                  <a href="#" class="media d-flex align-items-center">
+                                  <a href="<%=FormatUrl("./Views/Fitness/Etapas.aspx") %>" class="media d-flex align-items-center">
                                     <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
                                       <i class="ni ni-spaceship"></i>
                                     </div>
@@ -106,7 +106,7 @@
                       </nav>
                 </header>
             
-                <main>
+                <main >
                     <div class="position-relative">
                       <!-- Hero for FREE version -->
                          <section class="section section-lg section-hero section-shaped">

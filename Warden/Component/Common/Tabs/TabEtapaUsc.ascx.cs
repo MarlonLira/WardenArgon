@@ -25,37 +25,37 @@ namespace Warden.Component.Common.Tabs {
             RadioButtonUsc.Item Item1 = new RadioButtonUsc.Item() { Text = "Sim"};
             RadioButtonUsc.Item Item2 = new RadioButtonUsc.Item() { Text = "Não"};
             RadioButtonUsc.Item [] Itens = new RadioButtonUsc.Item[] { Item1, Item2 };
+            if (!IsPostBack) {
+                Question1.Title = Question(1);
+                Question1.LoadDataSource(Itens);
 
-            Question1.Title = Question(1);
-            Question1.LoadDataSource(Itens);
+                Question2.Title = Question(2);
+                Question2.LoadDataSource(Itens);
 
-            Question2.Title = Question(2);
-            Question2.LoadDataSource(Itens);
+                Question3.Title = Question(3);
+                Question3.LoadDataSource(Itens);
 
-            Question3.Title = Question(3);
-            Question3.LoadDataSource(Itens);
+                Question4.Title = Question(4);
+                Question4.LoadDataSource(Itens);
 
-            Question4.Title = Question(4);
-            Question4.LoadDataSource(Itens);
+                Question5.Title = Question(5);
+                Question5.LoadDataSource(Itens);
 
-            Question5.Title = Question(5);
-            Question5.LoadDataSource(Itens);
+                Question6.Title = Question(6);
+                Question6.LoadDataSource(Itens);
 
-            Question6.Title = Question(6);
-            Question6.LoadDataSource(Itens);
+                Question7.Title = Question(7);
+                Question7.LoadDataSource(Itens);
 
-            Question7.Title = Question(7);
-            Question7.LoadDataSource(Itens);
+                Question8.Title = Question(8);
+                Question8.LoadDataSource(Itens);
 
-            Question8.Title = Question(8);
-            Question8.LoadDataSource(Itens);
+                Question9.Title = Question(9);
+                Question9.LoadDataSource(Itens);
 
-            Question9.Title = Question(9);
-            Question9.LoadDataSource(Itens);
-
-            Question10.Title = Question(10);
-            Question10.LoadDataSource(Itens);
-
+                Question10.Title = Question(10);
+                Question10.LoadDataSource(Itens);
+            }
 
         }
 

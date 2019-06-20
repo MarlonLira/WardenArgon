@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Warden.Views.Login" %>
 <%@ Import Namespace="Warden.Helper" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -7,16 +8,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title> Warden</title>
     <!-- Favicon -->
-  <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png"/>
+  <link href="<%=Help.FormatUrl(" ../assets/img/brand/favicon.png") %>" rel="icon" type="image/png"/>
   <!-- Fonts -->
-  <link type="text/css" href="../assets/css/opensans.css" rel="stylesheet"/>
+  <link type="text/css" href="<%=Help.FormatUrl("../assets/css/opensans.css") %> rel="stylesheet"/>
   <!-- Icons -->
-  <link href="../assets/vendor/nucleo/css/nucleo.css" rel="stylesheet"/>
-  <link href="../assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="<%=Help.FormatUrl("../assets/vendor/nucleo/css/nucleo.css") %>" rel="stylesheet"/>
+  <link href=" <%=Help.FormatUrl("../assets/vendor/font-awesome/css/font-awesome.min.css") %>" rel="stylesheet"/>
   <!-- Argon CSS -->
-  <link type="text/css" href="../assets/css/argon.css?v=1.0.1" rel="stylesheet"/>
+  <link type="text/css" href="<%=Help.FormatUrl("../assets/css/argon.css?v=1.0.1") %>"  rel="stylesheet"/>
   <!-- Docs CSS -->
-  <link type="text/css" href="../assets/css/docs.min.css" rel="stylesheet"/>
+  <link type="text/css" href="<%=Help.FormatUrl("../assets/css/docs.min.css") %>" rel="stylesheet"/>
 </head>
 <body>
     <form runat="server">
@@ -50,7 +51,7 @@
                 </div>
                 <div role="form">
                   <div class="form-group mb-3">
-                    <usc:TextBoxUsc ID="txt_email" runat="server" Icon="email" Placeholder="E-mail"/>
+                    <usc:TextBoxUsc ID="txt_email" runat="server" Icon="email" Placeholder="CPF"/>
                   </div>
                   <div class="form-group">
                     <usc:TextBoxUsc ID="txt_password" runat="server" Icon="password" Placeholder="Senha" TextMode="Password"/>
@@ -87,11 +88,11 @@
   </main>
 </form>
     <!-- Core -->
-  <script src="../assets/vendor/jquery/jquery.min.js"></script>
-  <script src="../assets/vendor/popper/popper.min.js"></script>
-  <script src="../assets/vendor/bootstrap/bootstrap.min.js"></script>
-  <script src="../assets/vendor/headroom/headroom.min.js"></script>
-  <!-- Argon JS -->
-  <script src="../assets/js/argon.js?v=1.0.1"></script>
+      <script src="<%=Help.FormatUrl("../assets/vendor/jquery/jquery.min.js") %>"></script>
+      <script src="<%=Help.FormatUrl("../assets/vendor/popper/popper.min.js") %>"></script>
+      <script src="<%=Help.FormatUrl("../assets/vendor/bootstrap/bootstrap.min.js") %>"></script>
+      <script src="<%=Help.FormatUrl("../assets/vendor/headroom/headroom.min.js") %>"></script>
+    <!-- Argon JS -->
+      <script src="<%=Help.FormatUrl("../assets/js/argon.js?v=1.0.1") %>></script>
 </body>
 </html>

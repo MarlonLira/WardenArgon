@@ -42,4 +42,5 @@
       </div>
     
     <usc:ButtonUsc ID="btn_confirmar" runat="server" Text="Salvar"/>
+    <asp:Label ID="lbl_erro" runat="server"></asp:Label>
 </asp:Panel>
