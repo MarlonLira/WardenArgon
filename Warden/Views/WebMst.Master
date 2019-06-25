@@ -9,28 +9,30 @@
         <title>Warden</title>
 
         <!-- Favicon -->
-        <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png">
+        <link href="/assets/img/brand/favicon.png" rel="icon" type="image/png">
 
         <!-- Fonts -->
-        <link type="text/css" href="<%=FormatUrl("../assets/css/opensans.css") %>" rel="stylesheet"/>
+        <link type="text/css" href="<%=FormatUrl("/assets/css/opensans.css") %>" rel="stylesheet"/>
 
         <!-- Icons -->
-        <link href="<%=FormatUrl("../assets/vendor/nucleo/css/nucleo.css") %>" rel="stylesheet">
-        <link href="<%=FormatUrl("../assets/vendor/font-awesome/css/font-awesome.min.css") %>" rel="stylesheet">
+        <link href="<%=FormatUrl("/assets/vendor/nucleo/css/nucleo.css") %>" rel="stylesheet">
+        <link href="<%=FormatUrl("/assets/vendor/font-awesome/css/font-awesome.min.css") %>" rel="stylesheet">
 
         <!-- Argon CSS -->
-        <link type="text/css" href="<%=FormatUrl("../assets/css/argon.css") %>" rel="stylesheet">
-        <!-- Paper CSS -->
-        
+        <link type="text/css" href="<%=FormatUrl("/assets/css/argon.css") %>" rel="stylesheet">
+
+         <!-- Table CSS -->
+        <link type="text/css" href="<%=FormatUrl("/assets/css/jquery.dataTables.min.css") %>" rel="stylesheet">
+       
         
     </head>
-    <body>
+    <body style="background-color:black">
         <form runat="server" >
-            <header class="header-global" style="background-color: black !important">
+            <header class="header-global" style="background-color:transparent">
                 <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
                   <div class="container">
-                    <a class="navbar-brand mr-lg-5" href=" <%=FormatUrl("./index.html") %>">
-                      <img src="<%=FormatUrl("../assets/img/brand/white.png") %>">
+                    <a class="navbar-brand mr-lg-5" href=" <%=FormatUrl("/index.html") %>">
+                      <img src="<%=FormatUrl("/assets/img/brand/white.png") %>">
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
                           <span class="navbar-toggler-icon"></span>
@@ -38,9 +40,9 @@
                         <div class="navbar-collapse collapse" id="navbar_global">
                           <div class="navbar-collapse-header">
                             <div class="row">
-                              <div class="col-6 collapse-brand">
-                                <a href="../Default.aspx">
-                                  <img src="<%=FormatUrl("../assets/img/brand/blue.png") %>">
+                              <div class="col-6 collapse-brand" >
+                                <a href="<%=FormatUrl("Views/Default.aspx") %>">
+                                  <img src="<%=FormatUrl("/assets/img/brand/blue.png") %>">
                                 </a>
                               </div>
                               <div class="col-6 collapse-close">
@@ -59,7 +61,7 @@
                               </a>
                               <div class="dropdown-menu dropdown-menu-xl">
                                 <div class="dropdown-menu-inner">
-                                  <a href="<%=FormatUrl("./Views/Fitness/Etapas.aspx") %>" class="media d-flex align-items-center">
+                                  <a href="<%=FormatUrl("/Views/Fitness/Etapas.aspx") %>" class="media d-flex align-items-center">
                                     <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
                                       <i class="ni ni-spaceship"></i>
                                     </div>
@@ -68,7 +70,7 @@
                                       <p class="description d-none d-md-inline-block mb-0">Cadastre as informações do seu aluno aqui.</p>
                                     </div>
                                   </a>
-                                  <a href="<%=FormatUrl("./Views/Fitness/Graficos.aspx") %>" class="media d-flex align-items-center">
+                                  <a href="<%=FormatUrl("/Views/Fitness/Graficos.aspx") %>" class="media d-flex align-items-center">
                                     <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
                                       <i class="ni ni-palette"></i>
                                     </div>
@@ -77,7 +79,7 @@
                                       <p class="description d-none d-md-inline-block mb-0">Aqui você vera graficos relacionado a um determinado aluno</p>
                                     </div>
                                   </a>
-                                  <a href="<%=FormatUrl("./Views/Telemarketing/ContactLeads.aspx") %>" class="media d-flex align-items-center">
+                                  <a href="<%=FormatUrl("/Views/Telemarketing/ContactLeads.aspx") %>" class="media d-flex align-items-center">
                                     <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
                                       <i class="ni ni-ui-04"></i>
                                     </div>
@@ -125,23 +127,27 @@
                 </main>
         </form>
         <!-- Core -->
-      <script src="<%=FormatUrl("../assets/vendor/jquery/jquery.min.js") %>"></script>
-      <script src="<%=FormatUrl("../assets/vendor/popper/popper.min.js") %>"></script>
-      <script src="<%=FormatUrl("../assets/vendor/bootstrap/bootstrap.min.js") %>"></script>
-      <script src="<%=FormatUrl("../assets/vendor/headroom/headroom.min.js") %>"></script>
-      <script src="<%=FormatUrl("../assets/js/plugins/perfect-scrollbar.jquery.min.js") %>"></script>
+      <script src="<%=FormatUrl("/assets/vendor/jquery/jquery.min.js") %>"></script>
+      <script src="<%=FormatUrl("/assets/vendor/popper/popper.min.js") %>"></script>
+      <script src="<%=FormatUrl("/assets/vendor/bootstrap/bootstrap.min.js") %>"></script>
+      <script src="<%=FormatUrl("/assets/vendor/headroom/headroom.min.js") %>"></script>
+      <script src="<%=FormatUrl("/assets/js/plugins/perfect-scrollbar.jquery.min.js") %>"></script>
       <!-- Optional JS -->
-      <script src="<%=FormatUrl("../assets/vendor/onscreen/onscreen.min.js") %>"></script>
-      <script src="<%=FormatUrl("../assets/vendor/nouislider/js/nouislider.min.js") %>"></script>
-      <script src="<%=FormatUrl("../assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js") %>"></script>
+      <script src="<%=FormatUrl("/assets/vendor/onscreen/onscreen.min.js") %>"></script>
+      <script src="<%=FormatUrl("/assets/vendor/nouislider/js/nouislider.min.js") %>"></script>
+      <script src="<%=FormatUrl("/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js") %>"></script>
       <!-- Charts JS -->
-      <script src="<%=FormatUrl("../assets/js/plugins/chartjs.min.js") %>"></script>
+      <script src="<%=FormatUrl("/assets/js/plugins/chartjs.min.js") %>"></script>
       <!-- Argon JS -->
-      <script src="<%=FormatUrl("../assets/js/argon.js?v=1.0.1") %>"></script>
+      <script src="<%=FormatUrl("/assets/js/argon.js?v=1.0.1") %>"></script>
+      
       <!-- Chart -->
-      <script src="<%=FormatUrl("../assets/js/charts/Chart.js") %>"></script>
-      <script src="<%=FormatUrl("../assets/js/charts/bar-chart.js") %>"></script>
-      <script src="<%=FormatUrl("../assets/js/charts/area-chart.js") %>"></script>
-      <script src="<%=FormatUrl("../assets/js/charts/line-chart.js") %>"></script>
+      
+      
+      <script src="<%=FormatUrl("/assets/js/charts/area-chart.js") %>"></script>
+      <script src="<%=FormatUrl("/assets/js/charts/line-chart.js") %>"></script>
+       <!-- Table -->
+        <script src="<%=FormatUrl("/assets/js/table/data-table-act.js") %>"></script>
+        <script src="<%=FormatUrl("/assets/js/table/jquery.dataTables.min.js") %>"></script>
     </body>
 </html>

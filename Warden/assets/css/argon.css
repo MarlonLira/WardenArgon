@@ -12597,14 +12597,11 @@ iframe
 
 figcaption,
 figure,
-main
-{
+main {
     display: block;
-    background-image:url(../img/bg/3.jpg);
-    background-color: black;
+    background-image: url(../img/bg/3-12.png);
+    background-repeat: no-repeat;
     background-size: 120%;
-    background-repeat: no-repeat; 
-	
 }
 
 main

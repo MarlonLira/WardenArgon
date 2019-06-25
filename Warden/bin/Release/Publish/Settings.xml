@@ -1,0 +1,186 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="higsetting" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="higsetting">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="param_id" type="xs:string" minOccurs="0" />
+                <xs:element name="param_value" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <!-- DATABASE SETTINGS -->
+  <higsetting>
+    <param_id>CONNECTION_STRING_MASTER</param_id>
+
+    <!--param_value>Data Source = LOCALHOST\SQLEXPRESS; Connection Timeout = 10; Initial Catalog = gestor2; User Id= sa; Password = Root1526; MultipleActiveResultSets=True; Pooling=True;</param_value-->
+    <param_value>+82kjar9seJReUz+17KZKsCI5xUFmbjDCPirtHupAuh/5p7PjNCi4U2y/di5Vpjtni+O2ba8Iw0nXhm0a/tbkaUsvOTws/HuspLzXVAui9SnQFNWHzvLgVHhzPt2Yn9Sqd/QN8q4L+f3tVWm9Zlcgx6yQ7NUXo2FrL8J1XbatioG83BfQqaqbFIlzXkeoLqYUtj80yk0pz2Mr15PIbWcifcaZxVh9b1p</param_value>
+
+    <!--param_value>Data Source = LOCALHOST\SQLEXPRESS; Connection Timeout = 10; Initial Catalog = gestor2_web; User Id= sa; Password = Root1526; MultipleActiveResultSets=True; Pooling=True;</param_value-->
+    <!--param_value>+82kjar9seJReUz+17KZKsCI5xUFmbjDCPirtHupAuh/5p7PjNCi4U2y/di5Vpjtni+O2ba8Iw0nXhm0a/tbkaUsvOTws/HuspLzXVAui9STBIN6bbXBHLcMzm6HZ83SpyhJcK8oDq/rhT/IE3nE9AsziI20XIb8vwYQ6yHI8N7mO7JGhaoJa6h8X6rEajdztbO/7rhoKHXkL+BDvA3SojZaxBsloXYZwZU1r0af7gg=</param_value-->
+
+    <!-- 198.38.83.33; hiacademia_web; -->
+    <!--param_value>+82kjar9seIEUB0txFGd0Mi9NCJp7KOEewH+dvOL/q9Nsv3YuVaY7Z4vjtm2vCMNJ14ZtGv7W5GlLLzk8LPx7tjq5h+0VFaPkkC5HpdexmZ/ZKvJpRH+Pvkc1/faO7ecDt3A3LuWwc2lmbk0UGDXkfe1Vab1mVyDHrJDs1RejYWsvwnVdtq2KgbzcF9CpqpsUiXNeR6guphS2PzTKTSnPYyvXk8htZyJAVkF243XmqvunaHQWOmWjLXiLPHncgfAQFVTxE/cnS+IR3Hq6DPvCWvmd0WoBIc6</param_value-->
+
+  </higsetting>
+  <higsetting>
+    <param_id>CONNECTION_STRING_SLAVE</param_id>
+     <param_value></param_value>
+  </higsetting>
+  <higsetting>
+    <!-- VALUES: CHAOS, READUNCOMMITTED, READCOMMITTED, REPEATABLEREAD, SERIALIZABLE, SNAPSHOT -->
+    <param_id>CONNECTION_ISOLATION_NAME</param_id>
+    <param_value>SNAPSHOT</param_value>
+  </higsetting>
+  <higsetting>
+    <!-- VALUE IN SECONDS -->
+    <param_id>CONNECTION_COMMAND_TIMEOUT</param_id>
+    <param_value>1200</param_value>
+  </higsetting>
+  <higsetting>
+    <!-- VALUE IN SECONDS -->
+    <param_id>CONNECTION_LOCK_TIMEOUT</param_id>
+    <param_value>30</param_value>
+  </higsetting>
+  <higsetting>
+    <!-- VALUE MODEL: [schema origin 1],[schema replaced 1]|[schema origin 2],[schema replaced 2]|... -->
+    <param_id>CONNECTION_REPLACE_SCHEMA</param_id>
+    <!-- param_value>[administracao],[dbo]|[boss],[dbo]|[financeiro],[dbo]|[fitness],[dbo]|[sinc],[dbo]</param_value -->
+    <param_value></param_value>
+  </higsetting>
+  <higsetting>
+    <param_id>CONNECTION_SHARED_MODE</param_id>
+    <param_value>false</param_value>
+  </higsetting>
+  <!-- WEBSERVICE SETTINGS -->
+  <!-- WEB SETTINGS -->
+  <higsetting>
+    <param_id>URL_WEB_APPLICATION</param_id>
+    <param_value></param_value>
+  </higsetting>
+  <higsetting>
+    <param_id>WEB_THEME</param_id>
+    <param_value>1</param_value>
+  </higsetting>
+  <higsetting>
+    <param_id>WEB_LOCAL</param_id>
+    <param_value>0</param_value>
+  </higsetting>
+  <!-- WINDOWS SERVICE SETTINGS -->
+  <higsetting>
+    <param_id>CPU_PRIORITY</param_id>
+    <param_value>ASYNC=3|SYNC=3|JOB=0</param_value>
+  </higsetting>
+  <higsetting>
+    <param_id>URL_SERVICE_SINC</param_id>
+    <param_value>http://localhost:1100/sync</param_value>
+    <!--param_value>http://www.hiportal.com.br/hiservice/</param_value-->
+  </higsetting>
+  <higsetting>
+    <!-- VALUE IN SECONDS -->
+    <param_id>SINC_CONNECT_INTERVAL</param_id>
+    <param_value>6</param_value>
+  </higsetting>
+  <higsetting>
+    <!-- VALUE IN SECONDS -->
+    <param_id>SINC_MONITOR_INTERVAL</param_id>
+    <param_value>6</param_value>
+  </higsetting>
+  <higsetting>
+    <param_id>SINC_MONITOR_TASKS</param_id>
+    <param_value></param_value>
+  </higsetting>
+  <higsetting>
+    <param_id>SINC_TASKS</param_id>
+    <param_value></param_value>
+  </higsetting>
+  <higsetting>
+    <!-- VALUE IN SECONDS -->
+    <param_id>SINC_REMOTE_ACCESS_INTERVAL</param_id>
+    <param_value></param_value>
+  </higsetting>
+  <!-- WINDOWS APPLICATION SETTINGS -->
+  <higsetting>
+    <param_id>AUTOMATIC_LOGIN</param_id>
+    <param_value></param_value>
+  </higsetting>
+  <higsetting>
+    <param_id>ASYNC_MODE</param_id>
+    <param_value>true</param_value>
+  </higsetting>
+  <higsetting>
+    <!-- VALUES: 0[NOT]; 1[YES]; 2[YES AND ACTIVED DEFAULT] -->
+    <param_id>BIOMETRIC_USAGE</param_id>
+    <param_value>0</param_value>
+  </higsetting>
+  <!-- COMMON SETTINGS -->
+  <higsetting>
+    <param_id>CPU_PRIORITY</param_id>
+    <param_value>ASYNC=3|SYNC=3|JOB=1</param_value>
+  </higsetting>
+  <higsetting>
+    <param_id>CPU_PRIORITY_TASKS</param_id>
+    <param_value></param_value>
+  </higsetting>
+  <higsetting>
+    <param_id>CONTEXT_EMPRESA_COD</param_id>
+    <param_value>001001</param_value>
+  </higsetting>
+  <higsetting>
+    <param_id>CONTEXT_EMPRESA_MUDAR</param_id>
+    <param_value>0</param_value>
+  </higsetting>
+  <higsetting>
+    <param_id>DEFAULT_SMTP_STRUCTURE</param_id>
+    <param_value></param_value>
+  </higsetting>
+  <higsetting>
+    <param_id>SHOW_STACKTRACE</param_id>
+    <param_value>true</param_value>
+  </higsetting>
+  <higsetting>
+    <param_id>STORAGE_FILE_PATH</param_id>
+    <param_value>~\resources\files\storage\</param_value>
+  </higsetting>
+  <higsetting>
+    <param_id>STORAGE_FILE_PATH_TEMP</param_id>
+    <param_value>~\resources\files\temp\</param_value>
+  </higsetting>
+  <higsetting>
+    <param_id>STORAGE_FILE_PATH_REMOVED</param_id>
+    <param_value>~\resources\files\removed\</param_value>
+  </higsetting>
+  <higsetting>
+    <!-- em MB -->
+    <param_id>STORAGE_FILE_MAXLENGTH</param_id>
+    <param_value>2</param_value>
+  </higsetting>
+  <higsetting>
+    <param_id>STORAGE_FILE_URL</param_id>
+    <param_value>~/resources/files/storage/</param_value>
+  </higsetting>
+  <higsetting>
+    <param_id>STORAGE_FILE_URL_TEMP</param_id>
+    <param_value>~/resources/files/temp/</param_value>
+  </higsetting>
+  <higsetting>
+    <param_id>MARGIN_PRINTER</param_id>
+    <!--param_value>top|right|bottom|left</param_value-->
+    <param_value>0|0|5|0</param_value>
+  </higsetting>
+  <higsetting>
+    <param_id>PRINTER_CHAR_PER_LINE</param_id>
+    <param_value>50</param_value>
+  </higsetting>
+  <higsetting>
+    <param_id>LOCAL_PRINTER</param_id>
+    <param_value></param_value>
+  </higsetting>
+</NewDataSet>

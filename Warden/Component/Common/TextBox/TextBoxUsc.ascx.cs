@@ -16,6 +16,10 @@ namespace Warden.Component.Common.TextBox {
         public String Style { get; set; }
         public String Icon { get; set; }
         public String Placeholder { get; set; }
+        public Int32 Size { get; set; }
+        public String Mode { get; set; }
+        public Boolean IsModified { get; set; }
+        
 
         public TextBoxMode TextMode {
             get {
@@ -33,12 +37,46 @@ namespace Warden.Component.Common.TextBox {
             txt_control.Attributes.Add("placeholder", Placeholder);
         }
 
+        public String LoadMode() {
+            String NewMode = "";
+            if (String.IsNullOrEmpty(Mode)) {
+                NewMode = "md";
+            } else {
+
+                switch (Mode.ToUpper()) {
+                    case "SMALL": {
+                        NewMode = "md";
+                        break;
+                    }
+                    case "MEDIUM": {
+                        NewMode = "md";
+                        break;
+                    }
+                    case "LARGER": {
+                        NewMode= "lg";
+                        break;
+                    }
+                }
+            }
+
+            return NewMode;
+        }
+
+        public Int32 LoadSize() {
+            Int32 NewSize;
+            if (Size <= 0) {
+                NewSize = 3;
+            } else {
+                NewSize = Size;
+            }
+            return NewSize;
+        }
+
         public String LoadIcon() {
             String CreateIcon = "";
             if (String.IsNullOrEmpty(Icon)) { Icon = ""; }
             switch (Icon.ToUpper()) {
                 case "EMAIL": {
-
                         CreateIcon = "ni ni-email-83";
                         break;
                 }

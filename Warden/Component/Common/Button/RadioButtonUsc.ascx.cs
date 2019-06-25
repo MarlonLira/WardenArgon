@@ -28,15 +28,7 @@ namespace Warden.Component.Common.Button {
 
         public String Value {
             get {
-                Int32 select = rb_control.SelectedIndex;
-
-
-                String item = rb_control.SelectedItem.Value ;
-                String item2 = rb_control.SelectedItem.Text;
-
-
-                return rb_control.SelectedValue;
-
+                return rb_control.SelectedItem.Text;
             }
         }
     }

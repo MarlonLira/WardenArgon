@@ -7,7 +7,7 @@ using Warden.Component.Common.Button;
 namespace Warden.Views {
     public partial class Login : Page {
         protected void Page_Load(object sender, EventArgs e) {
-            ButtonUsc.OnClick += new ButtonUsc.OnClickEvent(ButtonUsc_Click);
+           ButtonUsc.OnClick += new ButtonUsc.OnClickEvent(ButtonUsc_Click);
         }
 
         protected void ButtonUsc_Click() {
@@ -32,7 +32,7 @@ namespace Warden.Views {
                     Global.Funcionario = Funcionario;
                     Global.SetEmpresa(Funcionario.Empresa.Id);
 
-                    Response.Redirect("./Fitness/Etapas.aspx", false);
+                    Response.Redirect("./Default.aspx", false);
                 }
                 
             } finally {

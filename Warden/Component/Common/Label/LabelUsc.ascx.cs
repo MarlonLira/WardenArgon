@@ -11,7 +11,8 @@ namespace Warden.Component.Common.Label {
             get { return lbl_control.Text; }
             set { this.lbl_control.Text = value; }
         }
-
+        
+        public String Color { get; set; }
         public Int32 FontSize {
             set { lbl_control.Font.Size = new System.Web.UI.WebControls.FontUnit(value) ; }
         }
@@ -21,7 +22,7 @@ namespace Warden.Component.Common.Label {
         }
     
         public void LoadLabel() {
-           
+            lbl_control.Style.Add("Color", Color);
         }
     }
 }

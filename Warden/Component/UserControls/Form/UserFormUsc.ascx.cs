@@ -5,7 +5,9 @@ using Brasdat.Gestor.Library.Business.Classes.Fitness;
 namespace Warden.Component.UserControls.Form {
     public partial class UserFormUsc : UserControl {
         protected void Page_Load(object sender, EventArgs e) {
-            
+            if (String.IsNullOrEmpty(BtnText)) {
+                BtnText = "Editar";
+            }
         }
 
         public String BtnText {

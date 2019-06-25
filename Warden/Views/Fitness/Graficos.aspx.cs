@@ -1,16 +1,23 @@
 ﻿using System;
 using System.Web.UI;
-using Warden.Component.Common.Button;
+using System.Collections.Generic;
+using Warden.Component.Common.Charts;
 
 namespace Warden.Views.Fitness {
     public partial class Graficos : Page {
         protected void Page_Load(object sender, EventArgs e) {
-            btnteste.OnClick += new ButtonUsc.OnClickEvent (Btnteste_OnClick);
+            if (!IsPostBack) {
+                ChartUsc = new ChartUsc();
+                ChartUsc.DataSource = new Dictionary<string, string>();
+
+                ChartUsc.DataSource.Add("IMC", "22");
+                ChartUsc.DataSource.Add("Gordura", "33");
+                ChartUsc.DataSource.Add("Idade Corporal", "32");
+                ChartUsc.DataSource.Add("Peso", "69");
+
+                Session.Add("LoadCharts", ChartUsc.DataSource);
+            }
         }
 
-        private void Btnteste_OnClick() {
-            Int16 kk = 15;
-            throw new NotImplementedException();
-        }
     }
 }
