@@ -12599,9 +12599,6 @@ figcaption,
 figure,
 main {
     display: block;
-    background-image: url(../img/bg/3-12.png);
-    background-repeat: no-repeat;
-    background-size: 120%;
 }
 
 main

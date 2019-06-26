@@ -21,6 +21,11 @@ namespace Warden.Views {
             Table.Rows.Add("Teste", "Teste2", "Teste3");
             Table.Rows.Add("Teste", "Teste2", "Teste3");
             Table.Rows.Add("Teste", "Teste2", "Teste3");
+            Table.Rows.Add("Teste", "Teste2", "Teste3");
+            Table.Rows.Add("Teste", "Teste2", "Teste3");
+            Table.Rows.Add("Teste", "Teste2", "Teste3");
+            Table.Rows.Add("Teste", "Teste2", "Teste3");
+            Table.Rows.Add("Teste", "Teste2", "Teste3");
             tbl_teste.Colunas = new String[] { "Column1", "Column2", "Column3" };
             tbl_teste.LoadDataSource(Table);
 
