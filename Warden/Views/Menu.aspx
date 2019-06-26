@@ -2,8 +2,7 @@
 <%@ Import Namespace="Warden.Helper" %>
 
 <asp:Content ID="cttMenu" ContentPlaceHolderID="MainContent" runat="server">
-    <!-- Paper CSS -->
-    <link type="text/css" href="<%=Help.FormatUrl("/assets/css/paper-dashboard.css?v=2.0.0") %>" rel="stylesheet">
+    
     
 <div class="content" style="justify-content:center">
     
@@ -42,7 +41,5 @@
          />
     </div>
 </div>
-
-    <!-- Paper JS -->
-     <script src="<%=Help.FormatUrl("/assets/js/paper-dashboard.min.js?v=2.0.0") %>"></script>
+   
 </asp:Content>

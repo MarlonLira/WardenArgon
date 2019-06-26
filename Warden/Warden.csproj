@@ -345,6 +345,7 @@
     <Content Include="Index.html" />
     <Content Include="Settings.xml" />
     <Content Include="Views\Default.aspx" />
+    <Content Include="Views\Fitness\Aluno.aspx" />
     <Content Include="Views\Fitness\Etapas.aspx" />
     <Content Include="Views\Fitness\Graficos.aspx" />
     <Content Include="Views\Login.aspx" />
@@ -477,6 +478,13 @@
     </Compile>
     <Compile Include="Views\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fitness\Aluno.aspx.cs">
+      <DependentUpon>Aluno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Fitness\Aluno.aspx.designer.cs">
+      <DependentUpon>Aluno.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Fitness\Etapas.aspx.cs">
       <DependentUpon>Etapas.aspx</DependentUpon>

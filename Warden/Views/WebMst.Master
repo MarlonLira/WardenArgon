@@ -25,10 +25,10 @@
     </head>
     <body style="background-color:ghostwhite">
         <form runat="server" >
-            <header class="header-global" style="background-color:black">
+            <header class="header-global" style="background-color:black !important">
                 <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
                   <div class="container">
-                    <a class="navbar-brand mr-lg-5" href=" <%=FormatUrl("/index.html") %>">
+                    <a class="navbar-brand mr-lg-5" href=" <%=FormatUrl("/Views/Default.aspx") %>">
                       <img src="<%=FormatUrl("/assets/img/brand/white.png") %>">
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">

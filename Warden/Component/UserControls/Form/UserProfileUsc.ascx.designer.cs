@@ -76,24 +76,6 @@ namespace Warden.Component.UserControls.Form {
         protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_endereco;
         
         /// <summary>
-        /// Controle txt_cidade.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_cidade;
-        
-        /// <summary>
-        /// Controle txt_pais.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_pais;
-        
-        /// <summary>
         /// Controle txt_cep.
         /// </summary>
         /// <remarks>
@@ -101,5 +83,41 @@ namespace Warden.Component.UserControls.Form {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_cep;
+        
+        /// <summary>
+        /// Controle txt_etapa.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_etapa;
+        
+        /// <summary>
+        /// Controle txt_data.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_data;
+        
+        /// <summary>
+        /// Controle txt_professor.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_professor;
+        
+        /// <summary>
+        /// Controle txt_observacao.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_observacao;
     }
 }

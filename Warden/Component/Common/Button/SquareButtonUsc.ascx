@@ -1,25 +1,29 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SquareButtonUsc.ascx.cs" Inherits="Warden.Component.Common.Button.SquareButtonUsc" %>
 <%@ Import Namespace="Warden.Helper" %>
 
+
 <asp:Panel ID="pnl_control" runat="server">
-    <div class="col-lg-24 col-md-12 col-sm-8" style="padding-left: 10px">
-        <div class="card card-stats">
-            <div class="card-body ">
+    <div class="col-lg-12 col-md-12 col-sm-8" style="padding-left: 10px; padding-top: 10px">
+        
+            <div class="card-body" style="background-color:lightgray; justify-content:center; text-align:center">
                 <div class="row">
+                    <%if (!String.IsNullOrEmpty(LoadIcon())) { %>
                     <div class="col-4 col-md-3">
                         <div class="icon-big text-center icon-warning">
                             <i class="<%=LoadIcon()%>"></i>
                         </div>
                     </div>
-                    <div class="col-7 col-md-8">
-                        <div class="numbers">
-                            <p class="card-category"><asp:Label class="card-category" ID="lbl_category" runat="server" Text="Label"></asp:Label></p>
-                            <p class="card-title"><asp:Label class="card-title" ID="lbl_Title" runat="server" Text="Label" Font-Size="Large"></asp:Label></p>
+                    <%} %>
+                    <div class="col-15 col-md-16" style="padding-left:10px">
+                        <div class="numbers" >
+                            <usc:LabelUsc runat="server" ID="lbl_category" FontSize="12" Text="teste2" Class="card-category" Color="" />
+                            <usc:LabelUsc runat="server" ID="lbl_title" FontSize="14" Text="Teste" Class="card-title" Color="
+                                "/>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card-footer ">
+            
+            <div class="card-footer " style="background-color:lightgray">
                 <hr>
                 <%if (IsButton) { %>
 

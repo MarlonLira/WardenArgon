@@ -28,16 +28,16 @@ namespace Warden.Component.Common.Button {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_category;
+        protected global::Warden.Component.Common.Label.LabelUsc lbl_category;
         
         /// <summary>
-        /// Controle lbl_Title.
+        /// Controle lbl_title.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_Title;
+        protected global::Warden.Component.Common.Label.LabelUsc lbl_title;
         
         /// <summary>
         /// Controle btn_control.

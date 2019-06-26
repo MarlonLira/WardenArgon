@@ -6,7 +6,8 @@ namespace Warden.Component.Common.Label {
         protected void Page_Load(object sender, EventArgs e) {
             LoadLabel();
         }
-
+        const String Default = "text-uppercase font-weight-bold";
+        public String Class { get; set; }
         public String Text {
             get { return lbl_control.Text; }
             set { this.lbl_control.Text = value; }
@@ -22,7 +23,14 @@ namespace Warden.Component.Common.Label {
         }
     
         public void LoadLabel() {
+            if (String.IsNullOrEmpty(Class)) {
+                lbl_control.Attributes.Add("class", Default);
+            } else {
+                lbl_control.Attributes.Add("class", Class);
+            }
+
             lbl_control.Style.Add("Color", Color);
+
         }
     }
 }

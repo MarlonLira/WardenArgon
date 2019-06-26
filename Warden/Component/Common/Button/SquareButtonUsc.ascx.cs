@@ -16,10 +16,13 @@ namespace Warden.Component.Common.Button {
             get { return btn_control.Text; }
             set { this.btn_control.Text = value; }
         }
-        
+
+        public Int32 TitleSize { set { lbl_title.FontSize = value; } } 
+        public Int32 CategorySize { set { lbl_category.FontSize = value; } }
+
         public String Title {
-            get { return lbl_Title.Text; }
-            set { this.lbl_Title.Text = value; }
+            get { return lbl_title.Text; }
+            set { this.lbl_title.Text = value; }
         }
 
         public String Category {
@@ -123,7 +126,7 @@ namespace Warden.Component.Common.Button {
                         break;
                     }
                 default: {
-                        CreateIcon = "ni ni-email-83";
+                        CreateIcon = "";
                         break;
                     }
             }

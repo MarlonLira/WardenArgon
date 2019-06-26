@@ -19,6 +19,8 @@ namespace Warden.Component.Common.TextBox {
         public Int32 Size { get; set; }
         public String Mode { get; set; }
         public Boolean IsModified { get; set; }
+        public Boolean IsLabel { get; set; }
+        public String Label { set { lbl_control.Text = value; } }
         
 
         public TextBoxMode TextMode {
