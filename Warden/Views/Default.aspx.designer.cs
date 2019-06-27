@@ -13,12 +13,12 @@ namespace Warden.Views {
     public partial class Default {
         
         /// <summary>
-        /// Controle TabsUsc.
+        /// Controle UserSearchFormUsc.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.Tabs.TabsUsc TabsUsc;
+        protected global::Warden.Component.UserControls.Form.UserSearchFormUsc UserSearchFormUsc;
     }
 }

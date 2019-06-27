@@ -17,6 +17,9 @@ namespace Warden.Component.UserControls.Form {
             btn_pesquisar.OnClick += new ButtonUsc.OnClickEvent(BtnPesquisar_Click);
         }
 
+        public String TitleText { set { this.lbl_title_control.Text = value; } }
+        public String CategoryText { set { this.lbl_category_control.Text = value; } }
+
         protected void BtnPesquisar_Click() {
             if (!String.IsNullOrEmpty(txt_matricula.Text) || !String.IsNullOrEmpty(txt_nome.Text)) {
                 CarregarAluno();

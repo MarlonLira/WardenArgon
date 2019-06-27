@@ -10,6 +10,16 @@ namespace Warden.Component.Common.Button {
         public delegate void OnClickEvent();
         public event OnClickEvent OnClick;
 
+        protected void btn_control_Click(object sender, EventArgs e) {
+            try {
+                if (OnClick != null) {
+                    OnClick();
+                }
+            } catch (Exception Except) {
+
+            }
+        }
+
         public String Icon { get; set; }
         public Boolean IsButton { get; set; }
         public String BtnText {
@@ -29,17 +39,6 @@ namespace Warden.Component.Common.Button {
             get { return lbl_category.Text; }
             set { this.lbl_category.Text = value; }
         }
-
-        protected void btn_control_Click(object sender, EventArgs e) {
-            try {
-                if (OnClick != null) {
-                    OnClick();
-                }
-            } catch (Exception Except) {
-
-            }
-        }
-
 
         public String LoadIcon() {
             String CreateIcon = "";

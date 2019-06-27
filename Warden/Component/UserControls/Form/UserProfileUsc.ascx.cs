@@ -37,6 +37,9 @@ namespace Warden.Component.UserControls.Form {
                 txt_data.Text = DateTime.Now.ToShortDateString();
                 txt_etapa.Text = "2º Etapa";
                 txt_professor.Text = "fulano";
+                lbl_limite_acesso.Text = "Dt.limite Acesso: " + Aluno.DataLimiteAcesso.ToShortDateString();
+                lbl_plano.Text = "Plano: " + Aluno.ContratoObservacao;
+                lbl_aluno.Text = Aluno.Nome;
 
             } catch (Exception Err) {
 

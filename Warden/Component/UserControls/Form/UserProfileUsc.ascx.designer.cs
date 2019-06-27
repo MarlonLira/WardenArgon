@@ -31,6 +31,24 @@ namespace Warden.Component.UserControls.Form {
         protected global::Warden.Component.Common.Label.LabelUsc lbl_aluno;
         
         /// <summary>
+        /// Controle lbl_limite_acesso.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.Label.LabelUsc lbl_limite_acesso;
+        
+        /// <summary>
+        /// Controle lbl_plano.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.Label.LabelUsc lbl_plano;
+        
+        /// <summary>
         /// Controle txt_empresa.
         /// </summary>
         /// <remarks>

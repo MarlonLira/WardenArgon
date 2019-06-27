@@ -22,6 +22,33 @@ namespace Warden.Component.UserControls.Form {
         protected global::System.Web.UI.WebControls.Panel pnl_control;
         
         /// <summary>
+        /// Controle cardInit_control.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.Card.CardInit cardInit_control;
+        
+        /// <summary>
+        /// Controle lbl_title_control.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.Label.LabelUsc lbl_title_control;
+        
+        /// <summary>
+        /// Controle lbl_category_control.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.Label.LabelUsc lbl_category_control;
+        
+        /// <summary>
         /// Controle tbl_control.
         /// </summary>
         /// <remarks>

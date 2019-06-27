@@ -19,7 +19,9 @@
         <div class="card-body">
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
-                    <usc:UserSearchFormUsc runat="server" ID="UserSearchFormUsc"/>
+                    <div class="row">
+                        <usc:UserSearchFormUsc runat="server" ID="UserSearchFormUsc"/>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
                     

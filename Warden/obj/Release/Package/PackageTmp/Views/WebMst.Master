@@ -1,4 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebMst.master.cs" Inherits="Warden.Views.WebMst" %>
+<%@ Import Namespace="Warden.Helper" %>
 
 <!DOCTYPE html>
 <html lang="pt-Br">
@@ -6,114 +7,22 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>Warden</title>
+        <title>2 Gether</title>
 
-        <!-- Favicon -->
-        <link href="/assets/img/brand/favicon.png" rel="icon" type="image/png">
-
-        <!-- Fonts -->
-        <link type="text/css" href="<%=FormatUrl("/assets/css/opensans.css") %>" rel="stylesheet"/>
-
-        <!-- Icons -->
-        <link href="<%=FormatUrl("/assets/vendor/nucleo/css/nucleo.css") %>" rel="stylesheet">
-        <link href="<%=FormatUrl("/assets/vendor/font-awesome/css/font-awesome.min.css") %>" rel="stylesheet">
-
-        <!-- Argon CSS -->
-        <link type="text/css" href="<%=FormatUrl("/assets/css/argon.css") %>" rel="stylesheet">
-        <!-- Paper CSS -->
-        
+        <usc:CssUsc runat="server" ID="css_control" />
         
     </head>
-    <body>
+    <body style="background-color:ghostwhite">
         <form runat="server" >
-            <header class="header-global" style="background-color: black !important">
-                <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
-                  <div class="container">
-                    <a class="navbar-brand mr-lg-5" href=" <%=FormatUrl("./index.html") %>">
-                      <img src="<%=FormatUrl("./assets/img/brand/white.png") %>">
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="navbar-collapse collapse" id="navbar_global">
-                          <div class="navbar-collapse-header">
-                            <div class="row">
-                              <div class="col-6 collapse-brand">
-                                <a href="<%=FormatUrl("/Default.aspx") %>">
-                                  <img src="<%=FormatUrl("/assets/img/brand/blue.png") %>">
-                                </a>
-                              </div>
-                              <div class="col-6 collapse-close">
-                                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
-                                  <span></span>
-                                  <span></span>
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                          <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
-                            <li class="nav-item dropdown">
-                              <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
-                                <i class="ni ni-ui-04 d-lg-none"></i>
-                                <span class="nav-link-inner--text">Acompanhamento</span>
-                              </a>
-                              <div class="dropdown-menu dropdown-menu-xl">
-                                <div class="dropdown-menu-inner">
-                                  <a href="<%=FormatUrl("./Views/Fitness/Etapas.aspx") %>" class="media d-flex align-items-center">
-                                    <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
-                                      <i class="ni ni-spaceship"></i>
-                                    </div>
-                                    <div class="media-body ml-3">
-                                      <h6 class="heading text-primary mb-md-1">Etapas</h6>
-                                      <p class="description d-none d-md-inline-block mb-0">Cadastre as informações do seu aluno aqui.</p>
-                                    </div>
-                                  </a>
-                                  <a href="<%=FormatUrl("./Views/Fitness/Graficos.aspx") %>" class="media d-flex align-items-center">
-                                    <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
-                                      <i class="ni ni-palette"></i>
-                                    </div>
-                                    <div class="media-body ml-3">
-                                      <h6 class="heading text-primary mb-md-1">Graficos</h6>
-                                      <p class="description d-none d-md-inline-block mb-0">Aqui você vera graficos relacionado a um determinado aluno</p>
-                                    </div>
-                                  </a>
-                                  <a href="<%=FormatUrl("./Views/Telemarketing/ContactLeads.aspx") %>" class="media d-flex align-items-center">
-                                    <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
-                                      <i class="ni ni-ui-04"></i>
-                                    </div>
-                                    <div class="media-body ml-3">
-                                      <h5 class="heading text-warning mb-md-1">Leads</h5>
-                                      <p class="description d-none d-md-inline-block mb-0">....Leads</p>
-                                    </div>
-                                  </a>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                              <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
-                                <i class="ni ni-collection d-lg-none"></i>
-                                <span class="nav-link-inner--text">Configurações</span>
-                              </a>
-                              <div class="dropdown-menu">
-                                <a href="#" class="dropdown-item">Perfil</a>
-                                <a href="#" class="dropdown-item">Login</a>
-                                <a href="#" class="dropdown-item">Registro</a>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                        </div>
-                      </nav>
-                </header>
-            
-                <main >
+            <usc:HeaderUsc runat="server" ID="header_control" />
+                <main>
                     <div class="position-relative">
                       <!-- Hero for FREE version -->
                          <section class="section section-lg section-hero section-shaped">
                              <div class="container shape-container d-flex align-items-center py-lg">
-                                  <div class="col px-0">
-                                    <div class="row align-items-center justify-content-center">
-                                      <div class="col-lg-24 text-center">
+                                  <div class="col px-0" >
+                                    <div class="row align-items-center justify-content-center" >
+                                      <div class="col-lg-24 text-center" >
                                          <asp:ContentPlaceHolder ID="MainContent" runat="server">
                                          </asp:ContentPlaceHolder>
                                         </div>
@@ -124,24 +33,7 @@
                     </div>
                 </main>
         </form>
-        <!-- Core -->
-      <script src="<%=FormatUrl("/assets/vendor/jquery/jquery.min.js") %>"></script>
-      <script src="<%=FormatUrl("/assets/vendor/popper/popper.min.js") %>"></script>
-      <script src="<%=FormatUrl("/assets/vendor/bootstrap/bootstrap.min.js") %>"></script>
-      <script src="<%=FormatUrl("/assets/vendor/headroom/headroom.min.js") %>"></script>
-      <script src="<%=FormatUrl("/assets/js/plugins/perfect-scrollbar.jquery.min.js") %>"></script>
-      <!-- Optional JS -->
-      <script src="<%=FormatUrl("/assets/vendor/onscreen/onscreen.min.js") %>"></script>
-      <script src="<%=FormatUrl("/assets/vendor/nouislider/js/nouislider.min.js") %>"></script>
-      <script src="<%=FormatUrl("/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js") %>"></script>
-      <!-- Charts JS -->
-      <script src="<%=FormatUrl("/assets/js/plugins/chartjs.min.js") %>"></script>
-      <!-- Argon JS -->
-      <script src="<%=FormatUrl("/assets/js/argon.js?v=1.0.1") %>"></script>
-      <!-- Chart -->
-      <script src="<%=FormatUrl("/assets/js/charts/Chart.js") %>"></script>
-      <script src="<%=FormatUrl("/assets/js/charts/bar-chart.js") %>"></script>
-      <script src="<%=FormatUrl("/assets/js/charts/area-chart.js") %>"></script>
-      <script src="<%=FormatUrl("/assets/js/charts/line-chart.js") %>"></script>
+
+        <usc:JsUsc runat="server" ID="js_control" />
     </body>
 </html>

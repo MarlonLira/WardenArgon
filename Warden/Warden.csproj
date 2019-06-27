@@ -328,6 +328,8 @@
     <Content Include="Component\Common\Button\ButtonUsc.ascx" />
     <Content Include="Component\Common\Button\RadioButtonUsc.ascx" />
     <Content Include="Component\Common\Button\SquareButtonUsc.ascx" />
+    <Content Include="Component\Common\Card\CardClose.ascx" />
+    <Content Include="Component\Common\Card\CardInit.ascx" />
     <Content Include="Component\Common\Charts\ChartUsc.ascx" />
     <Content Include="Component\Common\Label\LabelUsc.ascx" />
     <Content Include="Component\Common\Modal\ModalUsc.ascx" />
@@ -336,10 +338,13 @@
     <Content Include="Component\Common\Tabs\TabEtapaUsc.ascx" />
     <Content Include="Component\Common\Tabs\TabsUsc.ascx" />
     <Content Include="Component\Common\TextBox\TextBoxUsc.ascx" />
+    <Content Include="Component\Styles\Css\CssUsc.ascx" />
+    <Content Include="Component\Styles\Js\JsUsc.ascx" />
     <Content Include="Component\UserControls\BioImpedancia\BioImpedanciaUsc.ascx" />
     <Content Include="Component\UserControls\Form\UserFormUsc.ascx" />
     <Content Include="Component\UserControls\Form\UserProfileUsc.ascx" />
     <Content Include="Component\UserControls\Form\UserSearchFormUsc.ascx" />
+    <Content Include="Component\UserControls\Header\HeaderUsc.ascx" />
     <Content Include="Component\UserControls\Login\LoginUsc.ascx" />
     <Content Include="Global.asax" />
     <Content Include="Index.html" />
@@ -375,6 +380,20 @@
     </Compile>
     <Compile Include="Component\Common\Button\SquareButtonUsc.ascx.designer.cs">
       <DependentUpon>SquareButtonUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Common\Card\CardClose.ascx.cs">
+      <DependentUpon>CardClose.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\Common\Card\CardClose.ascx.designer.cs">
+      <DependentUpon>CardClose.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Common\Card\CardInit.ascx.cs">
+      <DependentUpon>CardInit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\Common\Card\CardInit.ascx.designer.cs">
+      <DependentUpon>CardInit.ascx</DependentUpon>
     </Compile>
     <Compile Include="Component\Common\Charts\ChartUsc.ascx.cs">
       <DependentUpon>ChartUsc.ascx</DependentUpon>
@@ -432,6 +451,20 @@
     <Compile Include="Component\Common\TextBox\TextBoxUsc.ascx.designer.cs">
       <DependentUpon>TextBoxUsc.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Component\Styles\Css\CssUsc.ascx.cs">
+      <DependentUpon>CssUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\Styles\Css\CssUsc.ascx.designer.cs">
+      <DependentUpon>CssUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Styles\Js\JsUsc.ascx.cs">
+      <DependentUpon>JsUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\Styles\Js\JsUsc.ascx.designer.cs">
+      <DependentUpon>JsUsc.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Component\UserControls\BioImpedancia\BioImpedanciaUsc.ascx.cs">
       <DependentUpon>BioImpedanciaUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -459,6 +492,13 @@
     </Compile>
     <Compile Include="Component\UserControls\Form\UserSearchFormUsc.ascx.designer.cs">
       <DependentUpon>UserSearchFormUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\UserControls\Header\HeaderUsc.ascx.cs">
+      <DependentUpon>HeaderUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\UserControls\Header\HeaderUsc.ascx.designer.cs">
+      <DependentUpon>HeaderUsc.ascx</DependentUpon>
     </Compile>
     <Compile Include="Component\UserControls\Login\LoginUsc.ascx.cs">
       <DependentUpon>LoginUsc.ascx</DependentUpon>

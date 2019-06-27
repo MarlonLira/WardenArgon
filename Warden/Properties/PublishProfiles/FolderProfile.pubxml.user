@@ -10,7 +10,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
   </PropertyGroup>
   <ItemGroup>
     <File Include="assets/css/argon.css">
-      <publishTime>06/20/2019 17:58:02</publishTime>
+      <publishTime>06/26/2019 09:56:21</publishTime>
     </File>
     <File Include="assets/css/argon.min.css">
       <publishTime>06/17/2019 13:45:25</publishTime>
@@ -34,7 +34,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>06/17/2019 13:45:25</publishTime>
     </File>
     <File Include="assets/css/paper-dashboard.min.css">
-      <publishTime>06/17/2019 13:45:25</publishTime>
+      <publishTime>06/04/2019 11:58:44</publishTime>
     </File>
     <File Include="assets/demo/demo.css">
       <publishTime>06/17/2019 13:45:25</publishTime>
@@ -103,7 +103,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>05/07/2019 15:34:27</publishTime>
     </File>
     <File Include="assets/img/bg/bg-red.png">
-      <publishTime>01/04/2019 17:04:15</publishTime>
+      <publishTime>04/01/2019 17:04:15</publishTime>
     </File>
     <File Include="assets/img/bg2.jpg">
       <publishTime>06/17/2019 13:45:25</publishTime>
@@ -355,7 +355,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>10/15/2018 10:17:30</publishTime>
     </File>
     <File Include="assets/js/charts/bar-chart.js">
-      <publishTime>06/07/2019 15:54:52</publishTime>
+      <publishTime>06/25/2019 16:40:58</publishTime>
     </File>
     <File Include="assets/js/charts/Chart.js">
       <publishTime>10/15/2018 10:17:30</publishTime>
@@ -1897,10 +1897,10 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>06/17/2019 13:45:28</publishTime>
     </File>
     <File Include="bin/Warden.dll">
-      <publishTime>06/21/2019 14:47:55</publishTime>
+      <publishTime>06/27/2019 11:23:41</publishTime>
     </File>
     <File Include="bin/Warden.pdb">
-      <publishTime>06/21/2019 14:47:55</publishTime>
+      <publishTime>06/27/2019 11:23:41</publishTime>
     </File>
     <File Include="Component/Common/Button/ButtonUsc.ascx">
       <publishTime>06/17/2019 13:45:25</publishTime>
@@ -1908,26 +1908,44 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
     <File Include="Component/Common/Button/RadioButtonUsc.ascx">
       <publishTime>06/19/2019 15:18:06</publishTime>
     </File>
+    <File Include="Component/Common/Button/SquareButtonUsc.ascx">
+      <publishTime>06/27/2019 11:09:07</publishTime>
+    </File>
+    <File Include="Component/Common/Card/CardClose.ascx">
+      <publishTime>06/27/2019 10:16:54</publishTime>
+    </File>
+    <File Include="Component/Common/Card/CardInit.ascx">
+      <publishTime>06/27/2019 10:06:53</publishTime>
+    </File>
     <File Include="Component/Common/Charts/ChartUsc.ascx">
-      <publishTime>06/18/2019 10:53:17</publishTime>
+      <publishTime>06/25/2019 17:30:30</publishTime>
     </File>
     <File Include="Component/Common/Label/LabelUsc.ascx">
-      <publishTime>06/17/2019 13:45:25</publishTime>
+      <publishTime>06/26/2019 16:36:31</publishTime>
     </File>
     <File Include="Component/Common/Modal/ModalUsc.ascx">
       <publishTime>06/17/2019 13:45:25</publishTime>
     </File>
+    <File Include="Component/Common/Table/HtmlTableUsc.ascx">
+      <publishTime>06/26/2019 09:56:21</publishTime>
+    </File>
     <File Include="Component/Common/Table/TableUsc.ascx">
-      <publishTime>06/17/2019 17:09:24</publishTime>
+      <publishTime>06/26/2019 17:17:19</publishTime>
     </File>
     <File Include="Component/Common/Tabs/TabEtapaUsc.ascx">
-      <publishTime>06/21/2019 14:35:45</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Component/Common/Tabs/TabsUsc.ascx">
-      <publishTime>06/18/2019 10:53:49</publishTime>
+      <publishTime>06/26/2019 17:08:09</publishTime>
     </File>
     <File Include="Component/Common/TextBox/TextBoxUsc.ascx">
-      <publishTime>06/17/2019 13:45:25</publishTime>
+      <publishTime>06/26/2019 17:54:29</publishTime>
+    </File>
+    <File Include="Component/Styles/Css/CssUsc.ascx">
+      <publishTime>06/27/2019 09:52:40</publishTime>
+    </File>
+    <File Include="Component/Styles/Js/JsUsc.ascx">
+      <publishTime>06/27/2019 09:52:39</publishTime>
     </File>
     <File Include="Component/UserControls/BioImpedancia/BioImpedanciaUsc.ascx">
       <publishTime>06/20/2019 10:15:46</publishTime>
@@ -1936,10 +1954,13 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>06/17/2019 18:35:44</publishTime>
     </File>
     <File Include="Component/UserControls/Form/UserProfileUsc.ascx">
-      <publishTime>06/18/2019 16:34:42</publishTime>
+      <publishTime>06/27/2019 10:56:25</publishTime>
     </File>
     <File Include="Component/UserControls/Form/UserSearchFormUsc.ascx">
-      <publishTime>06/19/2019 12:41:50</publishTime>
+      <publishTime>06/27/2019 10:45:49</publishTime>
+    </File>
+    <File Include="Component/UserControls/Header/HeaderUsc.ascx">
+      <publishTime>06/27/2019 10:25:33</publishTime>
     </File>
     <File Include="Component/UserControls/Login/LoginUsc.ascx">
       <publishTime>06/17/2019 13:45:25</publishTime>
@@ -1948,31 +1969,40 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>06/17/2019 13:45:25</publishTime>
     </File>
     <File Include="Index.html">
-      <publishTime>06/21/2019 14:46:57</publishTime>
+      <publishTime>06/21/2019 14:54:23</publishTime>
     </File>
     <File Include="Settings.xml">
-      <publishTime>06/19/2019 12:04:29</publishTime>
+      <publishTime>06/26/2019 14:31:26</publishTime>
     </File>
     <File Include="Views/Default.aspx">
-      <publishTime>06/19/2019 12:41:25</publishTime>
+      <publishTime>06/27/2019 09:56:37</publishTime>
+    </File>
+    <File Include="Views/Fitness/Aluno.aspx">
+      <publishTime>06/27/2019 11:13:38</publishTime>
     </File>
     <File Include="Views/Fitness/Etapas.aspx">
       <publishTime>06/20/2019 17:41:40</publishTime>
     </File>
     <File Include="Views/Fitness/Graficos.aspx">
-      <publishTime>06/19/2019 13:26:08</publishTime>
+      <publishTime>06/25/2019 16:47:16</publishTime>
     </File>
     <File Include="Views/Login.aspx">
-      <publishTime>06/20/2019 17:11:26</publishTime>
+      <publishTime>06/26/2019 14:08:37</publishTime>
+    </File>
+    <File Include="Views/Menu.aspx">
+      <publishTime>06/26/2019 13:25:23</publishTime>
     </File>
     <File Include="Views/Telemarketing/ContactLeads.aspx">
       <publishTime>06/18/2019 15:14:09</publishTime>
     </File>
+    <File Include="Views/teste.aspx">
+      <publishTime>06/25/2019 16:04:21</publishTime>
+    </File>
     <File Include="Views/WebMst.Master">
-      <publishTime>06/21/2019 14:46:30</publishTime>
+      <publishTime>06/27/2019 09:55:50</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/21/2019 12:40:53</publishTime>
+      <publishTime>06/27/2019 11:23:47</publishTime>
     </File>
   </ItemGroup>
 </Project>

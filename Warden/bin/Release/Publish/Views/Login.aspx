@@ -8,30 +8,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title> Warden</title>
     <!-- Favicon -->
-  <link href="<%=Help.FormatUrl(" ../assets/img/brand/favicon.png") %>" rel="icon" type="image/png"/>
+  <link href="<%=Help.FormatUrl("/assets/img/brand/favicon.png") %>" rel="icon" type="image/png"/>
   <!-- Fonts -->
-  <link type="text/css" href="<%=Help.FormatUrl("../assets/css/opensans.css") %> rel="stylesheet"/>
+  <link type="text/css" href="<%=Help.FormatUrl("/assets/css/opensans.css") %> rel="stylesheet"/>
   <!-- Icons -->
-  <link href="<%=Help.FormatUrl("../assets/vendor/nucleo/css/nucleo.css") %>" rel="stylesheet"/>
-  <link href=" <%=Help.FormatUrl("../assets/vendor/font-awesome/css/font-awesome.min.css") %>" rel="stylesheet"/>
+  <link href="<%=Help.FormatUrl("/assets/vendor/nucleo/css/nucleo.css") %>" rel="stylesheet"/>
+  <link href=" <%=Help.FormatUrl("/assets/vendor/font-awesome/css/font-awesome.min.css") %>" rel="stylesheet"/>
   <!-- Argon CSS -->
-  <link type="text/css" href="<%=Help.FormatUrl("../assets/css/argon.css?v=1.0.1") %>"  rel="stylesheet"/>
+  <link type="text/css" href="<%=Help.FormatUrl("/assets/css/argon.css?v=1.0.1") %>"  rel="stylesheet"/>
   <!-- Docs CSS -->
-  <link type="text/css" href="<%=Help.FormatUrl("../assets/css/docs.min.css") %>" rel="stylesheet"/>
+  
 </head>
-<body>
-    <form runat="server">
-    <main>
+<body style=" justify-content:center">
+    <main >
     <section class="section section-shaped section-lg">
       <div class="shape shape-style-1" style="background-color: black">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
       </div>
       <div class="container pt-lg-md">
         <div class="row justify-content-center">
@@ -39,17 +30,16 @@
             <div class="card bg-secondary shadow border-0">
               <div class="card-header bg-white pb-5">
                 <div class="text-muted text-center mb-3">
-                  <small></small>
                 </div>
-                  <div style="align-items:center !important">
-                    <img width="250" height="100" style="position:relative; left:15%; top:15%;" src="<%=Help.FormatUrl("../assets/img/logo/white.png")%>"/>
+                  <div style="justify-content: center !important">
+                    <img width="250" height="100" style="position:relative; left:15%; top:15%; justify-content: center !important" src="<%=Help.FormatUrl("/assets/img/logo/white.png")%>"/>
                   </div>
               </div>
               <div class="card-body px-lg-5 py-lg-5">
                 <div class="text-center text-muted mb-4">
                   <small>Login</small>
                 </div>
-                <div role="form">
+                <form role="form" runat="server">
                   <div class="form-group mb-3">
                     <usc:TextBoxUsc ID="txt_email" runat="server" Icon="email" Placeholder="CPF"/>
                   </div>
@@ -65,8 +55,10 @@
                   <div class="text-center">
                       <br />
                       <usc:ButtonUsc ID="ButtonUsc" runat="server" Text="Confirmar"/>
+                      <br />
+                      <usc:LabelUsc runat="server" Bold="true" FontSize="10" Color="red" ID="lbl_erro"/>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
             <div class="row mt-3">
@@ -86,13 +78,12 @@
       </div>
     </section>
   </main>
-</form>
     <!-- Core -->
-      <script src="<%=Help.FormatUrl("../assets/vendor/jquery/jquery.min.js") %>"></script>
-      <script src="<%=Help.FormatUrl("../assets/vendor/popper/popper.min.js") %>"></script>
-      <script src="<%=Help.FormatUrl("../assets/vendor/bootstrap/bootstrap.min.js") %>"></script>
-      <script src="<%=Help.FormatUrl("../assets/vendor/headroom/headroom.min.js") %>"></script>
+      <script src="<%=Help.FormatUrl("/assets/vendor/jquery/jquery.min.js") %>"></script>
+      <script src="<%=Help.FormatUrl("/assets/vendor/popper/popper.min.js") %>"></script>
+      <script src="<%=Help.FormatUrl("/assets/vendor/bootstrap/bootstrap.min.js") %>"></script>
+      <script src="<%=Help.FormatUrl("/assets/vendor/headroom/headroom.min.js") %>"></script>
     <!-- Argon JS -->
-      <script src="<%=Help.FormatUrl("../assets/js/argon.js?v=1.0.1") %>></script>
+      <script src="<%=Help.FormatUrl("/assets/js/argon.js?v=1.0.1") %>></script>
 </body>
 </html>

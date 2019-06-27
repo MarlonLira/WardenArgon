@@ -41,7 +41,18 @@
                     <usc:BioImpedanciaUsc runat="server" ID="BioImpedanciaUsc"/>
                 </div>
                 <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
-                    <p class="description">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
+                     <usc:LabelUsc Runat="server" Text="Proxima Medição" FontSize="15"/>
+                            
+                        <usc:TextBoxUsc runat="server" Icon="Date" TextMode="Date" Mode="larger" Size="6" IsModified="true"/>
+                    
+                    <div class="rows" >
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <usc:TextBoxUsc runat="server" Icon="Date" TextMode="Search" Placeholder="Professor"/>
+                            </div>
+                        </div>
+                    </div>
+                    <usc:ButtonUsc runat="server" Text="Salvar"/>
                 </div>
             </div>
         </div>
