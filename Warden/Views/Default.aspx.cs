@@ -7,6 +7,11 @@ namespace Warden.Views {
 
         protected void Page_Load(object sender, EventArgs e) {
             /*this.TabsUsc.OnFind += TabsUsc_OnFind;*/
+
+            if (Global.Funcionario == null & Global.Aluno == null) {
+                Response.Redirect("~/Views/Login.aspx", false);
+            }
+
             this.UserSearchFormUsc.OnFind += UserSearchFormUsc_OnFind;
         }
 

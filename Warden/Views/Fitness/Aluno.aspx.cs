@@ -10,7 +10,14 @@ namespace Warden.Views.Fitness {
                 profile_control.IsReadOnly = true;
                 profile_control.LoadForm((AlunoPst)Session["Aluno"]);
             }
-            
+            if (Global.Funcionario == null & Global.Aluno == null) {
+                Response.Redirect("~/Views/Login.aspx", false);
+            }
+
+            if (Global.Aluno == null) {
+                Response.Redirect("~/Views/Default.aspx", false);
+            }
+
             btn_prox_etapa.OnClick += new SquareButtonUsc.OnClickEvent(BtnProxEtapa_Click);
             btn_verif_etapa.OnClick += new SquareButtonUsc.OnClickEvent(BtnVerifEtapa_Click);
         }

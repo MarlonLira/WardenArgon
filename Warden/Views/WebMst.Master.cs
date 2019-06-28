@@ -5,7 +5,7 @@ using System.Web.UI;
 namespace Warden.Views {
     public partial class WebMst : MasterPage {
         protected void Page_Load(object sender, EventArgs e) {
-            /*if (Global.Funcionario == null & Global.Aluno == null) {
+           /* if (Global.Funcionario == null & Global.Aluno == null) {
                 Response.Redirect("~/Views/Login.aspx", false);
             }*/
         }

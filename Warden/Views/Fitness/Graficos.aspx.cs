@@ -17,6 +17,9 @@ namespace Warden.Views.Fitness {
 
                 Session.Add("LoadCharts", ChartUsc.DataSource);
             }
+            if (Global.Funcionario == null & Global.Aluno == null) {
+                Response.Redirect("~/Views/Login.aspx", false);
+            }
         }
 
     }

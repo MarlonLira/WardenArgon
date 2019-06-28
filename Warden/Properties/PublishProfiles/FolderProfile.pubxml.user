@@ -34,7 +34,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>06/17/2019 13:45:25</publishTime>
     </File>
     <File Include="assets/css/paper-dashboard.min.css">
-      <publishTime>06/04/2019 11:58:44</publishTime>
+      <publishTime>04/06/2019 11:58:44</publishTime>
     </File>
     <File Include="assets/demo/demo.css">
       <publishTime>06/17/2019 13:45:25</publishTime>
@@ -103,7 +103,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>05/07/2019 15:34:27</publishTime>
     </File>
     <File Include="assets/img/bg/bg-red.png">
-      <publishTime>04/01/2019 17:04:15</publishTime>
+      <publishTime>01/04/2019 17:04:15</publishTime>
     </File>
     <File Include="assets/img/bg2.jpg">
       <publishTime>06/17/2019 13:45:25</publishTime>
@@ -1897,10 +1897,10 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>06/17/2019 13:45:28</publishTime>
     </File>
     <File Include="bin/Warden.dll">
-      <publishTime>06/27/2019 11:23:41</publishTime>
+      <publishTime>06/28/2019 12:41:03</publishTime>
     </File>
     <File Include="bin/Warden.pdb">
-      <publishTime>06/27/2019 11:23:41</publishTime>
+      <publishTime>06/28/2019 12:41:03</publishTime>
     </File>
     <File Include="Component/Common/Button/ButtonUsc.ascx">
       <publishTime>06/17/2019 13:45:25</publishTime>
@@ -1954,7 +1954,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>06/17/2019 18:35:44</publishTime>
     </File>
     <File Include="Component/UserControls/Form/UserProfileUsc.ascx">
-      <publishTime>06/27/2019 10:56:25</publishTime>
+      <publishTime>06/27/2019 12:15:38</publishTime>
     </File>
     <File Include="Component/UserControls/Form/UserSearchFormUsc.ascx">
       <publishTime>06/27/2019 10:45:49</publishTime>
@@ -1962,17 +1962,23 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
     <File Include="Component/UserControls/Header/HeaderUsc.ascx">
       <publishTime>06/27/2019 10:25:33</publishTime>
     </File>
+    <File Include="Component/UserControls/Login/Login2GetherUsc.ascx">
+      <publishTime>06/28/2019 11:28:31</publishTime>
+    </File>
+    <File Include="Component/UserControls/Login/LoginTesteUsc.ascx">
+      <publishTime>06/28/2019 10:46:41</publishTime>
+    </File>
     <File Include="Component/UserControls/Login/LoginUsc.ascx">
-      <publishTime>06/17/2019 13:45:25</publishTime>
+      <publishTime>06/28/2019 10:51:06</publishTime>
     </File>
     <File Include="Global.asax">
       <publishTime>06/17/2019 13:45:25</publishTime>
     </File>
     <File Include="Index.html">
-      <publishTime>06/21/2019 14:54:23</publishTime>
+      <publishTime>06/28/2019 12:40:35</publishTime>
     </File>
     <File Include="Settings.xml">
-      <publishTime>06/26/2019 14:31:26</publishTime>
+      <publishTime>06/28/2019 11:36:30</publishTime>
     </File>
     <File Include="Views/Default.aspx">
       <publishTime>06/27/2019 09:56:37</publishTime>
@@ -1987,7 +1993,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>06/25/2019 16:47:16</publishTime>
     </File>
     <File Include="Views/Login.aspx">
-      <publishTime>06/26/2019 14:08:37</publishTime>
+      <publishTime>06/28/2019 12:20:40</publishTime>
     </File>
     <File Include="Views/Menu.aspx">
       <publishTime>06/26/2019 13:25:23</publishTime>
@@ -1998,11 +2004,14 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
     <File Include="Views/teste.aspx">
       <publishTime>06/25/2019 16:04:21</publishTime>
     </File>
+    <File Include="Views/TesteLogin.aspx">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
     <File Include="Views/WebMst.Master">
-      <publishTime>06/27/2019 09:55:50</publishTime>
+      <publishTime>06/28/2019 12:19:22</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/27/2019 11:23:47</publishTime>
+      <publishTime>06/28/2019 12:22:49</publishTime>
     </File>
   </ItemGroup>
 </Project>

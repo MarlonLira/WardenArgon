@@ -1,10 +1,8 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LoginUsc.ascx.cs" Inherits="Warden.Component.UserControls.Login.LoginUsc" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Login2GetherUsc.ascx.cs" Inherits="Warden.Component.UserControls.Login.Login2GetherUsc" %>
 <%@ Import Namespace="Warden.Helper" %>
 
-<div class="col-md-4">
-<button type="button" class="btn btn-block btn-default" data-toggle="modal" data-target="#modal-form">2Gether</button>
-    
-    <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+<div class="col-md-6">
+    <div class="modal fade" id="modal-2gether" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
     <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-body p-0">
@@ -13,7 +11,7 @@
                 <div class="text-muted text-center mb-3">
                 </div>
                   <div style="justify-content: center !important">
-                    <img width="250" height="100" style="position:relative; left:15%; top:15%; justify-content: center !important" src="<%=Help.FormatUrl("/assets/img/logo/white.png")%>"/>
+                    <img width="250" height="100" style="position:relative; justify-content: center !important" src="<%=Help.FormatUrl("/assets/img/logo/white.png")%>"/>
                   </div>
               </div>
               <div class="card-body px-lg-5 py-lg-5">
@@ -40,18 +38,6 @@
                       <usc:LabelUsc runat="server" Bold="true" FontSize="10" Color="red" ID="lbl_erro"/>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="row mt-3">
-              <div class="col-6">
-                <a href="#" class="text-light">
-                  <small>Forgot password?</small>
-                </a>
-              </div>
-              <div class="col-6 text-right">
-                <a href="#" class="text-light">
-                  <small>Create new account</small>
-                </a>
               </div>
             </div>
             </div>

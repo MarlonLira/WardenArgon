@@ -345,6 +345,8 @@
     <Content Include="Component\UserControls\Form\UserProfileUsc.ascx" />
     <Content Include="Component\UserControls\Form\UserSearchFormUsc.ascx" />
     <Content Include="Component\UserControls\Header\HeaderUsc.ascx" />
+    <Content Include="Component\UserControls\Login\Login2GetherUsc.ascx" />
+    <Content Include="Component\UserControls\Login\LoginTesteUsc.ascx" />
     <Content Include="Component\UserControls\Login\LoginUsc.ascx" />
     <Content Include="Global.asax" />
     <Content Include="Index.html" />
@@ -352,11 +354,13 @@
     <Content Include="Views\Default.aspx" />
     <Content Include="Views\Fitness\Aluno.aspx" />
     <Content Include="Views\Fitness\Etapas.aspx" />
+    <Content Include="Views\Fitness\FitnessPge.aspx" />
     <Content Include="Views\Fitness\Graficos.aspx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\Menu.aspx" />
     <Content Include="Views\Telemarketing\ContactLeads.aspx" />
     <Content Include="Views\teste.aspx" />
+    <Content Include="Views\TesteLogin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -500,6 +504,20 @@
     <Compile Include="Component\UserControls\Header\HeaderUsc.ascx.designer.cs">
       <DependentUpon>HeaderUsc.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Component\UserControls\Login\Login2GetherUsc.ascx.cs">
+      <DependentUpon>Login2GetherUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\UserControls\Login\Login2GetherUsc.ascx.designer.cs">
+      <DependentUpon>Login2GetherUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\UserControls\Login\LoginTesteUsc.ascx.cs">
+      <DependentUpon>LoginTesteUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\UserControls\Login\LoginTesteUsc.ascx.designer.cs">
+      <DependentUpon>LoginTesteUsc.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Component\UserControls\Login\LoginUsc.ascx.cs">
       <DependentUpon>LoginUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -532,6 +550,13 @@
     </Compile>
     <Compile Include="Views\Fitness\Etapas.aspx.designer.cs">
       <DependentUpon>Etapas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fitness\FitnessPge.aspx.cs">
+      <DependentUpon>FitnessPge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Fitness\FitnessPge.aspx.designer.cs">
+      <DependentUpon>FitnessPge.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Fitness\Graficos.aspx.cs">
       <DependentUpon>Graficos.aspx</DependentUpon>
@@ -567,6 +592,13 @@
     </Compile>
     <Compile Include="Views\teste.aspx.designer.cs">
       <DependentUpon>teste.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TesteLogin.aspx.cs">
+      <DependentUpon>TesteLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TesteLogin.aspx.designer.cs">
+      <DependentUpon>TesteLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\WebMst.Master.cs">
       <DependentUpon>WebMst.Master</DependentUpon>

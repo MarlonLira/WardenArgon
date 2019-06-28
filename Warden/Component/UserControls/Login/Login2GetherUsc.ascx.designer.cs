@@ -10,7 +10,7 @@
 namespace Warden.Component.UserControls.Login {
     
     
-    public partial class LoginUsc {
+    public partial class Login2GetherUsc {
         
         /// <summary>
         /// Controle txt_email.

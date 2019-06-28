@@ -12,9 +12,23 @@
         <usc:CssUsc runat="server" ID="css_control" />
         
     </head>
-    <body style="background-color:ghostwhite">
+    <%if (Session["User"] != null) { %>
+        <body style="background-color:ghostwhite">
+        <%} else {%>
+            <body style="
+                background-image:url(../assets/img/bg/3-1.jpg); 
+                background-repeat:no-repeat; 
+                background-color:black; 
+                background-size:cover; 
+                background-position: center center;
+                background-size:250%
+                ">
+            <%} %>
         <form runat="server" >
-            <usc:HeaderUsc runat="server" ID="header_control" />
+            <% if(Session["User"] != null)
+                    if ((Boolean)Session["User"] == true) {%>
+                        <usc:HeaderUsc runat="server" ID="header_control" />
+            <%      } %>
                 <main>
                     <div class="position-relative">
                       <!-- Hero for FREE version -->
