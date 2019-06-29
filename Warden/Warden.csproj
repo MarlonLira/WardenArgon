@@ -340,6 +340,7 @@
     <Content Include="Component\Common\TextBox\TextBoxUsc.ascx" />
     <Content Include="Component\Styles\Css\CssUsc.ascx" />
     <Content Include="Component\Styles\Js\JsUsc.ascx" />
+    <Content Include="Component\UserControls\Avatar\AvatarUsc.ascx" />
     <Content Include="Component\UserControls\BioImpedancia\BioImpedanciaUsc.ascx" />
     <Content Include="Component\UserControls\Form\UserFormUsc.ascx" />
     <Content Include="Component\UserControls\Form\UserProfileUsc.ascx" />
@@ -353,6 +354,7 @@
     <Content Include="Settings.xml" />
     <Content Include="Views\Default.aspx" />
     <Content Include="Views\Fitness\Aluno.aspx" />
+    <Content Include="Views\Fitness\Colaborador\Atendimento.aspx" />
     <Content Include="Views\Fitness\Etapas.aspx" />
     <Content Include="Views\Fitness\FitnessPge.aspx" />
     <Content Include="Views\Fitness\Graficos.aspx" />
@@ -360,7 +362,6 @@
     <Content Include="Views\Menu.aspx" />
     <Content Include="Views\Telemarketing\ContactLeads.aspx" />
     <Content Include="Views\teste.aspx" />
-    <Content Include="Views\TesteLogin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -469,6 +470,13 @@
     <Compile Include="Component\Styles\Js\JsUsc.ascx.designer.cs">
       <DependentUpon>JsUsc.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Component\UserControls\Avatar\AvatarUsc.ascx.cs">
+      <DependentUpon>AvatarUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\UserControls\Avatar\AvatarUsc.ascx.designer.cs">
+      <DependentUpon>AvatarUsc.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Component\UserControls\BioImpedancia\BioImpedanciaUsc.ascx.cs">
       <DependentUpon>BioImpedanciaUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -544,6 +552,13 @@
     <Compile Include="Views\Fitness\Aluno.aspx.designer.cs">
       <DependentUpon>Aluno.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Fitness\Colaborador\Atendimento.aspx.cs">
+      <DependentUpon>Atendimento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Fitness\Colaborador\Atendimento.aspx.designer.cs">
+      <DependentUpon>Atendimento.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Fitness\Etapas.aspx.cs">
       <DependentUpon>Etapas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -592,13 +607,6 @@
     </Compile>
     <Compile Include="Views\teste.aspx.designer.cs">
       <DependentUpon>teste.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\TesteLogin.aspx.cs">
-      <DependentUpon>TesteLogin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\TesteLogin.aspx.designer.cs">
-      <DependentUpon>TesteLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\WebMst.Master.cs">
       <DependentUpon>WebMst.Master</DependentUpon>
@@ -982,6 +990,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
+    <Folder Include="Views\Fitness\Aluno\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

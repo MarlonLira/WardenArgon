@@ -20,7 +20,7 @@
                 </div>
                 <div role="form" runat="server">
                   <div class="form-group mb-3">
-                    <usc:TextBoxUsc ID="txt_email" runat="server" Icon="email" Placeholder="CPF"/>
+                    <usc:TextBoxUsc ID="txt_email" runat="server" Icon="badge" Placeholder="CPF"/>
                   </div>
                   <div class="form-group">
                     <usc:TextBoxUsc ID="txt_password" runat="server" Icon="password" Placeholder="Senha" TextMode="Password"/>

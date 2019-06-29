@@ -41,7 +41,7 @@ namespace Warden.Component.UserControls.Form {
             }
 
             Table = Aluno.Pesquisar();
-
+            Session.Add("Table", Table);
 
 
             if (Table.Rows.Count == 1) {

@@ -6,6 +6,7 @@
     </div>
         <usc:LabelUsc Text=" Escolha o Sistema" FontSize="16" runat="server" Color="white"/>
         <button type="button" class="btn btn-block btn-default" data-toggle="modal" data-target="#modal-2gether">2Gether</button>
+        <button type="button" class="btn btn-block btn-default" data-toggle="modal" data-target="#modal-Portal">Portal</button>
         <button type="button" class="btn btn-block btn-default" data-toggle="modal" data-target="#modal-Argon">Argon</button>
         <usc:Login2GetherUsc runat="server" />
         <%if (Session["Error"] != null) {

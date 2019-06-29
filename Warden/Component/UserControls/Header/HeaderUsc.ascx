@@ -1,6 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HeaderUsc.ascx.cs" Inherits="Warden.Component.UserControls.Header.HeaderUsc" %>
 <%@ Import Namespace="Warden.Helper" %>
 
+<% if(Session["User"] != null)
+    if ((Boolean)Session["User"] == true) {%>
 <header class="header-global" style="background-color:black !important">
     <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
         <div class="container">
@@ -80,3 +82,4 @@
         </div>
     </nav>
 </header>
+<%  } %>
