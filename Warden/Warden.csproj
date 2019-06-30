@@ -351,6 +351,7 @@
     <Content Include="Component\Common\Button\SquareButtonUsc.ascx" />
     <Content Include="Component\Common\Card\CardClose.ascx" />
     <Content Include="Component\Common\Card\CardInit.ascx" />
+    <Content Include="Component\Common\Card\CardUsc.ascx" />
     <Content Include="Component\Common\Charts\ChartUsc.ascx" />
     <Content Include="Component\Common\Label\LabelUsc.ascx" />
     <Content Include="Component\Common\Modal\ModalUsc.ascx" />
@@ -439,6 +440,13 @@
     </Compile>
     <Compile Include="Component\Common\Card\CardInit.ascx.designer.cs">
       <DependentUpon>CardInit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Common\Card\CardUsc.ascx.cs">
+      <DependentUpon>CardUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\Common\Card\CardUsc.ascx.designer.cs">
+      <DependentUpon>CardUsc.ascx</DependentUpon>
     </Compile>
     <Compile Include="Component\Common\Charts\ChartUsc.ascx.cs">
       <DependentUpon>ChartUsc.ascx</DependentUpon>

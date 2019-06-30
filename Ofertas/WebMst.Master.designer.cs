@@ -7,18 +7,27 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Warden.Views.Fitness.Colaborador {
+namespace Ofertas {
     
     
-    public partial class Atendimento {
+    public partial class WebMst {
         
         /// <summary>
-        /// Controle card_control.
+        /// Controle frm_main.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.Card.CardUsc card_control;
+        protected global::System.Web.UI.HtmlControls.HtmlForm frm_main;
+        
+        /// <summary>
+        /// Controle ctt_main.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ctt_main;
     }
 }

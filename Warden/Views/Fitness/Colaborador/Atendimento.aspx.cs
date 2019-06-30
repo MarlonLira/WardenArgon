@@ -1,30 +1,22 @@
-﻿using Brasdat.Gestor.Library.Business.Classes.Fitness;
+﻿using Brasdat.Gestor.Library.Core.Classes.Helpers;
 using System;
 using System.Data;
-using System.Web.UI;
+using System.Data.SqlClient;
 
 namespace Warden.Views.Fitness.Colaborador {
     public partial class Atendimento : FitnessPge {
-        protected void Page_Load(object sender, EventArgs e) {
-            if (Session["Table"] != null) {
-
+        protected override void OnLoad(EventArgs e) {
+            base.OnLoad(e);
+            if (Session["Table"] == null) {
+                DataTable Table = new DataTable();
+                Table = Sql.ExecuteReader("SELECT TOP 10 * FROM [FITNESS].[VIW_ALUNO] " +
+                                          " WHERE [STATUS] = 'AT' " +
+                                          " AND CODIGO IS NOT NULL " +
+                                          " ORDER BY ID DESC");
+                Session["Table"] = Table;
             }
         }
 
-        public void LoadAvatar() {
-
-            DataTable Table = new DataTable();
-            AlunoPst Aluno = new AlunoPst();
-
-            if (Session["Table"] != null) {
-                Table = (DataTable)Session["Table"];
-            }
-
-            foreach (DataRow Row in Table.Rows) {
-
-                Aluno.Preencher(Row);
-                avatar_control.Aluno = Aluno;
-            }
-        }
+        SqlHlp Sql { get { return SqlHlp.Instance; } }
     }
 }
