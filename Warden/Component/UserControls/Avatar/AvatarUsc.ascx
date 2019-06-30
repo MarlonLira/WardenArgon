@@ -10,7 +10,7 @@
     DataTable Table = (DataTable)Session["Table"];
 
     foreach (DataRow Row in Table.Rows) {
-        
+
         lbl_aluno.Text = Row["nome"].ToString();
         lbl_plano.Text = Row["codigo"].ToString();
         lbl_data.Text = "23/06/2019";

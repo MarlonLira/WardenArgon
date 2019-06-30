@@ -8,6 +8,9 @@ namespace Warden.Views {
             /* if (Global.Funcionario == null & Global.Aluno == null) {
                  Response.Redirect("~/Views/Login.aspx", false);
              }*/
+
+            Session.Add("Key", Helper.Help.Crypto.GenerateRandomNumber(8));
+            Session.Add("IV", Helper.Help.Crypto.GenerateRandomNumber(8));
         }
 
         public String Usuario() {

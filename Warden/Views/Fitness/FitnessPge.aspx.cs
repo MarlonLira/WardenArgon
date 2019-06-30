@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Warden.Views.Fitness {
-    public partial class FitnessPge : Page {
+    public partial class FitnessPge : BasePge {
 
         protected override void OnLoad(EventArgs e) {
             base.OnLoad(e);
@@ -18,5 +13,6 @@ namespace Warden.Views.Fitness {
                 Response.Redirect("~/Views/Default.aspx", false);
             }
         }
+        
     }
 }

@@ -6,6 +6,7 @@ using Brasdat.Gestor.Library.Core.Classes.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Text;
 using System.Web;
 
 namespace Warden {
@@ -21,6 +22,7 @@ namespace Warden {
         private const String KEY_CACHE_EMPRESA = "Global.Empresa";
         private const String KEY_CACHE_PROFESSORES = "Global.Professores";
         private const String KEY_CACHE_CONSULTORES = "Global.Consultores";
+        
 
         #endregion
 
@@ -288,8 +290,21 @@ namespace Warden {
 
         #region Methods
 
+        public Byte[] GetKey() {
+            Byte[] Key;
+
+            Key = (Byte [])Session["Key"];
+            Encrypt(Key);
+            return Key;
+        }
+
+        public static void Encrypt( Byte[]  Key) {
+           
+        }
+
         public static void ProfessoresLimpar() {
             ContextHlp.SetCache(KEY_CACHE_PROFESSORES, null);
+            
         }
 
         public static void EmpresasLimpar() {

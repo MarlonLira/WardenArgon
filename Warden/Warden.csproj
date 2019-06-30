@@ -89,6 +89,15 @@
   <ItemGroup>
     <Content Include="assets\css\argon.css" />
     <Content Include="assets\css\argon.min.css" />
+    <Content Include="assets\css\bootstrap-grid.css" />
+    <Content Include="assets\css\bootstrap-grid.min.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\calendar\calendars.css" />
+    <Content Include="assets\css\calendar\fullcalendar.min.css" />
+    <Content Include="assets\css\calendar\jquery-ui.min.css" />
+    <Content Include="assets\css\calendar\jquery.qtip.min.css" />
+    <Content Include="assets\css\jquery.dataTables.min.css" />
+    <Content Include="assets\css\jquery.mCustomScrollbar.min.css" />
     <Content Include="assets\css\material-kit.css" />
     <Content Include="assets\css\material-kit.min.css" />
     <Content Include="assets\css\opensans.css" />
@@ -195,6 +204,12 @@
     <Content Include="assets\img\theme\team-4-800x800.jpg" />
     <Content Include="assets\js\argon.js" />
     <Content Include="assets\js\argon.min.js" />
+    <Content Include="assets\js\calendar\calendarscript.js" />
+    <Content Include="assets\js\calendar\fullcalendar.min.js" />
+    <Content Include="assets\js\calendar\jquery-ui.min.js" />
+    <Content Include="assets\js\calendar\jquery.min.js" />
+    <Content Include="assets\js\calendar\jquery.qtip.min.js" />
+    <Content Include="assets\js\calendar\moment.min.js" />
     <Content Include="assets\js\charts\area-chart.js" />
     <Content Include="assets\js\charts\bar-chart.js" />
     <Content Include="assets\js\charts\Chart.js" />
@@ -214,6 +229,10 @@
     <Content Include="assets\js\plugins\moment.min.js" />
     <Content Include="assets\js\plugins\nouislider.min.js" />
     <Content Include="assets\js\plugins\perfect-scrollbar.jquery.min.js" />
+    <Content Include="assets\js\table\data-table-act.js" />
+    <Content Include="assets\js\table\jquery-1.12.4.min.js" />
+    <Content Include="assets\js\table\jquery.dataTables.min.js" />
+    <Content Include="assets\js\table\jquery.mCustomScrollbar.concat.min.js" />
     <Content Include="assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker.css" />
     <Content Include="assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker.min.css" />
     <Content Include="assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker.standalone.css" />
@@ -352,9 +371,11 @@
     <Content Include="Global.asax" />
     <Content Include="Index.html" />
     <Content Include="Settings.xml" />
+    <Content Include="Views\BasePge.aspx" />
     <Content Include="Views\Default.aspx" />
     <Content Include="Views\Fitness\Aluno.aspx" />
     <Content Include="Views\Fitness\Colaborador\Atendimento.aspx" />
+    <Content Include="Views\Fitness\Colaborador\Calendar.aspx" />
     <Content Include="Views\Fitness\Etapas.aspx" />
     <Content Include="Views\Fitness\FitnessPge.aspx" />
     <Content Include="Views\Fitness\Graficos.aspx" />
@@ -362,6 +383,7 @@
     <Content Include="Views\Menu.aspx" />
     <Content Include="Views\Telemarketing\ContactLeads.aspx" />
     <Content Include="Views\teste.aspx" />
+    <Content Include="Views\teste2.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -538,6 +560,13 @@
     </Compile>
     <Compile Include="Helper\Help.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\BasePge.aspx.cs">
+      <DependentUpon>BasePge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\BasePge.aspx.designer.cs">
+      <DependentUpon>BasePge.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -558,6 +587,13 @@
     </Compile>
     <Compile Include="Views\Fitness\Colaborador\Atendimento.aspx.designer.cs">
       <DependentUpon>Atendimento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fitness\Colaborador\Calendar.aspx.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Fitness\Colaborador\Calendar.aspx.designer.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Fitness\Etapas.aspx.cs">
       <DependentUpon>Etapas.aspx</DependentUpon>
@@ -607,6 +643,13 @@
     </Compile>
     <Compile Include="Views\teste.aspx.designer.cs">
       <DependentUpon>teste.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\teste2.aspx.cs">
+      <DependentUpon>teste2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\teste2.aspx.designer.cs">
+      <DependentUpon>teste2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\WebMst.Master.cs">
       <DependentUpon>WebMst.Master</DependentUpon>
@@ -976,6 +1019,10 @@
     <Content Include="assets\vendor\nucleo\fonts\nucleo-icons.ttf" />
     <Content Include="assets\vendor\nucleo\fonts\nucleo-icons.woff" />
     <Content Include="assets\vendor\nucleo\fonts\nucleo-icons.woff2" />
+    <Content Include="assets\css\bootstrap-grid.css.map" />
+    <Content Include="assets\css\bootstrap-grid.min.css.map" />
+    <Content Include="assets\css\bootstrap.css.map" />
+    <Content Include="assets\css\bootstrap.min.css.map" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

@@ -15,29 +15,14 @@ namespace Warden.Component.UserControls.Avatar {
 
         public AlunoPst Aluno;
 
-        public void LoadAvatar() {
-
-            if (Session["Row"] != null) {
-                DataRow Row = (DataRow)Session["Row"];
-                Aluno = new AlunoPst();
-                Aluno.Preencher(Row);
-                lbl_aluno.Text = Aluno.Nome;
-                lbl_data.Text = "23/06/2019";
-                lbl_plano.Text = Aluno.ContratoObservacao;
-            } else if(Aluno == null) {
-                lbl_aluno.Text = "Zezo";
-                lbl_data.Text = "23/06/2019";
-                lbl_plano.Text = "dois";
-            } else {
-                lbl_aluno.Text = Aluno.Nome;
-                lbl_data.Text = "23/06/2019";
-                lbl_plano.Text = Aluno.ContratoObservacao;
-            }
-            
-        }
-
         public void SelectedValue() {
+            Byte[] Key = (Byte[])Session["Key"];
+            Byte[] IV = (Byte[])Session["IV"];
+            Global global = new Global();
+            global.GetKey();
+
             string AlunoMatricula = Request.QueryString["Matricula"];
+
             string AlunoEmpresa = Request.QueryString["Empresa"];
 
             if (!String.IsNullOrEmpty(AlunoMatricula)) {

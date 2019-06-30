@@ -10,6 +10,6 @@
 namespace Warden.Views {
     
     
-    public partial class teste {
+    public partial class BasePge {
     }
 }
