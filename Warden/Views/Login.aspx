@@ -9,6 +9,7 @@
         <button type="button" class="btn btn-block btn-default" data-toggle="modal" data-target="#modal-Portal">Portal</button>
         <button type="button" class="btn btn-block btn-default" data-toggle="modal" data-target="#modal-Argon">Argon</button>
         <usc:Login2GetherUsc runat="server" />
+        <usc:LoginUsc runat="server" />
         <%if (Session["Error"] != null) {
                 lbl_erro.Text = (String)Session["Error"]; %>
                 <usc:LabelUsc FontSize="14" runat="server" ID="lbl_erro" Color="red" />

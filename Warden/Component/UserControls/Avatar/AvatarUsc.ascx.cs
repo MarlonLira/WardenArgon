@@ -16,11 +16,7 @@ namespace Warden.Component.UserControls.Avatar {
         public AlunoPst Aluno;
 
         public void SelectedValue() {
-            Byte[] Key = (Byte[])Session["Key"];
-            Byte[] IV = (Byte[])Session["IV"];
-            Global global = new Global();
-            global.GetKey();
-
+            
             string AlunoMatricula = Request.QueryString["Matricula"];
 
             string AlunoEmpresa = Request.QueryString["Empresa"];

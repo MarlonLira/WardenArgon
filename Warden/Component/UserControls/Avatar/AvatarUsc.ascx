@@ -9,11 +9,12 @@
     AlunoPst Aluno = new AlunoPst();
     DataTable Table = (DataTable)Session["Table"];
 
-    foreach (DataRow Row in Table.Rows) {
+    if (Table != null) {
+        foreach (DataRow Row in Table.Rows) {
 
-        lbl_aluno.Text = Row["nome"].ToString();
-        lbl_plano.Text = Row["codigo"].ToString();
-        lbl_data.Text = "23/06/2019";
+            lbl_aluno.Text = Row["nome"].ToString();
+            lbl_plano.Text = Row["codigo"].ToString();
+            lbl_data.Text = "23/06/2019";
 
     %>
 <div class="col-md-16" style=" padding-left:20px; padding-right:20px; padding-bottom: 20px; padding-top: 20px ;position:relative">
@@ -55,5 +56,5 @@
 </div>
 </div>
 <br />
-<%} %>
+<%} } %>
     

@@ -7,9 +7,9 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Warden.Views.Fitness {
+namespace Warden.Component.Styles.Js {
     
     
-    public partial class FitnessPge {
+    public partial class CalendarJsUsc {
     }
 }

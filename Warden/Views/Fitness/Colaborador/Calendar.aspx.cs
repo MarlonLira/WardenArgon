@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Warden.Views.Fitness.Colaborador {
-    public partial class Calendar : System.Web.UI.Page {
+    public partial class Calendar : FitnessPge {
         protected void Page_Load(object sender, EventArgs e) {
 
         }

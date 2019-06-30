@@ -344,7 +344,9 @@
     <Content Include="assets\vendor\onscreen\onscreen.min.js" />
     <Content Include="assets\vendor\popper\popper.js" />
     <Content Include="assets\vendor\popper\popper.min.js" />
+    <Content Include="Component\BaseUsc.ascx" />
     <Content Include="Component\Common\Button\ButtonUsc.ascx" />
+    <Content Include="Component\Common\Button\MenuButtonUsc.ascx" />
     <Content Include="Component\Common\Button\RadioButtonUsc.ascx" />
     <Content Include="Component\Common\Button\SquareButtonUsc.ascx" />
     <Content Include="Component\Common\Card\CardClose.ascx" />
@@ -357,7 +359,9 @@
     <Content Include="Component\Common\Tabs\TabEtapaUsc.ascx" />
     <Content Include="Component\Common\Tabs\TabsUsc.ascx" />
     <Content Include="Component\Common\TextBox\TextBoxUsc.ascx" />
+    <Content Include="Component\Styles\Css\CalendarCssUsc.ascx" />
     <Content Include="Component\Styles\Css\CssUsc.ascx" />
+    <Content Include="Component\Styles\Js\CalendarJsUsc.ascx" />
     <Content Include="Component\Styles\Js\JsUsc.ascx" />
     <Content Include="Component\UserControls\Avatar\AvatarUsc.ascx" />
     <Content Include="Component\UserControls\BioImpedancia\BioImpedanciaUsc.ascx" />
@@ -387,12 +391,26 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Component\BaseUsc.ascx.cs">
+      <DependentUpon>BaseUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\BaseUsc.ascx.designer.cs">
+      <DependentUpon>BaseUsc.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Component\Common\Button\ButtonUsc.ascx.cs">
       <DependentUpon>ButtonUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Component\Common\Button\ButtonUsc.ascx.designer.cs">
       <DependentUpon>ButtonUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Common\Button\MenuButtonUsc.ascx.cs">
+      <DependentUpon>MenuButtonUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\Common\Button\MenuButtonUsc.ascx.designer.cs">
+      <DependentUpon>MenuButtonUsc.ascx</DependentUpon>
     </Compile>
     <Compile Include="Component\Common\Button\RadioButtonUsc.ascx.cs">
       <DependentUpon>RadioButtonUsc.ascx</DependentUpon>
@@ -478,12 +496,26 @@
     <Compile Include="Component\Common\TextBox\TextBoxUsc.ascx.designer.cs">
       <DependentUpon>TextBoxUsc.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Component\Styles\Css\CalendarCssUsc.ascx.cs">
+      <DependentUpon>CalendarCssUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\Styles\Css\CalendarCssUsc.ascx.designer.cs">
+      <DependentUpon>CalendarCssUsc.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Component\Styles\Css\CssUsc.ascx.cs">
       <DependentUpon>CssUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Component\Styles\Css\CssUsc.ascx.designer.cs">
       <DependentUpon>CssUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Styles\Js\CalendarJsUsc.ascx.cs">
+      <DependentUpon>CalendarJsUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\Styles\Js\CalendarJsUsc.ascx.designer.cs">
+      <DependentUpon>CalendarJsUsc.ascx</DependentUpon>
     </Compile>
     <Compile Include="Component\Styles\Js\JsUsc.ascx.cs">
       <DependentUpon>JsUsc.ascx</DependentUpon>

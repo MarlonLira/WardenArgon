@@ -13,31 +13,22 @@ namespace Warden.Component.UserControls.Login {
     public partial class LoginUsc {
         
         /// <summary>
-        /// Controle txt_email.
+        /// Controle btn_hi.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_email;
+        protected global::Warden.Component.Common.Button.ButtonUsc btn_hi;
         
         /// <summary>
-        /// Controle txt_password.
+        /// Controle btn_hix.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_password;
-        
-        /// <summary>
-        /// Controle ButtonUsc.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::Warden.Component.Common.Button.ButtonUsc ButtonUsc;
+        protected global::Warden.Component.Common.Button.ButtonUsc btn_hix;
         
         /// <summary>
         /// Controle lbl_erro.

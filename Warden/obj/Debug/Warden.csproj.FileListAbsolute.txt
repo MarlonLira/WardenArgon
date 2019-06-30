@@ -79,4 +79,3 @@ C:\Users\suporte\Desktop\Warden\Warden\obj\Debug\Warden.csproj.CopyComplete
 C:\Users\suporte\Desktop\Warden\Warden\obj\Debug\Warden.dll
 C:\Users\suporte\Desktop\Warden\Warden\obj\Debug\Warden.pdb
 C:\Users\suporte\Desktop\Warden\Warden\obj\Debug\Warden.csprojAssemblyReference.cache
-C:\Web\Warden\Warden\obj\Debug\Warden.csprojAssemblyReference.cache

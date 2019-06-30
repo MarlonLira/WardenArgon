@@ -4,7 +4,7 @@ using System.Data;
 using System.Web.UI;
 
 namespace Warden.Views.Fitness.Colaborador {
-    public partial class Atendimento : Page {
+    public partial class Atendimento : FitnessPge {
         protected void Page_Load(object sender, EventArgs e) {
             if (Session["Table"] != null) {
 

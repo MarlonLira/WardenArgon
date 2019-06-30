@@ -1,19 +1,16 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Calendar.aspx.cs" Inherits="Warden.Views.Fitness.Colaborador.Calendar" %>
-<%@ Import Namespace="Warden.Helper" %>
+
 
 <!DOCTYPE html>
 <html>
 <head runat="server">
     <title>2 Gether Calendario</title>
-    <link href="<%=Help.FormatUrl("/assets/css/calendar/jquery-ui.min.css") %>" rel="stylesheet" />
-    <link href="<%=Help.FormatUrl("/assets/css/calendar/fullcalendar.min.css") %>" rel="stylesheet" />
-    <link href="<%=Help.FormatUrl("/assets/css/calendar/jquery.qtip.min.css") %>" rel="stylesheet" />
-    <link href="<%=Help.FormatUrl("/assets/css/calendar/calendars.css") %>" rel="stylesheet" />
-
+    <usc:CalendarCssUsc runat="server" ID="calendarcss_control" />
+    
 </head>
 <body>
+
     <form id="form1" runat="server">
-    
     <div id="calendar">
     </div>
     <div id="updatedialog" style="font: 70% 'Trebuchet MS', sans-serif; margin: 50px;display: none;"
@@ -78,11 +75,7 @@
     <input type="hidden" id="hdClient" runat="server" />
     </form>
 
-    <script src="<%=Help.FormatUrl("/assets/js/calendar/moment.min.js") %>"></script>
-    <script src="<%=Help.FormatUrl("/assets/js/calendar/jquery.min.js") %>"></script>
-    <script src="<%=Help.FormatUrl("/assets/js/calendar/jquery-ui.min.js") %>"></script>
-    <script src="<%=Help.FormatUrl("/assets/js/calendar/jquery.qtip.min.js") %>"></script>
-    <script src="<%=Help.FormatUrl("/assets/js/calendar/fullcalendar.min.js") %>"></script>
-    <script src="<%=Help.FormatUrl("/assets/js/calendar/calendarscript.js") %>" type="text/javascript"></script>
+    
+    <usc:CalendarJsUsc runat="server" ID="calendarjs_control" />
 </body>
 </html>

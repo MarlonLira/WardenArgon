@@ -12,7 +12,6 @@ namespace Warden.Component.UserControls.Login {
             if (Session["Error"] != null) {
                 lbl_erro.Text = (String)Session["Error"];
             }
-
         }
 
         protected void ButtonUsc_Click() {
