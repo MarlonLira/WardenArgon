@@ -82,7 +82,7 @@
                             Icon="ui" 
                             Title="Ofertas"
                             Description="Ofertas" 
-                            Url="/Views/Fitness/Telemarketing/Ofertas.aspx" 
+                            Url="/Views/Telemarketing/Ofertas.aspx" 
                         />
                         
                     </div>
