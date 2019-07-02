@@ -387,6 +387,7 @@
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\Menu.aspx" />
     <Content Include="Views\Telemarketing\ContactLeads.aspx" />
+    <Content Include="Views\Telemarketing\Ofertas.aspx" />
     <Content Include="Views\teste.aspx" />
     <Content Include="Views\teste2.aspx" />
     <Content Include="Web.config" />
@@ -676,6 +677,13 @@
     </Compile>
     <Compile Include="Views\Telemarketing\ContactLeads.aspx.designer.cs">
       <DependentUpon>ContactLeads.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Telemarketing\Ofertas.aspx.cs">
+      <DependentUpon>Ofertas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Telemarketing\Ofertas.aspx.designer.cs">
+      <DependentUpon>Ofertas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\teste.aspx.cs">
       <DependentUpon>teste.aspx</DependentUpon>

@@ -75,6 +75,15 @@
                             Description="Aqui Você marca o dia do atendimento com o aluno" 
                             Url="/Views/Fitness/Colaborador/Calendar.aspx" 
                         />
+
+                        <usc:MenuButtonUsc 
+                            ID="MenuButtonUsc1" 
+                            runat="server" 
+                            Icon="ui" 
+                            Title="Ofertas"
+                            Description="Ofertas" 
+                            Url="/Views/Fitness/Telemarketing/Ofertas.aspx" 
+                        />
                         
                     </div>
                     </div>

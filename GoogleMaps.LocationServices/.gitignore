@@ -1,0 +1,16 @@
+[Oo]bj/
+[Bb]in/
+*.user
+/TestResults
+*.vspscc
+*.vssscc
+deploy
+deploy/*
+*.suo
+*.cache
+packages/
+artifacts/
+msbuild.log
+*.sln.ide/
+.idea/
+.idea/*

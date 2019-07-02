@@ -47,5 +47,14 @@ namespace Warden.Component.UserControls.Header {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::Warden.Component.Common.Button.MenuButtonUsc leads_control;
+        
+        /// <summary>
+        /// Controle MenuButtonUsc1.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.Button.MenuButtonUsc MenuButtonUsc1;
     }
 }

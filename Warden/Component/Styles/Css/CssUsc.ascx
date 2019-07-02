@@ -13,3 +13,9 @@
 
 <!-- Argon CSS -->
 <link type="text/css" href="<%=Help.FormatUrl("/assets/css/argon.css") %>" rel="stylesheet">
+
+<%if (IsCarousel == true) { %>
+<!-- Carousel -->
+<link type="text/css" href="<%=Help.FormatUrl("/assets/css/carousel.css") %>" rel="stylesheet">
+
+<%} %>
