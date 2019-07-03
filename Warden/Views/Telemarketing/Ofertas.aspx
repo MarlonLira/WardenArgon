@@ -1,5 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Ofertas.aspx.cs" Inherits="Warden.Views.Telemarketing.Ofertas" %>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2075d2ef81986083104db7f684178eb2013574df
 <!doctype html>
 <html lang="en">
   <head>
@@ -26,7 +29,11 @@
             <li class="nav-item active">
               <a class="nav-link" href="#">Ofertas <span class="sr-only">(current)</span></a>
             </li>
+<<<<<<< HEAD
           </ul>
+=======
+              </ul>
+>>>>>>> 2075d2ef81986083104db7f684178eb2013574df
             
           <form class="form-inline mt-2 mt-md-0">
             <input class="form-control mr-sm-2" type="text" placeholder="CEP" aria-label="Search">
@@ -49,8 +56,13 @@
             <img class="first-slide" src="https://hiacademia.com.br/site/img/welcome-slider/home-welcome-img_5.jpg" alt="First slide">
             <div class="container">
               <div class="carousel-caption text-left">
+<<<<<<< HEAD
                 <h1 style="color:black"><b style="color:red">Hi</b> Fitness Group</h1>
                 <p><b>Matricule-se agora na maior rede de academias do nordeste !</b></p>
+=======
+                <h1>Hi Fitness Group</h1>
+                <p>Matricule-se agora na maior rede de academias do nordeste !</p>
+>>>>>>> 2075d2ef81986083104db7f684178eb2013574df
                 <p><a class="btn btn-lg btn-primary" href="#" role="button">Tenho interesse</a></p>
               </div>
             </div>
@@ -59,8 +71,13 @@
             <img class="second-slide" src="https://hiacademia.com.br/site/img/welcome-slider/home-welcome-img_4.jpg" alt="Second slide">
             <div class="container">
               <div class="carousel-caption">
+<<<<<<< HEAD
                 <h1 style="color:black"><b style="color:red">Hi</b> Fitness Group</h1>
                 <p><b>Focamos no seu resultado e na sua satisfação com profissionais altamente capacitados</b></p>
+=======
+                <h1>Hi Fitness Group</h1>
+                <p>Focamos no seu resultado e na sua satisfação com profissionais altamente capacitados</p>
+>>>>>>> 2075d2ef81986083104db7f684178eb2013574df
                 <p><a class="btn btn-lg btn-primary" href="#" role="button">Tenho interesse</a></p>
               </div>
             </div>
@@ -69,8 +86,13 @@
             <img class="third-slide" src="https://hiacademia.com.br/site/img/welcome-slider/home-welcome-img_2.jpg" alt="Third slide">
             <div class="container">
               <div class="carousel-caption text-right">
+<<<<<<< HEAD
                 <h1 style="color:black"><b style="color:red">Hi</b> Fitness Group</h1>
                 <p><b> esperando o que para ter um corpo saudavel ? clique agora em "Tenho interesse" e venha conhecer nossa rede de academias</b></p>
+=======
+                <h1>Hi Fitness Group</h1>
+                <p>Ta esperando o que para ter um corpo saudavel ? clique agora em "Tenho interesse" e venha conhecer nossa rede de academias</p>
+>>>>>>> 2075d2ef81986083104db7f684178eb2013574df
                 <p><a class="btn btn-lg btn-primary" href="#" role="button">Tenho interesse</a></p>
               </div>
             </div>
@@ -91,6 +113,7 @@
       ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
 
+<<<<<<< HEAD
       <div class="container marketing box-shadow" style="background-color:lightgray">
 
         <!-- Three columns of text below the carousel -->
@@ -138,6 +161,36 @@
                 Text="Endereço: R. Zeferino Agra, 519 - Arruda, Recife - PE, 52120-180"
                 UrlImg="https://lh5.googleusercontent.com/p/AF1QipPkVnsmbWcib0rt_VfPWDsfycKFwvS1Zn1J-omX=w90-h160-k-no"
             />
+=======
+      <div class="container marketing" style="background-color:lightgray">
+
+        <!-- Three columns of text below the carousel -->
+          <h2 class="featurette-heading" style="text-align:center">Unidades</h2>
+          <br />
+          <br />
+        <div class="row">
+            
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="https://lh5.googleusercontent.com/p/AF1QipN63hvrYF_AXDDDAslVXwWX5EmGNrkDK-7avLbt=w120-h160-k-no" alt="Generic placeholder image" width="140" height="140">
+            <h2>Hi Tamarineira</h2>
+            <p>Endereço: Estr. do Arraial, 2262 - Tamarineira, Recife - PE, 52051-380</p>
+            <p><a class="btn btn-secondary" href="#" role="button">Quero Conhecer &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="https://lh5.googleusercontent.com/p/AF1QipPkVnsmbWcib0rt_VfPWDsfycKFwvS1Zn1J-omX=w90-h160-k-no" alt="Generic placeholder image" width="140" height="140">
+            <h2>Hix Arruda</h2>
+            <p>Endereço: R. Zeferino Agra, 519 - Arruda, Recife - PE, 52120-180</p>
+            <p><a class="btn btn-secondary" href="#" role="button">Quero Conhecer &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="https://lh5.googleusercontent.com/p/AF1QipN4YNlUIlXNFAC_FtgSLjWP_A95rh_7i3RsvrL5=w90-h160-k-no" alt="Generic placeholder image" width="140" height="140">
+            <h2>Hi Encruzilhada</h2>
+            <p>Endereço: Estr. de Belém, 600 - Encruzilhada, Recife - PE, 52030-000 </p>
+            <p><a class="btn btn-secondary" href="#" role="button">Quero Conhecer &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+>>>>>>> 2075d2ef81986083104db7f684178eb2013574df
 
         <!-- START THE FEATURETTES -->
 
@@ -183,7 +236,11 @@
         <hr class="featurette-divider">
 
         <!-- /END THE FEATURETTES -->
+<<<<<<< HEAD
         </div>
+=======
+
+>>>>>>> 2075d2ef81986083104db7f684178eb2013574df
       </div><!-- /.container -->
 
 
