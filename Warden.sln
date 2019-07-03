@@ -13,11 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "..\..\Projetos\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "..\..\Projetos\Source Code\2.1.3\Library\Core\Core.csproj", "{6F12F1C1-50B5-46EE-A49A-A3724C58D656}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ofertas", "Ofertas\Ofertas.csproj", "{8F927FFA-8D90-4102-99E3-C9C248F8448E}"
-	ProjectSection(ProjectDependencies) = postProject
-		{FC41E89C-F20D-4380-8721-4BA808FA924A} = {FC41E89C-F20D-4380-8721-4BA808FA924A}
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,10 +31,6 @@ Global
 		{6F12F1C1-50B5-46EE-A49A-A3724C58D656}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F12F1C1-50B5-46EE-A49A-A3724C58D656}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F12F1C1-50B5-46EE-A49A-A3724C58D656}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8F927FFA-8D90-4102-99E3-C9C248F8448E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F927FFA-8D90-4102-99E3-C9C248F8448E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F927FFA-8D90-4102-99E3-C9C248F8448E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F927FFA-8D90-4102-99E3-C9C248F8448E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

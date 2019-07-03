@@ -15,15 +15,15 @@
             <%} %>
             <div class="col-15 col-md-16" style="padding-left:10px; padding-top:10px">
                 <div class="numbers" >
-                    <usc:LabelUsc runat="server" ID="lbl_category" FontSize="12" Text="teste2" Class="card-category" Color="" />
-                    <usc:LabelUsc runat="server" ID="lbl_title" FontSize="14" Text="Teste" Class="card-title" Color="
-                        "/>
+                    <usc:LabelUsc runat="server" ID="lbl_category" FontSize="12" Text="teste2" Class="card-category" />
+                    <usc:LabelUsc runat="server" ID="lbl_title" FontSize="14" Text="Teste" Class="card-title" />
                 </div>
             </div>
         </div>
             
     <div class="card-footer " style="background-color:lightgray">
         <hr>
+
         <%if (IsButton) { %>
 
         <asp:Button class="btn btn-outline-default" ID="btn_control" runat="server" Text="Button" OnClick="btn_control_Click" />

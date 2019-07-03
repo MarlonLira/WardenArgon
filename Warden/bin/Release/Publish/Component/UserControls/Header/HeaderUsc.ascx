@@ -1,6 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HeaderUsc.ascx.cs" Inherits="Warden.Component.UserControls.Header.HeaderUsc" %>
 <%@ Import Namespace="Warden.Helper" %>
 
+<% if(Session["User"] != null)
+    if ((Boolean)Session["User"] == true) {%>
 <header class="header-global" style="background-color:black !important">
     <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
         <div class="container">
@@ -34,33 +36,55 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-xl">
                     <div class="dropdown-menu-inner">
-                        <a href="<%=Help.FormatUrl("/Views/Fitness/Etapas.aspx") %>" class="media d-flex align-items-center">
-                        <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
-                            <i class="ni ni-spaceship"></i>
-                        </div>
-                        <div class="media-body ml-3">
-                            <h6 class="heading text-primary mb-md-1">Etapas</h6>
-                            <p class="description d-none d-md-inline-block mb-0">Cadastre as informações do seu aluno aqui.</p>
-                        </div>
-                        </a>
-                        <a href="<%=Help.FormatUrl("/Views/Fitness/Graficos.aspx") %>" class="media d-flex align-items-center">
-                        <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
-                            <i class="ni ni-palette"></i>
-                        </div>
-                        <div class="media-body ml-3">
-                            <h6 class="heading text-primary mb-md-1">Graficos</h6>
-                            <p class="description d-none d-md-inline-block mb-0">Aqui você vera graficos relacionado a um determinado aluno</p>
-                        </div>
-                        </a>
-                        <a href="<%=Help.FormatUrl("/Views/Telemarketing/ContactLeads.aspx") %>" class="media d-flex align-items-center">
-                        <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
-                            <i class="ni ni-ui-04"></i>
-                        </div>
-                        <div class="media-body ml-3">
-                            <h5 class="heading text-warning mb-md-1">Leads</h5>
-                            <p class="description d-none d-md-inline-block mb-0">....Leads</p>
-                        </div>
-                        </a>
+
+                        <usc:MenuButtonUsc 
+                            ID="atendimento_control" 
+                            runat="server" 
+                            Type="1"
+                            Icon="phone" 
+                            Title="Atendimentos" 
+                            Description="Todos seus alunos marcados para hoje" 
+                            Url="/Views/Fitness/Colaborador/Atendimento.aspx" 
+                        />
+
+                        <usc:MenuButtonUsc 
+                            ID="etapas_control" 
+                            runat="server"
+                            Type="2"
+                            Icon="spaceship" 
+                            Title="Etapas" 
+                            Description="Etapas dos alunos..." 
+                            Url="/Views/Fitness/Etapas.aspx" 
+                        />
+
+                        <usc:MenuButtonUsc 
+                            ID="graficos_control" 
+                            runat="server"
+                            Type="3"
+                            Icon="palette" 
+                            Title="Graficos" 
+                            Description="Aqui você vera graficos relacionado a um determinado aluno" 
+                            Url="/Views/Fitness/Graficos.aspx" 
+                        />
+
+                        <usc:MenuButtonUsc 
+                            ID="leads_control" 
+                            runat="server" 
+                            Icon="date" 
+                            Title="Calendario"
+                            Description="Aqui Você marca o dia do atendimento com o aluno" 
+                            Url="/Views/Fitness/Colaborador/Calendar.aspx" 
+                        />
+
+                        <usc:MenuButtonUsc 
+                            ID="MenuButtonUsc1" 
+                            runat="server" 
+                            Icon="ui" 
+                            Title="Ofertas"
+                            Description="Ofertas" 
+                            Url="/Views/Telemarketing/Ofertas.aspx" 
+                        />
+                        
                     </div>
                     </div>
                 </li>
@@ -80,3 +104,4 @@
         </div>
     </nav>
 </header>
+<%  } %>

@@ -25,10 +25,8 @@
                 ">
             <%} %>
         <form runat="server" >
-            <% if(Session["User"] != null)
-                    if ((Boolean)Session["User"] == true) {%>
-                        <usc:HeaderUsc runat="server" ID="header_control" />
-            <%      } %>
+            
+        <usc:HeaderUsc runat="server" ID="header_control" />
                 <main>
                     <div class="position-relative">
                       <!-- Hero for FREE version -->

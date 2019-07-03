@@ -10,5 +10,7 @@ namespace Warden.Component.Styles.Css {
         protected void Page_Load(object sender, EventArgs e) {
 
         }
+
+        public Boolean IsCarousel { get; set; }
     }
 }

@@ -348,10 +348,12 @@
     <Content Include="Component\Common\Button\ButtonUsc.ascx" />
     <Content Include="Component\Common\Button\MenuButtonUsc.ascx" />
     <Content Include="Component\Common\Button\RadioButtonUsc.ascx" />
+    <Content Include="Component\Common\Button\RoundButtonUsc.ascx" />
     <Content Include="Component\Common\Button\SquareButtonUsc.ascx" />
     <Content Include="Component\Common\Card\CardClose.ascx" />
     <Content Include="Component\Common\Card\CardInit.ascx" />
     <Content Include="Component\Common\Card\CardUsc.ascx" />
+    <Content Include="Component\Common\Carousel\CarouselUsc.ascx" />
     <Content Include="Component\Common\Charts\ChartUsc.ascx" />
     <Content Include="Component\Common\Label\LabelUsc.ascx" />
     <Content Include="Component\Common\Modal\ModalUsc.ascx" />
@@ -366,6 +368,7 @@
     <Content Include="Component\Styles\Js\JsUsc.ascx" />
     <Content Include="Component\UserControls\Avatar\AvatarUsc.ascx" />
     <Content Include="Component\UserControls\BioImpedancia\BioImpedanciaUsc.ascx" />
+    <Content Include="Component\UserControls\Form\FormLeadsUsc.ascx" />
     <Content Include="Component\UserControls\Form\UserFormUsc.ascx" />
     <Content Include="Component\UserControls\Form\UserProfileUsc.ascx" />
     <Content Include="Component\UserControls\Form\UserSearchFormUsc.ascx" />
@@ -387,6 +390,7 @@
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\Menu.aspx" />
     <Content Include="Views\Telemarketing\ContactLeads.aspx" />
+    <Content Include="Views\Telemarketing\Ofertas.aspx" />
     <Content Include="Views\teste.aspx" />
     <Content Include="Views\teste2.aspx" />
     <Content Include="Web.config" />
@@ -420,6 +424,13 @@
     <Compile Include="Component\Common\Button\RadioButtonUsc.ascx.designer.cs">
       <DependentUpon>RadioButtonUsc.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Component\Common\Button\RoundButtonUsc.ascx.cs">
+      <DependentUpon>RoundButtonUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\Common\Button\RoundButtonUsc.ascx.designer.cs">
+      <DependentUpon>RoundButtonUsc.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Component\Common\Button\SquareButtonUsc.ascx.cs">
       <DependentUpon>SquareButtonUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -447,6 +458,13 @@
     </Compile>
     <Compile Include="Component\Common\Card\CardUsc.ascx.designer.cs">
       <DependentUpon>CardUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Common\Carousel\CarouselUsc.ascx.cs">
+      <DependentUpon>CarouselUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\Common\Carousel\CarouselUsc.ascx.designer.cs">
+      <DependentUpon>CarouselUsc.ascx</DependentUpon>
     </Compile>
     <Compile Include="Component\Common\Charts\ChartUsc.ascx.cs">
       <DependentUpon>ChartUsc.ascx</DependentUpon>
@@ -545,6 +563,13 @@
     </Compile>
     <Compile Include="Component\UserControls\BioImpedancia\BioImpedanciaUsc.ascx.designer.cs">
       <DependentUpon>BioImpedanciaUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\UserControls\Form\FormLeadsUsc.ascx.cs">
+      <DependentUpon>FormLeadsUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\UserControls\Form\FormLeadsUsc.ascx.designer.cs">
+      <DependentUpon>FormLeadsUsc.ascx</DependentUpon>
     </Compile>
     <Compile Include="Component\UserControls\Form\UserFormUsc.ascx.cs">
       <DependentUpon>UserFormUsc.ascx</DependentUpon>
@@ -676,6 +701,13 @@
     </Compile>
     <Compile Include="Views\Telemarketing\ContactLeads.aspx.designer.cs">
       <DependentUpon>ContactLeads.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Telemarketing\Ofertas.aspx.cs">
+      <DependentUpon>Ofertas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Telemarketing\Ofertas.aspx.designer.cs">
+      <DependentUpon>Ofertas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\teste.aspx.cs">
       <DependentUpon>teste.aspx</DependentUpon>
