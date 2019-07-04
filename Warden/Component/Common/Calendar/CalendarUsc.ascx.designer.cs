@@ -7,18 +7,18 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Warden.Views {
+namespace Warden.Component.Common.Calendar {
     
     
-    public partial class teste2 {
+    public partial class CalendarUsc {
         
         /// <summary>
-        /// Controle calendar_control.
+        /// Controle frm_calendar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.Calendar.CalendarUsc calendar_control;
+        protected global::System.Web.UI.HtmlControls.HtmlForm frm_calendar;
     }
 }

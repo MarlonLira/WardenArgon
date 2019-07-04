@@ -350,6 +350,7 @@
     <Content Include="Component\Common\Button\RadioButtonUsc.ascx" />
     <Content Include="Component\Common\Button\RoundButtonUsc.ascx" />
     <Content Include="Component\Common\Button\SquareButtonUsc.ascx" />
+    <Content Include="Component\Common\Calendar\CalendarUsc.ascx" />
     <Content Include="Component\Common\Card\CardClose.ascx" />
     <Content Include="Component\Common\Card\CardInit.ascx" />
     <Content Include="Component\Common\Card\CardUsc.ascx" />
@@ -440,6 +441,13 @@
     </Compile>
     <Compile Include="Component\Common\Button\SquareButtonUsc.ascx.designer.cs">
       <DependentUpon>SquareButtonUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Common\Calendar\CalendarUsc.ascx.cs">
+      <DependentUpon>CalendarUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\Common\Calendar\CalendarUsc.ascx.designer.cs">
+      <DependentUpon>CalendarUsc.ascx</DependentUpon>
     </Compile>
     <Compile Include="Component\Common\Card\CardClose.ascx.cs">
       <DependentUpon>CardClose.ascx</DependentUpon>
