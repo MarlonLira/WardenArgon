@@ -8,10 +8,6 @@ namespace Warden.Component.UserControls.Login {
     public partial class Login2GetherUsc : UserControl {
         protected void Page_Load(object sender, EventArgs e) {
             ButtonUsc.OnClick += new ButtonUsc.OnClickEvent(ButtonUsc_Click);
-
-            if (Session["Error"] != null) {
-                lbl_erro.Text = (String)Session["Error"];
-            }
         }
 
         protected void ButtonUsc_Click() {

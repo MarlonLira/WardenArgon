@@ -1,8 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Ofertas.aspx.cs" Inherits="Warden.Views.Telemarketing.Ofertas" %>
-<<<<<<< HEAD
 
-=======
->>>>>>> 2075d2ef81986083104db7f684178eb2013574df
 <!doctype html>
 <html lang="en">
   <head>
@@ -29,12 +26,7 @@
             <li class="nav-item active">
               <a class="nav-link" href="#">Ofertas <span class="sr-only">(current)</span></a>
             </li>
-<<<<<<< HEAD
           </ul>
-=======
-              </ul>
->>>>>>> 2075d2ef81986083104db7f684178eb2013574df
-            
           <form class="form-inline mt-2 mt-md-0">
             <input class="form-control mr-sm-2" type="text" placeholder="CEP" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
@@ -56,13 +48,8 @@
             <img class="first-slide" src="https://hiacademia.com.br/site/img/welcome-slider/home-welcome-img_5.jpg" alt="First slide">
             <div class="container">
               <div class="carousel-caption text-left">
-<<<<<<< HEAD
                 <h1 style="color:black"><b style="color:red">Hi</b> Fitness Group</h1>
                 <p><b>Matricule-se agora na maior rede de academias do nordeste !</b></p>
-=======
-                <h1>Hi Fitness Group</h1>
-                <p>Matricule-se agora na maior rede de academias do nordeste !</p>
->>>>>>> 2075d2ef81986083104db7f684178eb2013574df
                 <p><a class="btn btn-lg btn-primary" href="#" role="button">Tenho interesse</a></p>
               </div>
             </div>
@@ -71,13 +58,8 @@
             <img class="second-slide" src="https://hiacademia.com.br/site/img/welcome-slider/home-welcome-img_4.jpg" alt="Second slide">
             <div class="container">
               <div class="carousel-caption">
-<<<<<<< HEAD
                 <h1 style="color:black"><b style="color:red">Hi</b> Fitness Group</h1>
                 <p><b>Focamos no seu resultado e na sua satisfação com profissionais altamente capacitados</b></p>
-=======
-                <h1>Hi Fitness Group</h1>
-                <p>Focamos no seu resultado e na sua satisfação com profissionais altamente capacitados</p>
->>>>>>> 2075d2ef81986083104db7f684178eb2013574df
                 <p><a class="btn btn-lg btn-primary" href="#" role="button">Tenho interesse</a></p>
               </div>
             </div>
@@ -86,13 +68,8 @@
             <img class="third-slide" src="https://hiacademia.com.br/site/img/welcome-slider/home-welcome-img_2.jpg" alt="Third slide">
             <div class="container">
               <div class="carousel-caption text-right">
-<<<<<<< HEAD
                 <h1 style="color:black"><b style="color:red">Hi</b> Fitness Group</h1>
                 <p><b> esperando o que para ter um corpo saudavel ? clique agora em "Tenho interesse" e venha conhecer nossa rede de academias</b></p>
-=======
-                <h1>Hi Fitness Group</h1>
-                <p>Ta esperando o que para ter um corpo saudavel ? clique agora em "Tenho interesse" e venha conhecer nossa rede de academias</p>
->>>>>>> 2075d2ef81986083104db7f684178eb2013574df
                 <p><a class="btn btn-lg btn-primary" href="#" role="button">Tenho interesse</a></p>
               </div>
             </div>
@@ -108,12 +85,6 @@
         </a>
       </div>
 
-
-      <!-- Marketing messaging and featurettes
-      ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
-
-<<<<<<< HEAD
       <div class="container marketing box-shadow" style="background-color:lightgray">
 
         <!-- Three columns of text below the carousel -->
@@ -161,7 +132,7 @@
                 Text="Endereço: R. Zeferino Agra, 519 - Arruda, Recife - PE, 52120-180"
                 UrlImg="https://lh5.googleusercontent.com/p/AF1QipPkVnsmbWcib0rt_VfPWDsfycKFwvS1Zn1J-omX=w90-h160-k-no"
             />
-=======
+
       <div class="container marketing" style="background-color:lightgray">
 
         <!-- Three columns of text below the carousel -->
@@ -190,7 +161,7 @@
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
 
->>>>>>> 2075d2ef81986083104db7f684178eb2013574df
+
 
         <!-- START THE FEATURETTES -->
 
@@ -236,11 +207,9 @@
         <hr class="featurette-divider">
 
         <!-- /END THE FEATURETTES -->
-<<<<<<< HEAD
-        </div>
-=======
 
->>>>>>> 2075d2ef81986083104db7f684178eb2013574df
+        </div>
+
       </div><!-- /.container -->
 
 

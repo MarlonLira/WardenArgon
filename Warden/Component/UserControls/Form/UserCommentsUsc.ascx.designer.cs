@@ -7,45 +7,36 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Warden.Component.Common.Card {
+namespace Warden.Component.UserControls.Form {
     
     
-    public partial class CardUsc {
+    public partial class UserCommentsUsc {
         
         /// <summary>
-        /// Controle lbl_aluno.
+        /// Controle tbl_comments.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.Label.LabelUsc lbl_aluno;
+        protected global::Warden.Component.Common.Table.TableUsc tbl_comments;
         
         /// <summary>
-        /// Controle lbl_data.
+        /// Controle txt_duvida.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.Label.LabelUsc lbl_data;
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_duvida;
         
         /// <summary>
-        /// Controle lbl_matricula.
+        /// Controle ButtonUsc.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.Label.LabelUsc lbl_matricula;
-        
-        /// <summary>
-        /// Controle btn1.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::Warden.Component.Common.Label.LabelUsc btn1;
+        protected global::Warden.Component.Common.Button.ButtonUsc ButtonUsc;
     }
 }

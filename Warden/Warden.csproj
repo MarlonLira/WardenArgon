@@ -369,6 +369,7 @@
     <Content Include="Component\UserControls\Avatar\AvatarUsc.ascx" />
     <Content Include="Component\UserControls\BioImpedancia\BioImpedanciaUsc.ascx" />
     <Content Include="Component\UserControls\Form\FormLeadsUsc.ascx" />
+    <Content Include="Component\UserControls\Form\UserCommentsUsc.ascx" />
     <Content Include="Component\UserControls\Form\UserFormUsc.ascx" />
     <Content Include="Component\UserControls\Form\UserProfileUsc.ascx" />
     <Content Include="Component\UserControls\Form\UserSearchFormUsc.ascx" />
@@ -389,8 +390,10 @@
     <Content Include="Views\Fitness\Graficos.aspx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\Menu.aspx" />
+    <Content Include="Views\Telemarketing\Colaborador\Atendimento.aspx" />
     <Content Include="Views\Telemarketing\ContactLeads.aspx" />
     <Content Include="Views\Telemarketing\Ofertas.aspx" />
+    <Content Include="Views\Telemarketing\TelemarketingPge.aspx" />
     <Content Include="Views\teste.aspx" />
     <Content Include="Views\teste2.aspx" />
     <Content Include="Web.config" />
@@ -571,6 +574,13 @@
     <Compile Include="Component\UserControls\Form\FormLeadsUsc.ascx.designer.cs">
       <DependentUpon>FormLeadsUsc.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Component\UserControls\Form\UserCommentsUsc.ascx.cs">
+      <DependentUpon>UserCommentsUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\UserControls\Form\UserCommentsUsc.ascx.designer.cs">
+      <DependentUpon>UserCommentsUsc.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Component\UserControls\Form\UserFormUsc.ascx.cs">
       <DependentUpon>UserFormUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -695,6 +705,13 @@
     <Compile Include="Views\Menu.aspx.designer.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Telemarketing\Colaborador\Atendimento.aspx.cs">
+      <DependentUpon>Atendimento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Telemarketing\Colaborador\Atendimento.aspx.designer.cs">
+      <DependentUpon>Atendimento.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Telemarketing\ContactLeads.aspx.cs">
       <DependentUpon>ContactLeads.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -708,6 +725,13 @@
     </Compile>
     <Compile Include="Views\Telemarketing\Ofertas.aspx.designer.cs">
       <DependentUpon>Ofertas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Telemarketing\TelemarketingPge.aspx.cs">
+      <DependentUpon>TelemarketingPge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Telemarketing\TelemarketingPge.aspx.designer.cs">
+      <DependentUpon>TelemarketingPge.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\teste.aspx.cs">
       <DependentUpon>teste.aspx</DependentUpon>

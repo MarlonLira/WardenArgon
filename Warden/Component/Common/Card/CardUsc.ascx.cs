@@ -23,6 +23,10 @@ namespace Warden.Component.Common.Card {
         public String UrlImg { get; set; }
         public String Class { get; set; }
         public String Href { get; set; }
+        public String btn1Text {
+            get { return btn1.Text; }
+            set { this.btn1.Text = value; }
+        }
 
 
         public String LoadRef() {

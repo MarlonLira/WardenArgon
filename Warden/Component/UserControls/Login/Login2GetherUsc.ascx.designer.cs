@@ -38,14 +38,5 @@ namespace Warden.Component.UserControls.Login {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::Warden.Component.Common.Button.ButtonUsc ButtonUsc;
-        
-        /// <summary>
-        /// Controle lbl_erro.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::Warden.Component.Common.Label.LabelUsc lbl_erro;
     }
 }

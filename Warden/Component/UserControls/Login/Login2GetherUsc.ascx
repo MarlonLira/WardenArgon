@@ -34,8 +34,7 @@
                   <div class="text-center">
                       <br />
                       <usc:ButtonUsc ID="ButtonUsc" runat="server" Text="Confirmar"/>
-                      <br />
-                      <usc:LabelUsc runat="server" Bold="true" FontSize="10" Color="red" ID="lbl_erro"/>
+                      
                   </div>
                 </div>
               </div>

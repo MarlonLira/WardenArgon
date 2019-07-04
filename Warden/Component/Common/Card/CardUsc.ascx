@@ -5,6 +5,7 @@
     <a href="<%=LoadRef() %>"><img class="<%=LoadClass() %>" src="<%=LoadImg() %>"  alt="Card image cap"></a>
     <div class="card-body">
         <p class="card-text">
+
             <usc:LabelUsc 
                 ID="lbl_aluno" 
                 runat="server" 
@@ -29,12 +30,20 @@
                 FontSize="8" 
             />
 
-
-
         </p>
         <div class="d-flex justify-content-between align-items-center">
         <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#modal-comments">
+
+                <usc:LabelUsc 
+                Class="description" 
+                runat="server" 
+                ID="btn1" 
+                Text="Comentarios:" 
+                FontSize="8" 
+            />
+
+            </button>
             <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
         </div>
         <small class="text-muted"><%=LoadTime()%></small>

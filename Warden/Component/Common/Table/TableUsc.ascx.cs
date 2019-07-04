@@ -6,7 +6,7 @@ using System.Web.UI.WebControls;
 
 namespace Warden.Component.Common.Table {
 
-    public partial class TableUsc : UserControl {
+    public partial class TableUsc : BaseUsc {
 
         public class TableColumnUsc {
 
@@ -18,14 +18,22 @@ namespace Warden.Component.Common.Table {
 
         public List<TableColumnUsc> TableColumns { get; set; }
 
+        protected override void OnLoad(EventArgs e) {
+            base.OnLoad(e);
+            if (Session["Table"] != null && IsTmk == true) {
 
+                TableColumns = new List<TableUsc.TableColumnUsc>();
+                TableColumns.Add(new TableUsc.TableColumnUsc() { ColumText = "Aluno", ColumName = "nome" });
+                HeaderCellsBold = true;
+                BodyCellsBold = false;
 
-        protected void Page_Load(object sender, EventArgs e) {
-            
+                LoadDataSource((DataTable)Session["Table"]);
+            }
         }
-     
+
         public Boolean HeaderCellsBold { set { tbh_control.Font.Bold = value; } }
         public Boolean BodyCellsBold { set { tbr_control.Font.Bold = value; } }
+        public Boolean IsTmk { get; set; }
 
         public void LoadDataSource(DataTable TableEdit) {
             System.Web.UI.WebControls.Table WebTable;
