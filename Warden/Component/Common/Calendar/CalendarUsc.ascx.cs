@@ -19,6 +19,7 @@ namespace Warden.Component.Common.Calendar
 
         public System.Web.UI.WebControls.Calendar Calendar_Control = new System.Web.UI.WebControls.Calendar();
         public CalendarDay Calendar;
+
         public void LoadCalendar(CalendarDay CalendarEdit) {
             Calendar = CalendarEdit;
             Calendar_Control.OtherMonthDayStyle.ForeColor = System.Drawing.Color.LightGray;
@@ -28,7 +29,9 @@ namespace Warden.Component.Common.Calendar
             Calendar_Control.SelectionMode = CalendarSelectionMode.Day;
             Calendar_Control.ShowNextPrevMonth = true;
 
-            frm_calendar.Controls.Add(Calendar_Control);
+            clr_control = Calendar_Control;
+            clr_control.DataBind();
+            //clr_control.Controls.Add(Calendar_Control);
         }
         private void Calendar_Control_DayRender(object sender, DayRenderEventArgs e) {
             String CreateCalendarDay = e.Day.Date.ToShortDateString();

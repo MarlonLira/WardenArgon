@@ -13,12 +13,12 @@ namespace Warden.Component.Common.Calendar {
     public partial class CalendarUsc {
         
         /// <summary>
-        /// Controle frm_calendar.
+        /// Controle clr_control.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm frm_calendar;
+        protected global::System.Web.UI.WebControls.Calendar clr_control;
     }
 }

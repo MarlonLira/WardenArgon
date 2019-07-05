@@ -3,10 +3,10 @@ using System.Web.UI;
 using Warden.Component.Common.Button;
 
 namespace Warden.Component.Common.Tabs {
-    public partial class TabEtapaUsc : UserControl {
+    public partial class TabEtapaUsc : BaseUsc {
 
-        protected void Page_Load(object sender, EventArgs e) {
-
+        protected override void OnLoad(EventArgs e) {
+            base.OnLoad(e);
             btn_anamnese_salvar.OnClick += new ButtonUsc.OnClickEvent(BtnAnamneseSalvar_Click);
             LoadEtapas();
         }
@@ -55,6 +55,10 @@ namespace Warden.Component.Common.Tabs {
 
                 Question10.Title = Question(10);
                 Question10.LoadDataSource(Itens);
+
+                calendar_control.Calendar = new Calendar.CalendarUsc.CalendarDay();
+                calendar_control.Calendar.Date = DateTime.Now;
+                calendar_control.LoadCalendar(calendar_control.Calendar);
             }
 
         }

@@ -12,10 +12,10 @@ namespace Warden.Views {
             LoadCalendar();
         }
         public void LoadCalendar() {
-            calendar_control.Calendar = new Component.Common.Calendar.CalendarUsc.CalendarDay();
+            /*calendar_control.Calendar = new Component.Common.Calendar.CalendarUsc.CalendarDay();
             calendar_control.Calendar.Date = DateTime.Now;
 
-            calendar_control.LoadCalendar(calendar_control.Calendar);
+            calendar_control.LoadCalendar(calendar_control.Calendar);*/
         }
         
     }

@@ -369,6 +369,7 @@
     <Content Include="Component\Styles\Js\JsUsc.ascx" />
     <Content Include="Component\UserControls\Avatar\AvatarUsc.ascx" />
     <Content Include="Component\UserControls\BioImpedancia\BioImpedanciaUsc.ascx" />
+    <Content Include="Component\UserControls\Form\AttendanceDateUsc.ascx" />
     <Content Include="Component\UserControls\Form\FormLeadsUsc.ascx" />
     <Content Include="Component\UserControls\Form\UserCommentsUsc.ascx" />
     <Content Include="Component\UserControls\Form\UserFormUsc.ascx" />
@@ -574,6 +575,13 @@
     </Compile>
     <Compile Include="Component\UserControls\BioImpedancia\BioImpedanciaUsc.ascx.designer.cs">
       <DependentUpon>BioImpedanciaUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\UserControls\Form\AttendanceDateUsc.ascx.cs">
+      <DependentUpon>AttendanceDateUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\UserControls\Form\AttendanceDateUsc.ascx.designer.cs">
+      <DependentUpon>AttendanceDateUsc.ascx</DependentUpon>
     </Compile>
     <Compile Include="Component\UserControls\Form\FormLeadsUsc.ascx.cs">
       <DependentUpon>FormLeadsUsc.ascx</DependentUpon>

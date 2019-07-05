@@ -44,6 +44,7 @@
                      <usc:LabelUsc Runat="server" Text="Proxima Medição" FontSize="15"/>
                             
                         <usc:TextBoxUsc runat="server" Icon="Date" TextMode="Date" Mode="larger" Size="6" IsModified="true"/>
+                    <usc:CalendarUsc runat="server" ID="calendar_control" />
                     
                     <div class="rows" >
                         <div class="col-md-6">
