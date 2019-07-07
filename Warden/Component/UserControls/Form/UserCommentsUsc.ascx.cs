@@ -40,7 +40,7 @@ namespace Warden.Component.UserControls.Form {
             if (AlunoEdit != null) {
                 if (!String.IsNullOrEmpty(AlunoEdit.TelCelular)) {
                     txt_tel.Text = Helper.Help.ConvertToPhoneFormat(AlunoEdit.TelCelular);
-                    Href = WhatsLink.Replace("ToPhone", AlunoEdit.TelCelular);
+                    Href = WhatsLink.Replace("ToPhone", "55" + AlunoEdit.TelCelular);
                     Href = Href.Replace("ToText", Text);
                 }
                 if (!String.IsNullOrEmpty(AlunoEdit.Email)) {
