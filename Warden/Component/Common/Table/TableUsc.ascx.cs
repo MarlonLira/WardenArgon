@@ -22,12 +22,12 @@ namespace Warden.Component.Common.Table {
             base.OnLoad(e);
             if (Session["Table"] != null && IsTmk == true) {
 
-                TableColumns = new List<TableUsc.TableColumnUsc>();
-                TableColumns.Add(new TableUsc.TableColumnUsc() { ColumText = "Aluno", ColumName = "nome" });
+                /*TableColumns = new List<TableUsc.TableColumnUsc>();
+                TableColumns.Add(new TableUsc.TableColumnUsc() { ColumText = "Aluno", ColumName = "nome" });*/
                 HeaderCellsBold = true;
                 BodyCellsBold = false;
 
-                LoadDataSource((DataTable)Session["Table"]);
+                /*LoadDataSource((DataTable)Session["Table"]);*/
             }
         }
 
@@ -41,6 +41,12 @@ namespace Warden.Component.Common.Table {
             TableRow WebRow;
             TableRow[] WebRow2;
 
+            if (tbl_control.Rows.Count > 0) {
+                //tbl_control.Rows.Clear();
+                tbl_control.Rows.RemoveAt(1);
+                tbh_control.Cells.Clear();
+                
+            }
             try {
                 WebTable = new System.Web.UI.WebControls.Table();
                 WebRow = new TableRow();
@@ -72,7 +78,6 @@ namespace Warden.Component.Common.Table {
                             }
 
                             WebRow.Cells.Add(WebCell);
-
                         }
 
                         WebTable.Rows.Add(WebRow);

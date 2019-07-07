@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="TextBoxUsc.ascx.cs" Inherits="Warden.Component.Common.TextBox.TextBoxUsc" %>
 
-
+<div style="padding-top: 10px; padding-bottom:10px">
     
 <% if (IsModified) {%>
 <div class="col-<%=LoadMode() %>-<%=LoadSize() %>">
@@ -23,3 +23,4 @@
 <%if (IsModified) { %>
 </div>
 <%} %>
+</div>

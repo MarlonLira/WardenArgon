@@ -22,13 +22,40 @@ namespace Warden.Component.UserControls.Form {
         protected global::Warden.Component.Common.Table.TableUsc tbl_comments;
         
         /// <summary>
-        /// Controle txt_duvida.
+        /// Controle txt_tel.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_duvida;
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_tel;
+        
+        /// <summary>
+        /// Controle txt_email.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_email;
+        
+        /// <summary>
+        /// Controle txt_link.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_link;
+        
+        /// <summary>
+        /// Controle txt_comentario.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_comentario;
         
         /// <summary>
         /// Controle ButtonUsc.

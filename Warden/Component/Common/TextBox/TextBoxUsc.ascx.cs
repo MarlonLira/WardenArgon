@@ -21,7 +21,7 @@ namespace Warden.Component.Common.TextBox {
         public Boolean IsModified { get; set; }
         public Boolean IsLabel { get; set; }
         public String Label { set { lbl_control.Text = value; } }
-        
+        public Int32 LabelSize { set { lbl_control.FontSize = value; } }
 
         public TextBoxMode TextMode {
             get {

@@ -95,6 +95,21 @@ namespace Warden.Helper {
             return HttpContext.Current.Request.Url.Scheme + @"://" + Result;
         }
 
+        public static String ConvertToPhoneFormat(String Tel) {
+            String FormatedTel = "";
+            if (Tel.Length == 11 ) {
+                FormatedTel = long.Parse(Tel).ToString(@"(00) 0 0000-0000");
+            } else if(Tel.Length == 10) {
+                FormatedTel = long.Parse(Tel).ToString(@"(00) 0000-0000");
+            } else if (Tel.Length == 8) {
+                FormatedTel = long.Parse(Tel).ToString(@"00000-0000");
+            } else if (Tel.Length == 9) {
+                FormatedTel = long.Parse(Tel).ToString(@"0 0000-0000");
+            } else {
+                FormatedTel = Tel;
+            }
+            return FormatedTel;
+        }
 
         public static String WordCheck(String Word) {
             String WordType = "";

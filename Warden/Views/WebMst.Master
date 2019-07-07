@@ -15,14 +15,13 @@
     <%if (Session["User"] != null) { %>
         <body style="background-color:ghostwhite">
         <%} else {%>
-            <body style="
-                background-image:url(../assets/img/bg/3-1.jpg); 
-                background-repeat:no-repeat; 
-                background-color:black; 
-                background-size:cover; 
-                background-position: center center;
-                background-size:250%
-                ">
+            <body> 
+                    
+                <video class="bg_video" autoplay loop poster="../assets/img/bg/hifitnessgroup.png">
+                    <source src="../assets/video/teste.webm" type="video/webm; codecs="vp8, vorbis""/>
+                </video>
+                    
+               
             <%} %>
         <form runat="server" >
             
@@ -47,5 +46,6 @@
         </form>
 
         <usc:JsUsc runat="server" ID="js_control" />
+        
     </body>
 </html>

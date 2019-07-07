@@ -344,6 +344,7 @@
     <Content Include="assets\vendor\onscreen\onscreen.min.js" />
     <Content Include="assets\vendor\popper\popper.js" />
     <Content Include="assets\vendor\popper\popper.min.js" />
+    <Content Include="assets\video\teste.mp4" />
     <Content Include="Component\BaseUsc.ascx" />
     <Content Include="Component\Common\Button\ButtonUsc.ascx" />
     <Content Include="Component\Common\Button\MenuButtonUsc.ascx" />
@@ -377,6 +378,7 @@
     <Content Include="Component\UserControls\Form\UserSearchFormUsc.ascx" />
     <Content Include="Component\UserControls\Header\HeaderUsc.ascx" />
     <Content Include="Component\UserControls\Login\Login2GetherUsc.ascx" />
+    <Content Include="Component\UserControls\Login\LoginArgonUsc.ascx" />
     <Content Include="Component\UserControls\Login\LoginTesteUsc.ascx" />
     <Content Include="Component\UserControls\Login\LoginUsc.ascx" />
     <Content Include="Global.asax" />
@@ -631,6 +633,13 @@
     </Compile>
     <Compile Include="Component\UserControls\Login\Login2GetherUsc.ascx.designer.cs">
       <DependentUpon>Login2GetherUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\UserControls\Login\LoginArgonUsc.ascx.cs">
+      <DependentUpon>LoginArgonUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\UserControls\Login\LoginArgonUsc.ascx.designer.cs">
+      <DependentUpon>LoginArgonUsc.ascx</DependentUpon>
     </Compile>
     <Compile Include="Component\UserControls\Login\LoginTesteUsc.ascx.cs">
       <DependentUpon>LoginTesteUsc.ascx</DependentUpon>

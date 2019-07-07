@@ -3,6 +3,9 @@ using Brasdat.Gestor.Library.Core.Classes.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using Warden.Component.Common.Button;
+using Warden.Component.Common.Table;
+using static Warden.Component.Common.Table.TableUsc;
 
 namespace Warden.Component.Common.Card {
     public partial class CardUsc : BaseUsc {
@@ -13,11 +16,19 @@ namespace Warden.Component.Common.Card {
                 SelectedValue();
             }
         }
-
-        public String Aluno { set { this.lbl_aluno.Text = value; } }
-        public String Matricula { set { this.lbl_matricula.Text = value; } }
+        public AlunoPst AlunoEdit { get; set; }
+        public List<TableColumnUsc> TableColumns { get; set; }
+        public String Aluno {
+            get { return this.lbl_aluno.Text; }
+            set { this.lbl_aluno.Text = value; } }
+        public String Matricula {
+            get { return this.lbl_matricula.Text; }
+            set { this.lbl_matricula.Text = value; } }
         public String Date { set { this.lbl_data.Text = value; } }
+
+        public Int32 EmpresaId { get; set; }
         
+        public String ID { get; set; }
         public String Text { get; set; }
         public DateTime Time { get; set; }
         public String UrlImg { get; set; }
@@ -27,6 +38,7 @@ namespace Warden.Component.Common.Card {
             get { return btn1.Text; }
             set { this.btn1.Text = value; }
         }
+        public Boolean IsModal { get; set; }
 
 
         public String LoadRef() {
@@ -111,6 +123,27 @@ namespace Warden.Component.Common.Card {
 
                 Response.Redirect("~/views/fitness/Aluno.aspx");
             }
+        }
+
+        public DataTable ComentariosAluno(String Matricula, String Empresa) {
+            DataTable Table = new DataTable();
+            AlunoPst Aluno;
+
+            Aluno = new AlunoPst() { Filters = new List<BaseMdl.Filter>() };
+            Aluno.Filters.Add(new BaseMdl.Filter("[status] = 'AT'", CompareModeTypes.EXPRESSION));
+            if (!String.IsNullOrEmpty(Matricula)) {
+                Aluno.Filters.Add(new BaseMdl.Filter("[codigo]", CompareModeTypes.EQUAL, Matricula));
+            }
+            if (!String.IsNullOrEmpty(Empresa)) {
+                Aluno.Filters.Add(new BaseMdl.Filter("[empresa_id]", CompareModeTypes.EQUAL, Empresa));
+            }
+
+            Table = Aluno.Pesquisar();
+
+            return Table;
+
+
+
         }
     }
 }

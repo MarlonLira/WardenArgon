@@ -13,6 +13,15 @@ namespace Warden.Component.Common.Card {
     public partial class CardUsc {
         
         /// <summary>
+        /// Controle modal_control.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.UserControls.Form.UserCommentsUsc modal_control;
+        
+        /// <summary>
         /// Controle lbl_aluno.
         /// </summary>
         /// <remarks>
