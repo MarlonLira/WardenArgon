@@ -45,10 +45,10 @@
                                 runat="server" 
                                 Text="Clique Aqui" 
                                 IsLabel="true" 
-                                Label="Link Whats App"
+                                Label="Whats App Link"
                                 LabelSize="10"
                                 ReadOnly="true"  
-                                Icon="SPACESHIP" 
+                                Icon="spaceship" 
                             />
 
                       </a>
@@ -56,16 +56,23 @@
                         <usc:TextBoxUsc 
                             ID="txt_comentario" 
                             runat="server"
-                            Icon="ATOM" 
+                            Icon="ATOM"
+                            IsLabel="true" 
+                            Label="Comentarios"
+                            LabelSize="10"
                             Placeholder="Comentario" 
-                            TextMode="MultiLine"/>
+                            TextMode="MultiLine"
+                            TextRow="3"
+                        />
                   </div>
                   <div class="text-center">
                       <br />
-                      <usc:ButtonUsc ID="ButtonUsc" runat="server" Text="Salvar"/>
+                      <usc:ButtonUsc ID="btn_salvar" runat="server" Text="Salvar"/>
                       <br />
                   </div>
-                    <small class="text-muted">Horario de Atendimento: <%=LoadTime()%></small>
+                    <div style="padding-top: 10px; padding-bottom: 5px">
+                        <small class="text-muted">Horario de Atendimento: <%=LoadTime()%></small>
+                    </div>
                 </div>
             </div>
             </div>

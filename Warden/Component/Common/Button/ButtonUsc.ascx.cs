@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Web.UI;
 
 namespace Warden.Component.Common.Button {
-    public partial class ButtonUsc : UserControl {
-        protected void Page_Load(object sender, EventArgs e) {
+    public partial class ButtonUsc : BaseUsc {
+
+        protected override void OnLoad(EventArgs e) {
+            base.OnLoad(e);
             LoadButton();
         }
-        //public event EventHandler BtnControl_Click;
 
         public delegate void OnClickEvent();
         public event OnClickEvent OnClick;
-
-        //public String OnClick { get; set; }
+       
         public String Style { get; set; }
         public String Type { get; set; }
 
@@ -49,7 +48,7 @@ namespace Warden.Component.Common.Button {
                     OnClick();
                 }
             } catch (Exception Except) {
-
+                throw new Exception(Except.Message);
             }
         }
     }

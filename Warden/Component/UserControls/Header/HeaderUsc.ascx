@@ -2,12 +2,50 @@
 <%@ Import Namespace="Warden.Helper" %>
 
 <% if(Session["User"] != null)
-    if ((Boolean)Session["User"] == true) {%>
+        if ((Boolean)Session["User"] == true) {
+            String LogoUrl = "";
+            String DefaultUrl = "";
+            String LogoMobileUrl = "";
+            String CurrentSessionApp = "";
+
+            if (Session["App"] != null) {
+                CurrentSessionApp = Convert.ToString(Session["App"]);
+            }
+
+            switch (CurrentSessionApp.ToUpper()) {
+                case "2GETHER": {
+                        DefaultUrl = Help.FormatUrl("/Views/Default.aspx");
+                        LogoUrl = Help.FormatUrl("/assets/img/logo/white6.png");
+                        LogoMobileUrl = Help.FormatUrl("/assets/img/logo/white.png");
+                        ofertas_control.Visible = false;
+                        atendimento_control.Url = "/Views/Fitness/Colaborador/Atendimento.aspx";
+
+                        break;
+                    }
+                case "ARGON": {
+                        DefaultUrl = Help.FormatUrl("/Views/Telemarketing/Colaborador/Atendimento.aspx");
+                        LogoUrl = Help.FormatUrl("/assets/img/brand/white.png");
+                        LogoMobileUrl = Help.FormatUrl("/assets/img/brand/blue.png");
+                        atendimento_control.Url = "/Views/Telemarketing/Colaborador/Atendimento.aspx";
+                        etapas_control.Visible = false;
+                        graficos_control.Visible = false;
+                        calendar_control.Visible = false;
+                        break;
+                    }
+                default: {
+                        DefaultUrl = Help.FormatUrl("/Views/Default.aspx");
+                        LogoUrl = Help.FormatUrl("/assets/img/logo/white6.png");
+                        LogoMobileUrl = Help.FormatUrl("/assets/img/logo/white.png");
+                        break;
+                    }
+            }
+
+            %>
 <header class="header-global" style="background-color:black !important">
     <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
         <div class="container">
-        <a class="navbar-brand mr-lg-5" href=" <%=Help.FormatUrl("/Views/Default.aspx") %>">
-            <img src="<%=Help.FormatUrl("/assets/img/logo/white6.png") %>" style="width: 120px; height: 50px">
+        <a class="navbar-brand mr-lg-5" href=" <%=DefaultUrl %>">
+            <img src="<%=LogoUrl %>" style="width: 120px; height: 50px">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -16,8 +54,8 @@
                 <div class="navbar-collapse-header">
                 <div class="row">
                     <div class="col-6 collapse-brand" >
-                    <a href="<%=Help.FormatUrl("Views/Default.aspx") %>">
-                        <img src="<%=Help.FormatUrl("/assets/img/logo/white.png") %>">
+                    <a href="<%=DefaultUrl %>">
+                        <img src="<%=LogoMobileUrl %>">
                     </a>
                     </div>
                     <div class="col-6 collapse-close">
@@ -44,7 +82,6 @@
                             Icon="phone" 
                             Title="Atendimentos" 
                             Description="Todos seus alunos marcados para hoje" 
-                            Url="/Views/Fitness/Colaborador/Atendimento.aspx" 
                         />
 
                         <usc:MenuButtonUsc 
@@ -68,7 +105,7 @@
                         />
 
                         <usc:MenuButtonUsc 
-                            ID="leads_control" 
+                            ID="calendar_control" 
                             runat="server" 
                             Icon="date" 
                             Title="Calendario"
@@ -77,7 +114,7 @@
                         />
 
                         <usc:MenuButtonUsc 
-                            ID="MenuButtonUsc1" 
+                            ID="ofertas_control" 
                             runat="server" 
                             Icon="ui" 
                             Title="Ofertas"
@@ -90,13 +127,20 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
-                    <i class="ni ni-collection d-lg-none"></i>
-                    <span class="nav-link-inner--text">Configurações</span>
+                        <i class="ni ni-collection d-lg-none"></i>
+                        <span class="nav-link-inner--text">Configurações</span>
                     </a>
                     <div class="dropdown-menu">
-                    <a href="#" class="dropdown-item">Perfil</a>
-                    <a href="#" class="dropdown-item">Login</a>
-                    <a href="#" class="dropdown-item">Registro</a>
+                        <a href="#" class="dropdown-item">Perfil</a>
+                        <a href="#" class="dropdown-item">Login</a>
+                        <a href="#" class="dropdown-item">Registro</a>
+                        <a href="#" class="dropdown-item">
+                            <usc:ButtonUsc 
+                                ID="btn_sair" 
+                                runat="server" 
+                                Text="Sair"
+                            />
+                        </a>
                     </div>
                 </li>
                 </ul>

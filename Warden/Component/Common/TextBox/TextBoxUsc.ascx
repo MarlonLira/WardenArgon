@@ -7,7 +7,7 @@
     <%} %>
 
     <%if (IsLabel == true) { %>
-            <div style="text-align:left">
+            <div style="text-align:left; padding-top:10px; padding-bottom: 1px">
                 <usc:LabelUsc FontSize="14" runat="server" Text="label" Class="font-weight-bold mb-4" ID="lbl_control"/>
             </div>
     <%} %>

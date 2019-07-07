@@ -40,21 +40,30 @@ namespace Warden.Component.UserControls.Header {
         protected global::Warden.Component.Common.Button.MenuButtonUsc graficos_control;
         
         /// <summary>
-        /// Controle leads_control.
+        /// Controle calendar_control.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.Button.MenuButtonUsc leads_control;
+        protected global::Warden.Component.Common.Button.MenuButtonUsc calendar_control;
         
         /// <summary>
-        /// Controle MenuButtonUsc1.
+        /// Controle ofertas_control.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.Button.MenuButtonUsc MenuButtonUsc1;
+        protected global::Warden.Component.Common.Button.MenuButtonUsc ofertas_control;
+        
+        /// <summary>
+        /// Controle btn_sair.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.Button.ButtonUsc btn_sair;
     }
 }

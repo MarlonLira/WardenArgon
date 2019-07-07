@@ -14,6 +14,7 @@ namespace Warden.Views.Telemarketing.Colaborador {
                                           " WHERE [STATUS] = 'AT' " +
                                           " AND CODIGO IS NOT NULL " +
                                           " AND EMPRESA_ID IS NOT NULL " +
+                                          " AND NOME NOT LIKE '%PERSONAL%' " +
                                           " ORDER BY ID DESC");
                 Session["Table"] = Table;
             }            

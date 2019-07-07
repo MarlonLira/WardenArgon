@@ -66,7 +66,7 @@
              />
 
             </button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+            <button runat="server" type="button" class="btn btn-sm btn-outline-secondary" id="btn2">Edit</button>
         </div>
         <small class="text-muted"><%=LoadTime()%></small>
         </div>

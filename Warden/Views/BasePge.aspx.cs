@@ -9,11 +9,9 @@ namespace Warden.Views {
 
             if (Global.Funcionario == null & Global.Aluno == null) {
                 Session["Error"] = "Sua Conexão Expirou!";
+                Session["User"] = false;
                 Response.Redirect("~/Views/Login.aspx", false);
             }
-            /*if (Global.Aluno == null) {
-                Response.Redirect("~/Views/Default.aspx", false);
-            }*/
 
             #region AutoCrypto
 

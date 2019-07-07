@@ -3,12 +3,13 @@ using Brasdat.Gestor.Library.Core.Classes.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using Warden.Component.Common.Button;
-using Warden.Component.Common.Table;
 using static Warden.Component.Common.Table.TableUsc;
 
 namespace Warden.Component.Common.Card {
     public partial class CardUsc : BaseUsc {
+
+        #region Eventos
+
         protected override void OnLoad(EventArgs e) {
             base.OnLoad(e);
 
@@ -16,8 +17,29 @@ namespace Warden.Component.Common.Card {
                 SelectedValue();
             }
         }
+
+        #endregion
+
+        #region Atributos
         public AlunoPst AlunoEdit { get; set; }
         public List<TableColumnUsc> TableColumns { get; set; }
+        public String UrlImg { get; set; }
+        public String Class { get; set; }
+        public DateTime Time { get; set; }
+        public String Href { get; set; }
+        public Boolean IsModal { get; set; }
+        public String Btn1Text {
+            get { return btn1.Text; }
+            set { this.btn1.Text = value; }
+        }
+        #endregion
+
+        #region Atributos Defasados // verificar
+        public String Btn2Text { set { this.btn2.InnerText = value; } }
+
+        public String ID { get; set; }
+        public Int32 EmpresaId { get; set; }
+
         public String Aluno {
             get { return this.lbl_aluno.Text; }
             set { this.lbl_aluno.Text = value; } }
@@ -25,21 +47,10 @@ namespace Warden.Component.Common.Card {
             get { return this.lbl_matricula.Text; }
             set { this.lbl_matricula.Text = value; } }
         public String Date { set { this.lbl_data.Text = value; } }
-
-        public Int32 EmpresaId { get; set; }
-        
-        public String ID { get; set; }
         public String Text { get; set; }
-        public DateTime Time { get; set; }
-        public String UrlImg { get; set; }
-        public String Class { get; set; }
-        public String Href { get; set; }
-        public String btn1Text {
-            get { return btn1.Text; }
-            set { this.btn1.Text = value; }
-        }
-        public Boolean IsModal { get; set; }
+        #endregion
 
+        #region Metodos
 
         public String LoadRef() {
             String Ref = "";
@@ -141,9 +152,25 @@ namespace Warden.Component.Common.Card {
             Table = Aluno.Pesquisar();
 
             return Table;
-
-
-
         }
+
+        public void LoadDataSource(AlunoPst Aluno) {
+            AlunoPst NewAluno;
+            try {
+                NewAluno = Aluno;
+                if (Aluno != null) {
+
+                    EmpresaId = Aluno.Empresa.Id;
+                    lbl_aluno.Text = Aluno.Nome;
+                    lbl_matricula.Text = "Matricula: " + Aluno.Codigo;
+                    lbl_data.Text = "Dt. Ultimo Contrato: " + Aluno.DataUltContrato.ToShortDateString();
+                }
+
+            } finally {
+                NewAluno = null;
+            }
+        }
+
+        #endregion
     }
 }

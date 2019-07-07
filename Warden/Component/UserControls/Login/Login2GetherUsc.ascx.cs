@@ -35,6 +35,7 @@ namespace Warden.Component.UserControls.Login {
 
                     Session["Error"] = null;
                     Session["User"] = true;
+                    Session.Add("App", "2gether");
                     Response.Redirect("./Default.aspx", false);
                 }
 

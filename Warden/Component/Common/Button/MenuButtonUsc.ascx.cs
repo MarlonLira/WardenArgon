@@ -8,6 +8,7 @@ namespace Warden.Component.Common.Button {
 
         public String Title { get; set; }
         public String Description { get; set; }
+        public override Boolean Visible { set { this.pnl_control.Visible = value; } }
         
     }
 }

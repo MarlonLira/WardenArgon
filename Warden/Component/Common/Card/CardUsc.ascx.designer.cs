@@ -56,5 +56,14 @@ namespace Warden.Component.Common.Card {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::Warden.Component.Common.Label.LabelUsc btn1;
+        
+        /// <summary>
+        /// Controle btn2.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btn2;
     }
 }

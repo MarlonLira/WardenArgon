@@ -2,19 +2,26 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using Warden.Component.Common.Table;
+using Warden.Component.Common.Button;
 using static Warden.Component.Common.Table.TableUsc;
 
 namespace Warden.Component.UserControls.Form {
     public partial class UserCommentsUsc : BaseUsc {
 
+        #region Eventos
         protected override void OnLoad(EventArgs e) {
             base.OnLoad(e);
+
+            btn_salvar.OnClick += new ButtonUsc.OnClickEvent(Btn_salvar_OnClick);
         }
+
+        private void Btn_salvar_OnClick() {
+            throw new Exception("Botão não habilitado!");
+        }
+
+        #endregion
+
+        #region Atributos
 
         public String ID { get; set; }
         public String Aluno { get; set; }
@@ -22,6 +29,9 @@ namespace Warden.Component.UserControls.Form {
         public const String WhatsLink = "https://api.whatsapp.com/send?phone=ToPhone&text=ToText";
         public String Href { get; set; }
 
+        #endregion
+
+        #region Metodos
         public void LoadTable(DataTable Table, List<TableColumnUsc> TableColumns) {
 
             if (Table != null && Table.Rows.Count > 0) {
@@ -56,5 +66,7 @@ namespace Warden.Component.UserControls.Form {
             
             return TimeToString;
         }
+        #endregion
+
     }
 }
