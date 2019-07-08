@@ -22,7 +22,7 @@
                     card_control.Href = "?Matricula=" + Row["codigo"].ToString() + "&Empresa=" + Row["empresa_id"].ToString();
 
                 %>
-              <usc:CardUsc ID="card_control" runat="server" UrlImg="/assets/img/default-avatar.png"/>
+              <usc:CardUsc ID="card_control" runat="server" UrlImg="/assets/gif/gym.gif"/>
         <%} } %>
             
     </div>   
