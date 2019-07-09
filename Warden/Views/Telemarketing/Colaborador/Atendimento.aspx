@@ -4,14 +4,19 @@
 <%@ Import Namespace="Brasdat.Gestor.Library.Business.Classes.Fitness" %>
 
 <asp:Content ID="ctt_atendimento" ContentPlaceHolderID="MainContent" runat="server">
-    
+    <usc:FilterUsc runat="server" />
 <div class="container">
     <div class="row">
           
         <%
 
             AlunoPst Aluno;
-            DataTable Table = (DataTable)Session["Table"];
+            DataTable Table;
+            if (TableEdit == null) {
+                Table = (DataTable)Session["Table"];
+            } else {
+                Table = TableEdit;
+            }
 
             if (Table != null) {
                 foreach (DataRow Row in Table.Rows) {

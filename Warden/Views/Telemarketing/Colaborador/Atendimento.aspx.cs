@@ -8,7 +8,12 @@ namespace Warden.Views.Telemarketing.Colaborador {
         protected override void OnLoad(EventArgs e) {
             base.OnLoad(e);
 
-            if (Session["Table"] == null) {
+            if (Session["Table"] != null) {
+                TableEdit = (DataTable)Session["TableEdit"];
+            }
+
+
+            if (Session["Table"] == null && TableEdit == null) {
                 DataTable Table = new DataTable();
                 Table = Sql.ExecuteReader("SELECT TOP 10 * FROM [FITNESS].[VIW_ALUNO] " +
                                           " WHERE [STATUS] = 'AT' " +
@@ -19,6 +24,8 @@ namespace Warden.Views.Telemarketing.Colaborador {
                 Session["Table"] = Table;
             }            
         }
+
+        public DataTable TableEdit { get; set; }
 
         SqlHlp Sql { get { return SqlHlp.Instance; } }
 
