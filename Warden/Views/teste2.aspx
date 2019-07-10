@@ -2,11 +2,11 @@
 <%@ Import Namespace="Warden.Helper" %>
 <%@ Import Namespace="System.Data" %>
 <%@ Import Namespace="Brasdat.Gestor.Library.Business.Classes.Fitness" %>
+
 <usc:CssUsc runat="server" ID="css_control" />
 
-
 <form runat="server">
-<usc:AttendanceDateUsc runat="server" />
+    <usc:CalendarUsc runat="server" />
 </form>
 
- <usc:JsUsc runat="server" ID="js_control" />
+<usc:JsUsc runat="server" ID="js_control" />

@@ -8,7 +8,8 @@ namespace Warden.Views.Fitness {
         protected void Page_Load(object sender, EventArgs e) {
             if (Session["Aluno"] != null) {
                 profile_control.IsReadOnly = true;
-                profile_control.LoadForm((AlunoPst)Session["Aluno"]);
+                AlunoEdit = (AlunoPst)Session["Aluno"];
+                profile_control.LoadForm(AlunoEdit);
             }
             if (Global.Funcionario == null & Global.Aluno == null) {
                 Response.Redirect("~/Views/Login.aspx", false);
@@ -18,18 +19,25 @@ namespace Warden.Views.Fitness {
             btn_verif_etapa.OnClick += new SquareButtonUsc.OnClickEvent(BtnVerifEtapa_Click);
         }
 
+        public AlunoPst AlunoEdit { get; set; }
+
         public void BtnProxEtapa_Click() {
 
             try {
-                LoadEtapa();
+                MarcarProxEtapa();
 
-            } catch (Exception Err) {
+            } finally {
 
             }
         }
 
         public void BtnVerifEtapa_Click() {
             
+        }
+
+        public void MarcarProxEtapa() {
+            Session.Add("MarcarProxEtapa", AlunoEdit);
+            Response.Redirect("~/views/fitness/Colaborador/Calendario.aspx");
         }
 
         public void LoadEtapa() {

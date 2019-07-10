@@ -12,7 +12,7 @@ namespace Warden.Component.UserControls.Form {
 
             calendar_control.Calendar = new Common.Calendar.CalendarUsc.CalendarDay();
             calendar_control.Calendar.Date = DateTime.Now;
-            calendar_control.LoadCalendar(calendar_control.Calendar);
+            calendar_control.LoadCalendar();
         }
 
 

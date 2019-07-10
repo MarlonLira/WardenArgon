@@ -75,8 +75,12 @@ namespace Warden.Component.Common.Card {
 
             string AlunoEmpresa = Request.QueryString["Empresa"];
 
-            if (!String.IsNullOrEmpty(AlunoMatricula)) {
-                CarregarAluno(AlunoMatricula, AlunoEmpresa);
+            if (AlunoRow == null) {
+                if (!String.IsNullOrEmpty(AlunoMatricula)) {
+                    CarregarAluno(AlunoMatricula, AlunoEmpresa);
+                }
+            } else {
+                CarregarAluno(AlunoRow);
             }
         }
 
@@ -102,6 +106,8 @@ namespace Warden.Component.Common.Card {
             }
             return Type;
         }
+
+        public DataRow AlunoRow { get; set; }
 
         public String LoadTime() {
             String TimeToString = "";
@@ -135,6 +141,19 @@ namespace Warden.Component.Common.Card {
                 Response.Redirect("~/views/fitness/Aluno.aspx");
             }
         }
+
+        private void CarregarAluno(DataRow AlunoRow) {
+            DataTable Table = new DataTable();
+            AlunoPst Aluno = new AlunoPst();
+
+            if (AlunoRow != null) {
+                Aluno.Preencher(AlunoRow);
+                Session.Add("Aluno", Aluno);
+            }
+
+            Response.Redirect("~/views/fitness/Aluno.aspx");
+        }
+        
 
         public DataTable ComentariosAluno(String Matricula, String Empresa) {
             DataTable Table = new DataTable();

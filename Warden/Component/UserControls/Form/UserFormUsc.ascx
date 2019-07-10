@@ -8,38 +8,84 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                  <usc:TextBoxUsc ID="txt_nome" runat="server" Icon="user" Placeholder="Nome"/>
+                  <usc:TextBoxUsc
+                      ID="txt_nome" 
+                      runat="server" 
+                      Icon="user" 
+                      Placeholder="Nome"
+                      IsLabel="true"
+                      Label="Nome"
+                      LabelSize="9"
+                    />
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <usc:TextBoxUsc ID="txt_email" runat="server" Icon="email" Placeholder="E-mail" />
+                <usc:TextBoxUsc 
+                    ID="txt_email" 
+                    runat="server" 
+                    Icon="email" 
+                    Placeholder="E-mail"
+                    IsLabel="true"
+                    Label="E-mail"
+                    LabelSize="9"
+                />
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <usc:TextBoxUsc ID="txt_tel" runat="server" Icon="phone" Placeholder="Telefone"/>
+                <usc:TextBoxUsc 
+                    ID="txt_tel"
+                    runat="server"
+                    Icon="phone" 
+                    Placeholder="Telefone"
+                    IsLabel="true"
+                    Label="Telefone"
+                    LabelSize="9"
+                />
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <div class="input-group mb-4">
-                  <usc:TextBoxUsc ID="txt_idade" runat="server" Icon="wave" Placeholder="Idade" />
-                </div>
+                  <usc:TextBoxUsc 
+                      ID="txt_idade" 
+                      runat="server" 
+                      Icon="wave" 
+                      Placeholder="Idade"
+                      IsLabel="true"
+                      Label="Idade"
+                      LabelSize="9"
+                    />
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <usc:TextBoxUsc ID="txt_sexo" runat="server" Icon="gender" Placeholder="Sexo" />
+                <usc:TextBoxUsc 
+                    ID="txt_sexo" 
+                    runat="server" 
+                    Icon="gender" 
+                    Placeholder="Sexo"
+                    IsLabel="true"
+                    Label="Sexo"
+                    LabelSize="9"
+                />
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <usc:TextBoxUsc ID="txt_data" runat="server" Icon="date" Placeholder="Data"/>
+                <usc:TextBoxUsc 
+                    ID="txt_data" 
+                    runat="server" 
+                    Icon="date" 
+                    Placeholder="Data"
+                    IsLabel="true"
+                    Label="Data"
+                    LabelSize="9"
+                />
               </div>
             </div>
               <usc:ButtonUsc ID="btn_confirmar" runat="server" Text="Salvar"/>

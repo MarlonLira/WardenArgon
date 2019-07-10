@@ -10,12 +10,13 @@
           
         <%
 
-            AlunoPst Aluno = new AlunoPst();
+            AlunoPst Aluno;
             DataTable Table = (DataTable)Session["Table"];
 
             if (Table != null) {
                 foreach (DataRow Row in Table.Rows) {
 
+                    card_control.AlunoRow = Row;
                     card_control.Aluno = Row["nome"].ToString();
                     card_control.Matricula =" Matricula: " +  Row["codigo"].ToString();
                     card_control.Date = "23/06/2019";

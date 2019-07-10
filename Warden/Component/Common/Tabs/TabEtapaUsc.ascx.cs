@@ -58,7 +58,7 @@ namespace Warden.Component.Common.Tabs {
 
                 calendar_control.Calendar = new Calendar.CalendarUsc.CalendarDay();
                 calendar_control.Calendar.Date = DateTime.Now;
-                calendar_control.LoadCalendar(calendar_control.Calendar);
+                calendar_control.LoadCalendar();
             }
 
         }

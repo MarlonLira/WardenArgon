@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DropdownUsc.ascx.cs" Inherits="Warden.Component.Common.Dropdown.DropdownUsc" %>
 
-<div class="dropdown">
+<div class="dropdown" style="padding-left:10px">
     <asp:DropDownList ID="dd_control" class="btn btn-secondary dropdown-toggle" runat="server">
     </asp:DropDownList>
   
