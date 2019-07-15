@@ -13,22 +13,67 @@ namespace Warden.Views.Fitness.Colaborador {
     public partial class Calendar {
         
         /// <summary>
-        /// Controle calendarcss_control.
+        /// Controle css_control.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Styles.Css.CalendarCssUsc calendarcss_control;
+        protected global::Warden.Component.Styles.Css.CssUsc css_control;
         
         /// <summary>
-        /// Controle form1.
+        /// Controle frm_calendar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm frm_calendar;
+        
+        /// <summary>
+        /// Controle spt_calendar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager spt_calendar;
+        
+        /// <summary>
+        /// Controle TextBoxUsc1.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc TextBoxUsc1;
+        
+        /// <summary>
+        /// Controle TextBoxUsc6.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc TextBoxUsc6;
+        
+        /// <summary>
+        /// Controle TextBoxUsc3.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc TextBoxUsc3;
+        
+        /// <summary>
+        /// Controle TextBoxUsc2.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc TextBoxUsc2;
         
         /// <summary>
         /// Controle jsonDiv.
@@ -49,12 +94,12 @@ namespace Warden.Views.Fitness.Colaborador {
         protected global::System.Web.UI.HtmlControls.HtmlInputHidden hdClient;
         
         /// <summary>
-        /// Controle calendarjs_control.
+        /// Controle js_control.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Styles.Js.CalendarJsUsc calendarjs_control;
+        protected global::Warden.Component.Styles.Js.JsUsc js_control;
     }
 }

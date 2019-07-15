@@ -121,5 +121,3 @@ C:\Users\Academia Brilhante\Desktop\Warden\WardenArgon\Warden\obj\Debug\Warden.c
 C:\Users\Academia Brilhante\Desktop\Warden\WardenArgon\Warden\obj\Debug\Warden.dll
 C:\Users\Academia Brilhante\Desktop\Warden\WardenArgon\Warden\obj\Debug\Warden.pdb
 C:\Users\Academia Brilhante\Desktop\Warden\WardenArgon\Warden\obj\Debug\Warden.csprojAssemblyReference.cache
-C:\Web\Warden\Warden\obj\Debug\Warden.csprojAssemblyReference.cache
-C:\Web\Warden\Warden\bin\Newtonsoft.Json.dll

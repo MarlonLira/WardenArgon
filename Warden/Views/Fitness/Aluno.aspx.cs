@@ -37,7 +37,7 @@ namespace Warden.Views.Fitness {
 
         public void MarcarProxEtapa() {
             Session.Add("MarcarProxEtapa", AlunoEdit);
-            Response.Redirect("~/views/fitness/Colaborador/Calendario.aspx");
+            Response.Redirect("~/views/fitness/Colaborador/Calendar.aspx");
         }
 
         public void LoadEtapa() {

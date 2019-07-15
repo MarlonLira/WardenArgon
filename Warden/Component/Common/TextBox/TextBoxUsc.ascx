@@ -2,7 +2,10 @@
 
 <div style="padding-top: 10px; padding-bottom:10px">
     
-<% if (IsModified) {%>
+<% if (!IsHtml) {
+
+
+        if (IsModified) {%>
 <div class="col-<%=LoadMode() %>-<%=LoadSize() %>">
     <%} %>
 
@@ -22,5 +25,17 @@
 
 <%if (IsModified) { %>
 </div>
-<%} %>
+<%}
+    } else {%>
+
+    <div style="padding-left:10px; padding-top:10px">
+        <label for="exampleInputEmail1"><b><%=Title %></b></label>
+        <%if (!IsTextArea) { %>
+            <input type="email" class="form-control" id="<%=ComponentId %>" aria-describedby="emailHelp" placeholder="Enter Text" title="<%=Text %>" style="color:slategray" >
+        <%} else {%>
+            <textarea rows="3" cols="30" class="form-control" id="<%=ComponentId %>" aria-describedby="emailHelp" placeholder="Enter text" title="<%=Text %>" style="color:slategray" ></textarea>
+        <%} %>
+    </div>
+
+    <%} %>
 </div>

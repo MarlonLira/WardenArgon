@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Brasdat.Gestor.Library.Business.Classes.Fitness;
+using Brasdat.Gestor.Library.Core.Classes.Model;
+using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Web.UI;
 using Warden.Component.Common.Button;
 
@@ -9,23 +13,104 @@ namespace Warden.Component.Common.Tabs {
             base.OnLoad(e);
             btn_anamnese_salvar.OnClick += new ButtonUsc.OnClickEvent(BtnAnamneseSalvar_Click);
             LoadEtapas();
+
+            if (Session["Aluno"] != null) {
+                AlunoEdit = (AlunoPst)Session["Aluno"];
+            }
         }
+
+        public AlunoPst AlunoEdit;
 
         protected void BtnAnamneseSalvar_Click() {
             SalvarAnamnese();
         }
+        private void PreencherAnamnese(DataRow Row) {
+            
+            Question1.SelectValue(Convert.ToBoolean(Row["problema_cardiaco"]));
+            Question2.SelectValue(Convert.ToBoolean(Row["dor_peito_atividade"]));
+            Question3.SelectValue(Convert.ToBoolean(Row["dor_peito_ultimo_mes"]));
+            Question4.SelectValue(Convert.ToBoolean(Row["perda_consciencia"]));
+            Question5.SelectValue(Convert.ToBoolean(Row["problema_osseo"]));
+            Question6.SelectValue(Convert.ToBoolean(Row["medicacao"]));
+            Question7.SelectValue(Convert.ToBoolean(Row["pressao_arterial"]));
+            Question8.SelectValue(Convert.ToBoolean(Row["impedimento_atividade"]));
+            Question9.SelectValue(Convert.ToBoolean(Row["cirurgia"]));
+            Question10.SelectValue(Convert.ToBoolean(Row["comprometer_saude_atividade"]));
+            pnl_question.Enabled = false;
 
+        }
+
+        private Boolean ProcurarAnamnese(AlunoPst Aluno) {
+            AlunoParqPst Parq = null;
+            DataTable Table;
+            Boolean Result = false;
+            try {
+                Parq = new AlunoParqPst();
+                Parq.Filters = new List<BaseMdl.Filter>();
+                Parq.Filters.Add(new BaseMdl.Filter("[status]", CompareModeTypes.EQUAL, "AT"));
+                Parq.Filters.Add(new BaseMdl.Filter("[empresa_id]", CompareModeTypes.EQUAL, Global.Empresa.Id));
+                Parq.Filters.Add(new BaseMdl.Filter("[aluno_id]", CompareModeTypes.EQUAL, Aluno.Id));
+                Table = Parq.Pesquisar();
+
+                if (Table.Rows.Count > 0) {
+                    Result = true;
+                    foreach (DataRow Row in Table.Rows) {
+                        PreencherAnamnese(Row);
+                        break;
+                    }
+                }
+
+            } catch (Exception Err) {
+
+            }
+            return Result;
+        }
         private void SalvarAnamnese() {
-            RadioButtonUsc Q1 = Question1;
+            AlunoParqPst Parq = null;
+            String CurrentDate = DateTime.UtcNow.AddHours(-3).ToLongDateString();
 
-            String Teste = Question1.Value;
+            try {
+                Parq = new AlunoParqPst();
+                Parq.AlunoAgenda = new AlunoAgendaPst();
+
+                if (Session["Aluno"] != null) {
+                    Parq.Empresa = Global.Empresa;
+                    Parq.Operador = Global.Funcionario;
+                    Parq.Aluno = AlunoEdit;
+                    Parq.Status = "AT";
+                    Parq.AlunoAgenda.Id = 0;
+                    Parq.ProblemaCardiaco = Question1.BoolValue;
+                    Parq.DorPeitoAtividade = Question2.BoolValue;
+                    Parq.DorPeitoUltimoMes = Question3.BoolValue;
+                    Parq.PerdaConsciencia = Question4.BoolValue;
+                    Parq.ProblemaOsseo = Question5.BoolValue;
+                    Parq.Medicacao = Question6.BoolValue;
+                    Parq.PressaoArterial = Question7.BoolValue;
+                    Parq.ImpedimentoAtividade = Question8.BoolValue;
+                    Parq.Cirugia = Question9.BoolValue;
+                    Parq.ComprometerSaudeAtividade = Question10.BoolValue;
+                    Parq.Auditoria = Parq.Operador.Usuario  + CurrentDate + " - INCLUIR";
+                    Parq.Incluir();
+                }
+
+            }catch(Exception Err) {
+
+            } finally {
+                Parq = null;
+            }
         }
 
         public void LoadEtapas() {
-            RadioButtonUsc.Item Item1 = new RadioButtonUsc.Item() { Text = "Sim"};
-            RadioButtonUsc.Item Item2 = new RadioButtonUsc.Item() { Text = "Não"};
-            RadioButtonUsc.Item [] Itens = new RadioButtonUsc.Item[] { Item1, Item2 };
+            AlunoEdit = (AlunoPst)Session["Aluno"];
+
+            RadioButtonUsc.Item Item1 = new RadioButtonUsc.Item() { Text = "Sim" };
+            RadioButtonUsc.Item Item2 = new RadioButtonUsc.Item() { Text = "Não" };
+            RadioButtonUsc.Item[] Itens = new RadioButtonUsc.Item[] { Item1, Item2 };
+           
+        
             if (!IsPostBack) {
+
+                
                 Question1.Title = Question(1);
                 Question1.LoadDataSource(Itens);
 
@@ -56,6 +141,9 @@ namespace Warden.Component.Common.Tabs {
                 Question10.Title = Question(10);
                 Question10.LoadDataSource(Itens);
 
+                if (AlunoEdit != null) {
+                    ProcurarAnamnese(AlunoEdit);
+                }
                 calendar_control.Calendar = new Calendar.CalendarUsc.CalendarDay();
                 calendar_control.Calendar.Date = DateTime.Now;
                 calendar_control.LoadCalendar();

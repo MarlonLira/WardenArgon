@@ -22,7 +22,7 @@
                 <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab" style="text-align: left !important">
                     <usc:LabelUsc runat="server" ID="lbl_title_control" Text ="Questionário de Prontidão para Atividade Física(PAR-Q):"/>
                     <br />
-                    <form>
+                    <asp:Panel ID="pnl_question" runat="server">
                         <usc:RadioButtonUsc runat="server" ID="Question1"/>
                         <usc:RadioButtonUsc runat="server" ID="Question2"/>
                         <usc:RadioButtonUsc runat="server" ID="Question3"/>
@@ -33,8 +33,7 @@
                         <usc:RadioButtonUsc runat="server" ID="Question8"/>
                         <usc:RadioButtonUsc runat="server" ID="Question9"/>
                         <usc:RadioButtonUsc runat="server" ID="Question10"/>
-                        <br />
-                    </form>
+                    </asp:Panel>
                     <usc:ButtonUsc runat="server" ID="btn_anamnese_salvar" Text="Salvar"/>
                 </div>
                 <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">

@@ -22,9 +22,7 @@
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <div class="input-group mb-4">
               <usc:TextBoxUsc ID="txt_metabolismo" runat="server" Icon="wave" Placeholder="Metabolismo Basal"/>
-            </div>
           </div>
         </div>
       </div>

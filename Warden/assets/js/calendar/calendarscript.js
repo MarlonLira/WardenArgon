@@ -2,6 +2,11 @@
 var addStartDate;
 var addEndDate;
 var globalAllDay;
+var AutoWidth = screen.width / 4;
+
+if (AutoWidth < 300) {
+    AutoWidth = 300;
+}
 
 function updateEvent(event, element) {
     //alert(event.description);
@@ -11,6 +16,7 @@ function updateEvent(event, element) {
     currentUpdateEvent = event;
 
     $('#updatedialog').dialog('open');
+
     $("#eventName").val(event.title);
     $("#eventDesc").val(event.description);
     $("#eventId").val(event.id);
@@ -23,7 +29,6 @@ function updateEvent(event, element) {
         $("#eventEnd").text("" + event.end.toLocaleString());
     }
 
-    return false;
 }
 
 function updateSuccess(updateResult) {
@@ -54,22 +59,28 @@ function addSuccess(addResult) {
 
         $('#calendar').fullCalendar('unselect');
     }
+
 }
 
 function UpdateTimeSuccess(updateResult) {
     //alert(updateResult);
 }
 
+
 function selectDate(start, end, allDay) {
 
     $('#addDialog').dialog('open');
+
+
     $("#addEventStartDate").text("" + start.toLocaleString());
     $("#addEventEndDate").text("" + end.toLocaleString());
+
 
     addStartDate = start;
     addEndDate = end;
     globalAllDay = allDay;
     //alert(allDay);
+
 }
 
 function updateEventOnDropResize(event, allDay) {
@@ -78,41 +89,48 @@ function updateEventOnDropResize(event, allDay) {
     var eventToUpdate = {
         id: event.id,
         start: event.start
+
     };
+
+    if (allDay) {
+        eventToUpdate.start.setHours(0, 0, 0);
+
+    }
 
     if (event.end === null) {
         eventToUpdate.end = eventToUpdate.start;
+
     }
     else {
         eventToUpdate.end = event.end;
+        if (allDay) {
+            eventToUpdate.end.setHours(0, 0, 0);
+        }
     }
 
-    var endDate;
-    if (!event.allDay) {
-        endDate = new Date(eventToUpdate.end + 60 * 60000);
-        endDate = endDate.toJSON();
-    }
-    else {
-        endDate = eventToUpdate.end.toJSON();
-    }
-
-    eventToUpdate.start = eventToUpdate.start.toJSON();
-    eventToUpdate.end = eventToUpdate.end.toJSON(); //endDate;
-    eventToUpdate.allDay = event.allDay;
+    eventToUpdate.start = eventToUpdate.start.format("dd-MM-yyyy hh:mm:ss tt");
+    eventToUpdate.end = eventToUpdate.end.format("dd-MM-yyyy hh:mm:ss tt");
 
     PageMethods.UpdateEventTime(eventToUpdate, UpdateTimeSuccess);
+
 }
 
 function eventDropped(event, dayDelta, minuteDelta, allDay, revertFunc) {
+
     if ($(this).data("qtip")) $(this).qtip("destroy");
 
-    updateEventOnDropResize(event);
+    updateEventOnDropResize(event, allDay);
+
+
+
 }
 
 function eventResized(event, dayDelta, minuteDelta, revertFunc) {
+
     if ($(this).data("qtip")) $(this).qtip("destroy");
 
     updateEventOnDropResize(event);
+
 }
 
 function checkForSpecialChars(stringToCheck) {
@@ -120,39 +138,14 @@ function checkForSpecialChars(stringToCheck) {
     return pattern.test(stringToCheck); 
 }
 
-function isAllDay(startDate, endDate) {
-    var allDay;
-
-    if (startDate.format("HH:mm:ss") == "00:00:00" && endDate.format("HH:mm:ss") == "00:00:00") {
-        allDay = true;
-        globalAllDay = true;
-    }
-    else {
-        allDay = false;
-        globalAllDay = false;
-    }
-    
-    return allDay;
-}
-
-function qTipText(start, end, description) {
-    var text;
-
-    if (end !== null)
-        text =  "<strong>Start:</strong> " + start.format("MM/DD/YYYY hh:mm T") + "<br/><strong>End:</strong> " + end.format("MM/DD/YYYY hh:mm T") + "<br/><br/>" + description;
-    else
-        text =  "<strong>Start:</strong> " + start.format("MM/DD/YYYY hh:mm T") + "<br/><strong>End:</strong><br/><br/>" + description;
-
-    return text;
-}
-
 $(document).ready(function() {
+
     // update Dialog
     $('#updatedialog').dialog({
         autoOpen: false,
-        width: 470,
+        width: AutoWidth,
         buttons: {
-            "update": function() {
+            "Atualizar": function() {
                 //alert(currentUpdateEvent.title);
                 var eventToUpdate = {
                     id: currentUpdateEvent.id,
@@ -173,7 +166,7 @@ $(document).ready(function() {
                 }
 
             },
-            "delete": function() {
+            "Deletar": function() {
 
                 if (confirm("do you really want to delete this event?")) {
 
@@ -181,26 +174,28 @@ $(document).ready(function() {
                     $(this).dialog("close");
                     $('#calendar').fullCalendar('removeEvents', $("#eventId").val());
                 }
+
             }
+
         }
     });
 
     //add dialog
     $('#addDialog').dialog({
         autoOpen: false,
-        width: 470,
+        width: AutoWidth,
         buttons: {
-            "Add": function() {
+            "Salvar": function() {
+                //alert("aqui");
                 //alert("sent:" + addStartDate.format("dd-MM-yyyy hh:mm:ss tt") + "==" + addStartDate.toLocaleString());
                 var eventToAdd = {
                     title: $("#addEventName").val(),
                     description: $("#addEventDesc").val(),
-                    start: addStartDate.toJSON(),
-                    end: addEndDate.toJSON(),
+                    start: addStartDate.format("dd-MM-yyyy hh:mm:ss tt"),
+                    end: addEndDate.format("dd-MM-yyyy hh:mm:ss tt")
 
-                    allDay: isAllDay(addStartDate, addEndDate)
                 };
-                
+
                 if (checkForSpecialChars(eventToAdd.title) || checkForSpecialChars(eventToAdd.description)) {
                     alert("please enter characters: A to Z, a to z, 0 to 9, spaces");
                 }
@@ -210,56 +205,66 @@ $(document).ready(function() {
                     PageMethods.addEvent(eventToAdd, addSuccess);
                     $(this).dialog("close");
                 }
+
             }
+
         }
     });
+
 
     var date = new Date();
     var d = date.getDate();
     var m = date.getMonth();
     var y = date.getFullYear();
-    var options = {
-        weekday: "long", year: "numeric", month: "short",
-        day: "numeric", hour: "2-digit", minute: "2-digit"
-    };
 
-    $('#calendar').fullCalendar({
+    //formatação do Url
+    var host = window.location.hostname;
+    var protocol = window.location.protocol;
+    var port = window.location.port;
+    var FormatUrl;
+
+    if (!port) {
+        FormatUrl = protocol + "//" + host + "/2gether/JsonResponse.ashx";
+    } else {
+        FormatUrl = protocol + "//" + host + ":" + port + "/JsonResponse.ashx";
+    }
+
+    var calendar = $('#calendar').fullCalendar({
         theme: true,
         header: {
-            left: 'prev,next today customBtn',
+            left: 'prev,next today',
             center: 'title',
             right: 'month,agendaWeek,agendaDay'
         },
-        customButtons: {
-            customBtn: {
-                text: 'Custom Button',
-                click: function() {
-                    alert('This custom button is hot! 🔥\nNow go have fun!');
-                }
-            }
-        },
-        defaultView: 'agendaWeek',
         eventClick: updateEvent,
         selectable: true,
         selectHelper: true,
         select: selectDate,
         editable: true,
-        events: "JsonResponse.ashx",
+        events: FormatUrl,
         eventDrop: eventDropped,
         eventResize: eventResized,
         eventRender: function(event, element) {
             //alert(event.title);
             element.qtip({
-                content: {
-                    text: qTipText(event.start, event.end, event.description),
-                    title: '<strong>' + event.title + '</strong>'
-                },
-                position: {
-                    my: 'bottom left',
-                    at: 'top right'
-                },
-                style: { classes: 'qtip-shadow qtip-rounded' }
+                content: event.description,
+                position: { corner: { tooltip: 'bottomLeft', target: 'topRight'} },
+                style: {
+                    border: {
+                        width: 1,
+                        radius: 3,
+                        color: '#2779AA'
+
+                    },
+                    padding: 10,
+                    textAlign: 'center',
+                    tip: true, // Give it a speech bubble tip with automatic corner detection
+                    name: 'cream' // Style it according to the preset 'cream' style
+                }
+
             });
         }
+
     });
+
 });

@@ -31,6 +31,15 @@ namespace Warden.Component.Common.Tabs {
         protected global::Warden.Component.Common.Label.LabelUsc lbl_title_control;
         
         /// <summary>
+        /// Controle pnl_question.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnl_question;
+        
+        /// <summary>
         /// Controle Question1.
         /// </summary>
         /// <remarks>

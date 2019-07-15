@@ -24,6 +24,10 @@ namespace Warden.Component.Common.TextBox {
         public String Label { set { lbl_control.Text = value; } }
         public Int32 LabelSize { set { lbl_control.FontSize = value; } }
         public Int32 TextRow { set { this.txt_control.Rows = value; } }
+        public Boolean IsHtml { get; set; }
+        public Boolean IsTextArea { get; set; }
+        public String Title { get; set; }
+        public String ComponentId { get; set; }
         public TextBoxMode TextMode {
             get {
                 return txt_control.TextMode;

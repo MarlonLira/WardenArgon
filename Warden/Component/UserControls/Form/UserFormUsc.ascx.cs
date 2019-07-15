@@ -8,6 +8,10 @@ namespace Warden.Component.UserControls.Form {
             if (String.IsNullOrEmpty(BtnText)) {
                 BtnText = "Editar";
             }
+
+            if (Session["MarcarProxEtapa"] != null) {
+                LoadForm((AlunoPst)Session["MarcarProxEtapa"]);
+            }
         }
 
         public String BtnText {
