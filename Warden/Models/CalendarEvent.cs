@@ -13,5 +13,6 @@ public class CalendarEvent
     public string description { get; set; }
     public DateTime start { get; set; }
     public DateTime end { get; set; }
+    public int AlunoId { get; set; }
     
 }

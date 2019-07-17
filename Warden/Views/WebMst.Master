@@ -13,13 +13,18 @@
         
     </head>
     <%if (Session["User"] != null) { %>
-        <body style="background-color:ghostwhite">
+        <body style="background-color:darkgrey">
         <%} else {%>
             <body> 
                     
-                <video class="bg_video" autoplay loop poster="../assets/img/bg/hifitnessgroup.png">
-                    <source src="../assets/video/teste.webm" type="video/webm; codecs="vp8, vorbis""/>
-                </video>
+                <!--<video class="bg_video" autoplay loop poster="../assets/img/bg/hifitnessgroup.png">
+                    <source src="../assets/gif/gym2.mp4" type="video/mp4"/>
+                </video> -->
+                <%if (Help.RandomNumber(0,2) == 1) { %>
+                    <image class="bg_video" src="<%=Help.FormatUrl("/assets/gif/gym5.gif") %>" ></image>
+                <%} else { %>
+                    <image class="bg_video" src="<%=Help.FormatUrl("/assets/gif/gym4.gif") %>" ></image>
+                <%} %>
                     
                
             <%} %>

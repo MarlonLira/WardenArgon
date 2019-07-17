@@ -69,6 +69,7 @@ namespace Warden.Views.Fitness.Colaborador {
             CalendarEvent cevent = new CalendarEvent() {
                 title = improperEvent.title,
                 description = improperEvent.description,
+                AlunoId = improperEvent.AlunoId,
                 start = DateTime.ParseExact(improperEvent.start, "dd-MM-yyyy hh:mm:ss tt", CultureInfo.InvariantCulture),
                 end = DateTime.ParseExact(improperEvent.end, "dd-MM-yyyy hh:mm:ss tt", CultureInfo.InvariantCulture)
 

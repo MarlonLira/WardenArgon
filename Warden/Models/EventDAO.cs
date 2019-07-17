@@ -26,7 +26,7 @@ public class EventDAO
        
         List<CalendarEvent> events = new List<CalendarEvent>();
         SqlConnection con = new SqlConnection(connectionString);
-        SqlCommand cmd = new SqlCommand("SELECT event_id, description, title, event_start, event_end FROM event where event_start>=@start AND event_end<=@end", con);
+        SqlCommand cmd = new SqlCommand("SELECT event_id, aluno_id, description, title, event_start, event_end FROM event where event_start>=@start AND event_end<=@end", con);
         cmd.Parameters.AddWithValue("@start", start);
         cmd.Parameters.AddWithValue("@end", end);
         
@@ -42,6 +42,7 @@ public class EventDAO
                 cevent.description = (string)reader["description"];
                 cevent.start = (DateTime)reader["event_start"];
                 cevent.end = (DateTime)reader["event_end"];
+                cevent.AlunoId = (int)reader["aluno_id"];
                 events.Add(cevent);
             }
         }
@@ -88,7 +89,7 @@ public class EventDAO
     public static void deleteEvent(int id)
     {
         SqlConnection con = new SqlConnection(connectionString);
-        SqlCommand cmd = new SqlCommand("DELETE FROM event WHERE (event_id = @event_id)", con);
+        SqlCommand cmd = new SqlCommand("update event set[status] = 'EX' WHERE (event_id = @event_id)", con);
         cmd.Parameters.AddWithValue("@event_id", id);
         using (con)
         {
@@ -104,11 +105,12 @@ public class EventDAO
 
         //insert
         SqlConnection con = new SqlConnection(connectionString);
-        SqlCommand cmd = new SqlCommand("INSERT INTO event(title, description, event_start, event_end) VALUES(@title, @description, @event_start, @event_end)", con);
+        SqlCommand cmd = new SqlCommand("INSERT INTO event(title, description, event_start, event_end, aluno_id) VALUES(@title, @description, @event_start, @event_end, @aluno_id)", con);
         cmd.Parameters.AddWithValue("@title", cevent.title);
         cmd.Parameters.AddWithValue("@description", cevent.description);
         cmd.Parameters.AddWithValue("@event_start", cevent.start);
         cmd.Parameters.AddWithValue("@event_end", cevent.end);
+        cmd.Parameters.AddWithValue("@aluno_id", cevent.AlunoId);
 
         int key = 0;
         using (con)
@@ -117,11 +119,12 @@ public class EventDAO
             cmd.ExecuteNonQuery();
 
             //get primary key of inserted row
-            cmd = new SqlCommand("SELECT max(event_id) FROM event where title=@title AND description=@description AND event_start=@event_start AND event_end=@event_end", con);
+            cmd = new SqlCommand("SELECT max(event_id) FROM event where title=@title AND description=@description AND event_start=@event_start AND event_end=@event_end AND aluno_id = @aluno_id", con);
             cmd.Parameters.AddWithValue("@title", cevent.title);
             cmd.Parameters.AddWithValue("@description", cevent.description);
             cmd.Parameters.AddWithValue("@event_start", cevent.start);
             cmd.Parameters.AddWithValue("@event_end", cevent.end);
+            cmd.Parameters.AddWithValue("@aluno_id", cevent.AlunoId);
 
             key = (int)cmd.ExecuteScalar();
         }
@@ -129,7 +132,4 @@ public class EventDAO
         return key;
 
     }
-
-
-    
 }

@@ -51,6 +51,7 @@ function addSuccess(addResult) {
 						    end: addEndDate,
 						    id: addResult,
 						    description: $("#addEventDesc").val(),
+                            alunoId: $("#addEventAlunoId").val(),
 						    allDay: globalAllDay
 						},
 						true // make the event "stick"
@@ -70,11 +71,8 @@ function UpdateTimeSuccess(updateResult) {
 function selectDate(start, end, allDay) {
 
     $('#addDialog').dialog('open');
-
-
     $("#addEventStartDate").text("" + start.toLocaleString());
     $("#addEventEndDate").text("" + end.toLocaleString());
-
 
     addStartDate = start;
     addEndDate = end;
@@ -150,7 +148,9 @@ $(document).ready(function() {
                 var eventToUpdate = {
                     id: currentUpdateEvent.id,
                     title: $("#eventName").val(),
-                    description: $("#eventDesc").val()
+                    description: $("#eventDesc").val(),
+                    alunoId: $("#alunoId").val()
+                    
                 };
 
                 if (checkForSpecialChars(eventToUpdate.title) || checkForSpecialChars(eventToUpdate.description)) {
@@ -192,7 +192,9 @@ $(document).ready(function() {
                     title: $("#addEventName").val(),
                     description: $("#addEventDesc").val(),
                     start: addStartDate.format("dd-MM-yyyy hh:mm:ss tt"),
-                    end: addEndDate.format("dd-MM-yyyy hh:mm:ss tt")
+                    end: addEndDate.format("dd-MM-yyyy hh:mm:ss tt"),
+                    //alunoId: $("#addEventAlunoId").val()
+                    alunoId: document.getElementById("addEventAlunoId").innerText
 
                 };
 
@@ -200,7 +202,7 @@ $(document).ready(function() {
                     alert("please enter characters: A to Z, a to z, 0 to 9, spaces");
                 }
                 else {
-                    //alert("sending " + eventToAdd.title);
+                    alert("sending " + eventToAdd.title + " - " + eventToAdd.alunoId);
 
                     PageMethods.addEvent(eventToAdd, addSuccess);
                     $(this).dialog("close");

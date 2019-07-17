@@ -9,7 +9,8 @@ namespace Warden.Views {
 
             if (Global.Funcionario == null & Global.Aluno == null) {
                 Session["Error"] = "Sua Conexão Expirou!";
-                Session["User"] = false;
+                Session.Clear();
+                Session.Abandon();
                 Response.Redirect("~/Views/Login.aspx", false);
             }
 

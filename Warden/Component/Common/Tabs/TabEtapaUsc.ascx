@@ -17,7 +17,7 @@
         </ul>
     </div>
     <div class="card shadow">
-        <div class="card-body">
+        <div class="card-body" style="background-color: lightgray">
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab" style="text-align: left !important">
                     <usc:LabelUsc runat="server" ID="lbl_title_control" Text ="Questionário de Prontidão para Atividade Física(PAR-Q):"/>

@@ -3,7 +3,7 @@
 <asp:Panel ID="pnl_control" runat="server" enabled="false">
     
     <form class="card shadow" >
-        <div class="card-body" style="text-align: left !important">
+        <div class="card-body" style="text-align: left; background-color:lightgray !important">
             <usc:LabelUsc ID="LabelUsc" runat="server" Text="Informações do Aluno"/>            
           <div class="row">
             <div class="col-md-6">

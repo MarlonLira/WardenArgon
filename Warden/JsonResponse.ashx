@@ -70,6 +70,7 @@ public class JsonResponse : IHttpHandler, IRequiresSessionState
         }
         return    "{" +
                   "id: '" + cevent.id + "'," +
+                  "alunoId: '" + cevent.AlunoId + "'," +
                   "title: '" + HttpContext.Current.Server.HtmlEncode(cevent.title) + "'," +
                   "start:  " + ConvertToTimestamp(cevent.start).ToString() + "," +
                   "end: " + ConvertToTimestamp(cevent.end).ToString() + "," +

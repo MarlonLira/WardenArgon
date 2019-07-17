@@ -10,7 +10,7 @@
     <usc:CssUsc runat="server" ID="css_control" />
     <usc:CalendarCssUsc runat="server" />
 </head>
-<body>
+<body style="background-color:darkgrey">
     
     <form id="frm_calendar" runat="server" class="wrapper" >
         <usc:HeaderUsc runat="server" />
@@ -28,9 +28,10 @@
                         <usc:UserFormUsc runat="server" />
                 <div id="calendar">
                 </div>
-
+                        
                 <div id="updatedialog" title="Atualizar ou Apagar Evento" style="text-align:left">
                     <div class="style1">
+                        <label class="alignRight" title="Inicio: "> Id: <span class="alignLeft" id="alunoId"></span></label>
                         <usc:TextBoxUsc runat="server" ID="TextBoxUsc1" ComponentId="eventName" Title="Testando" IsHtml="true"/>
                         <usc:TextBoxUsc runat="server" ID="TextBoxUsc6" ComponentId="eventDesc" Title="Descrição" IsHtml="true" IsTextArea="true"/>
                         <label class="alignRight" title="Inicio: "> Inicio: <span class="alignLeft" id="eventStart"></span></label>
@@ -41,6 +42,7 @@
                 
                 <div id="addDialog" title="Adicionar Evento" style="text-align:left">
                     <div class="style1">
+                        <label class="alignRight" title="Inicio: "> Id: <label class="alignLeft" id="addEventAlunoId"><%=this.SelectedAluno.Id %></label></label>
                         <usc:TextBoxUsc runat="server" ID="TextBoxUsc3" ComponentId="addEventName" Title="Nome" IsHtml="true"/>
                         <usc:TextBoxUsc runat="server" ID="TextBoxUsc2" ComponentId="addEventDesc" Title="Descrição" IsTextArea="true" IsHtml="true"/>
                         <label class="alignRight" title="Inicio: "> Inicio: <span class="alignLeft" id="addEventStartDate"></span></label>
@@ -52,11 +54,8 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </section>
-
             </div>
         </div>
     </form>
