@@ -80,3 +80,4 @@ C:\Web\Warden\Warden\obj\Release\Warden.csproj.CopyComplete
 C:\Web\Warden\Warden\obj\Release\Warden.dll
 C:\Web\Warden\Warden\obj\Release\Warden.pdb
 C:\Web\Warden\Warden\obj\Release\Warden.csprojAssemblyReference.cache
+C:\Web\Warden\Warden\bin\Newtonsoft.Json.dll
