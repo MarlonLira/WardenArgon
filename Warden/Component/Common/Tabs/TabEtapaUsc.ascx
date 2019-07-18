@@ -40,19 +40,8 @@
                     <usc:BioImpedanciaUsc runat="server" ID="BioImpedanciaUsc"/>
                 </div>
                 <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
-                     <usc:LabelUsc Runat="server" Text="Proxima Medição" FontSize="15"/>
-                            
-                        <usc:TextBoxUsc runat="server" Icon="Date" TextMode="Date" Mode="larger" Size="6" IsModified="true"/>
-                    <usc:CalendarUsc runat="server" ID="calendar_control" />
-                    
-                    <div class="rows" >
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <usc:TextBoxUsc runat="server" Icon="Date" TextMode="Search" Placeholder="Professor"/>
-                            </div>
-                        </div>
-                    </div>
-                    <usc:ButtonUsc runat="server" Text="Salvar"/>
+                     <usc:LabelUsc Runat="server" Text="Marcar Proxima Medição" FontSize="15"/>
+                        <usc:ButtonUsc ID="btn_prox_etapa" runat="server" Text="Marcar" />
                 </div>
             </div>
         </div>

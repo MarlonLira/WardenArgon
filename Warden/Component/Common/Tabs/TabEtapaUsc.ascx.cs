@@ -12,10 +12,19 @@ namespace Warden.Component.Common.Tabs {
         protected override void OnLoad(EventArgs e) {
             base.OnLoad(e);
             btn_anamnese_salvar.OnClick += new ButtonUsc.OnClickEvent(BtnAnamneseSalvar_Click);
+            btn_prox_etapa.OnClick += new ButtonUsc.OnClickEvent(Btn_prox_etapa_OnClick);
             LoadEtapas();
 
             if (Session["Aluno"] != null) {
                 AlunoEdit = (AlunoPst)Session["Aluno"];
+            }
+        }
+
+        private void Btn_prox_etapa_OnClick() {
+            try {
+                MarcarProxEtapa();
+            } catch (Exception Err) {
+                throw new Exception(Err.Message);
             }
         }
 
@@ -40,6 +49,10 @@ namespace Warden.Component.Common.Tabs {
 
         }
 
+        private void MarcarProxEtapa() {
+            Session.Add("MarcarProxEtapa", AlunoEdit);
+            Response.Redirect("~/views/fitness/Colaborador/Calendar.aspx");
+        }
         private Boolean ProcurarAnamnese(AlunoPst Aluno) {
             AlunoParqPst Parq = null;
             DataTable Table;
@@ -91,6 +104,8 @@ namespace Warden.Component.Common.Tabs {
                     Parq.ComprometerSaudeAtividade = Question10.BoolValue;
                     Parq.Auditoria = Parq.Operador.Usuario  + CurrentDate + " - INCLUIR";
                     Parq.Incluir();
+
+                    Response.Redirect("~/views/fitness/Etapas.aspx");
                 }
 
             }catch(Exception Err) {
@@ -144,9 +159,6 @@ namespace Warden.Component.Common.Tabs {
                 if (AlunoEdit != null) {
                     ProcurarAnamnese(AlunoEdit);
                 }
-                calendar_control.Calendar = new Calendar.CalendarUsc.CalendarDay();
-                calendar_control.Calendar.Date = DateTime.Now;
-                calendar_control.LoadCalendar();
             }
 
         }

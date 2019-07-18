@@ -27,7 +27,7 @@ namespace Warden.Component.UserControls.BioImpedancia {
                 Bioimpedancia.Aluno = new AlunoPst() { Id = Aluno.Id };
                 Bioimpedancia.Empresa = new EmpresaPst() { Id = Aluno.Empresa.Id };
 
-                Bioimpedancia.Auditoria = "INCLUIR - " + Global.Funcionario.Usuario + " - " + CurrentDate;
+                Bioimpedancia.Auditoria = Global.Funcionario.Usuario + " - " + CurrentDate + " - INCLUIR";
                 Bioimpedancia.Imc = Convert.ToInt64(txt_imc.Text);
                 Bioimpedancia.GorduraCorporal = Convert.ToInt64(txt_gordura.Text);
                 Bioimpedancia.GorduraVisceral = Convert.ToInt64(txt_visceral.Text);

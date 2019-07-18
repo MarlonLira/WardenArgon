@@ -15,13 +15,22 @@ namespace Warden.Views.Fitness {
                 Response.Redirect("~/Views/Login.aspx", false);
             }
             
-            btn_prox_etapa.OnClick += new SquareButtonUsc.OnClickEvent(BtnProxEtapa_Click);
-            btn_verif_etapa.OnClick += new SquareButtonUsc.OnClickEvent(BtnVerifEtapa_Click);
+            btn_marcar_atendimento.OnClick += new ButtonUsc.OnClickEvent(BtnMarcarAtendimento_Click);
+            btn_verif_progresso.OnClick += new ButtonUsc.OnClickEvent(BtnVerifProgresso_Click);
+            btn_atendimento.OnClick += new ButtonUsc.OnClickEvent(Btn_atendimento_OnClick);
+        }
+
+        private void Btn_atendimento_OnClick() {
+            try {
+                Atendimento();
+            } finally {
+
+            }
         }
 
         public AlunoPst AlunoEdit { get; set; }
 
-        public void BtnProxEtapa_Click() {
+        public void BtnMarcarAtendimento_Click() {
 
             try {
                 MarcarProxEtapa();
@@ -31,8 +40,11 @@ namespace Warden.Views.Fitness {
             }
         }
 
-        public void BtnVerifEtapa_Click() {
+        public void BtnVerifProgresso_Click() {
             
+        }
+        public void Atendimento() {
+            Response.Redirect("~/views/fitness/Etapas.aspx");
         }
 
         public void MarcarProxEtapa() {

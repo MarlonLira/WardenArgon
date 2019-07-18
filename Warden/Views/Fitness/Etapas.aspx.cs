@@ -1,6 +1,5 @@
-﻿using System;
-using System.Web.UI;
-using Brasdat.Gestor.Library.Business.Classes.Fitness;
+﻿using Brasdat.Gestor.Library.Business.Classes.Fitness;
+using System;
 
 namespace Warden.Views.Fitness {
     public partial class Etapas : FitnessPge {

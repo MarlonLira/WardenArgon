@@ -22,21 +22,30 @@ namespace Warden.Views.Fitness {
         protected global::Warden.Component.UserControls.Form.UserProfileUsc profile_control;
         
         /// <summary>
-        /// Controle btn_prox_etapa.
+        /// Controle btn_atendimento.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.Button.SquareButtonUsc btn_prox_etapa;
+        protected global::Warden.Component.Common.Button.ButtonUsc btn_atendimento;
         
         /// <summary>
-        /// Controle btn_verif_etapa.
+        /// Controle btn_marcar_atendimento.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.Button.SquareButtonUsc btn_verif_etapa;
+        protected global::Warden.Component.Common.Button.ButtonUsc btn_marcar_atendimento;
+        
+        /// <summary>
+        /// Controle btn_verif_progresso.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.Button.ButtonUsc btn_verif_progresso;
     }
 }

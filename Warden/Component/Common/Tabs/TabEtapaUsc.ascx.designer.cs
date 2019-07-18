@@ -148,12 +148,12 @@ namespace Warden.Component.Common.Tabs {
         protected global::Warden.Component.UserControls.BioImpedancia.BioImpedanciaUsc BioImpedanciaUsc;
         
         /// <summary>
-        /// Controle calendar_control.
+        /// Controle btn_prox_etapa.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.Calendar.CalendarUsc calendar_control;
+        protected global::Warden.Component.Common.Button.ButtonUsc btn_prox_etapa;
     }
 }

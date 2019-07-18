@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-lg-<%=Scale %> col-md-<%=Scale %> col-sm-<%=Scale %> col-xs-<%=Scale * 2 %>">
                         <div class="bar-chart-wp">
-                            <canvas height="240vh" width="380vw" id="barchart1"></canvas>
+                            <canvas height="240vh" width="380vw" id="barchart1" style="padding-top:15px"></canvas>
                         </div>
                     </div>
                 </div>
@@ -20,7 +20,6 @@
 <script src="<%=Help.FormatUrl("/assets/js/charts/Chart.js") %>"></script>
 
 <script type="text/javascript">
-
 
 	 /*----------------------------------------*/
 	/*  1.  Bar Chart

@@ -20,13 +20,13 @@
 <div class="main-panel">
     <div class="position-relative">
                       <!-- Hero for FREE version -->
-        <section class="section section-lg section-hero section-shaped">
+        <section class="section section-lg section-hero section-shaped" style="padding-top:15px">
             <div class="container shape-container d-flex align-items-center py-lg">
                 <div class="col px-0" >
                 <div class="row align-items-center justify-content-center" >
                     <div class="col-lg-30 text-center" >
                         <usc:UserFormUsc runat="server" />
-                <div id="calendar">
+                <div id="calendar" style="padding-top:15px">
                 </div>
                         
                 <div id="updatedialog" title="Atualizar ou Apagar Evento" style="text-align:left">

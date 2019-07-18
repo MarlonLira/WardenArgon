@@ -26,7 +26,7 @@
 
         <%if (IsButton) { %>
 
-        <asp:Button class="btn btn-outline-default" ID="btn_control" runat="server" Text="Button" OnClick="btn_control_Click" />
+            <asp:Button class="btn btn-outline-default" ID="btn_control" runat="server" Text="Button" OnClick="btn_control_Click" />
 
         <%} else { %>
 
