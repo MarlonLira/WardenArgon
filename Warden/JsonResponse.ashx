@@ -12,21 +12,21 @@ public class JsonResponse : IHttpHandler, IRequiresSessionState
     {
         context.Response.ContentType = "application/json";
 
-        DateTime start = new DateTime(1970, 1, 1);
-        DateTime end = new DateTime(1970, 1, 1);
+        DateTime DataAgendamento = new DateTime(1970, 1, 1);
+        DateTime DataAgendamentoFinal = new DateTime(1970, 1, 1);
 
-        start = start.AddSeconds(double.Parse(context.Request.QueryString["start"]));
-        end = end.AddSeconds(double.Parse(context.Request.QueryString["end"]));
+        DataAgendamento = DataAgendamento.AddSeconds(double.Parse(context.Request.QueryString["data_agendamento"]));
+        DataAgendamentoFinal = DataAgendamentoFinal.AddSeconds(double.Parse(context.Request.QueryString["data_agendamento_final"]));
         
         String result = String.Empty;
 
         result += "[";
 
         List<int> idList = new List<int>();
-        foreach (CalendarEvent cevent in EventDAO.getEvents(start, end))
+        foreach (CalendarEvent cevent in EventDAO.getEvents(DataAgendamento, DataAgendamentoFinal))
         {
             result += convertCalendarEventIntoString(cevent);
-            idList.Add(cevent.id);
+            idList.Add(cevent.Id);
         }
 
         if (result.EndsWith(","))
@@ -44,10 +44,10 @@ public class JsonResponse : IHttpHandler, IRequiresSessionState
     private String convertCalendarEventIntoString(CalendarEvent cevent)
     {
         String allDay = "true";
-        if (ConvertToTimestamp(cevent.start).ToString().Equals(ConvertToTimestamp(cevent.end).ToString()))
+        if (ConvertToTimestamp(cevent.DataAgendamento).ToString().Equals(ConvertToTimestamp(cevent.DataAgendamentoFinal).ToString()))
         {
 
-            if (cevent.start.Hour == 0 && cevent.start.Minute == 0 && cevent.start.Second == 0)
+            if (cevent.DataAgendamento.Hour == 0 && cevent.DataAgendamento.Minute == 0 && cevent.DataAgendamento.Second == 0)
             {
                 allDay = "true";
             }
@@ -58,8 +58,8 @@ public class JsonResponse : IHttpHandler, IRequiresSessionState
         }
         else
         {
-            if (cevent.start.Hour == 0 && cevent.start.Minute == 0 && cevent.start.Second == 0
-                && cevent.end.Hour == 0 && cevent.end.Minute == 0 && cevent.end.Second == 0)
+            if (cevent.DataAgendamento.Hour == 0 && cevent.DataAgendamento.Minute == 0 && cevent.DataAgendamento.Second == 0
+                && cevent.DataAgendamentoFinal.Hour == 0 && cevent.DataAgendamentoFinal.Minute == 0 && cevent.DataAgendamentoFinal.Second == 0)
             {
                 allDay = "true";
             }
@@ -69,13 +69,14 @@ public class JsonResponse : IHttpHandler, IRequiresSessionState
             }
         }
         return    "{" +
-                  "id: '" + cevent.id + "'," +
-                  "alunoId: '" + cevent.AlunoId + "'," +
-                  "title: '" + HttpContext.Current.Server.HtmlEncode(cevent.title) + "'," +
-                  "start:  " + ConvertToTimestamp(cevent.start).ToString() + "," +
-                  "end: " + ConvertToTimestamp(cevent.end).ToString() + "," +
+                  "Id: '" + cevent.Id + "'," +
+                  "AlunoId: '" + cevent.AlunoId + "'," +
+                  "operadorId: '" + cevent.OperadorId + "'," +
+                  "Aluno: '" + HttpContext.Current.Server.HtmlEncode(cevent.Aluno) + "'," +
+                  "data_agendamento:  " + ConvertToTimestamp(cevent.DataAgendamento).ToString() + "," +
+                  "data_agendamento_final: " + ConvertToTimestamp(cevent.DataAgendamentoFinal).ToString() + "," +
                   "allDay:" + allDay + "," +
-                  "description: '" + HttpContext.Current.Server.HtmlEncode(cevent.description) + "'" +
+                  "Observacao: '" + HttpContext.Current.Server.HtmlEncode(cevent.Observacao) + "'" +
                   "},";
     }
 

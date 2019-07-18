@@ -146,10 +146,11 @@ $(document).ready(function() {
             "Atualizar": function() {
                 //alert(currentUpdateEvent.title);
                 var eventToUpdate = {
-                    id: currentUpdateEvent.id,
-                    title: $("#eventName").val(),
-                    description: $("#eventDesc").val(),
-                    alunoId: $("#alunoId").val()
+                    Id: currentUpdateEvent.id,
+                    Aluno: $("#eventName").val(),
+                    Observacao: $("#eventDesc").val(),
+                    AlunoId: $("#alunoId").val(),
+                    OperadorId: $("#operadorId").val()
                     
                 };
 
@@ -189,21 +190,21 @@ $(document).ready(function() {
                 //alert("aqui");
                 //alert("sent:" + addStartDate.format("dd-MM-yyyy hh:mm:ss tt") + "==" + addStartDate.toLocaleString());
                 var eventToAdd = {
-                    title: $("#addEventName").val(),
-                    description: $("#addEventDesc").val(),
-                    start: addStartDate.format("dd-MM-yyyy hh:mm:ss tt"),
-                    end: addEndDate.format("dd-MM-yyyy hh:mm:ss tt"),
+                    Aluno: $("#addEventName").val(),
+                    Observacao: $("#addEventDesc").val(),
+                    DataAgendamento: addStartDate.format("dd-MM-yyyy hh:mm:ss tt"),
+                    DataAgendamentoFinal: addEndDate.format("dd-MM-yyyy hh:mm:ss tt"),
                     //alunoId: $("#addEventAlunoId").val()
-                    alunoId: document.getElementById("addEventAlunoId").innerText
+                    AlunoId: document.getElementById("addEventAlunoId").innerText,
+                    OperadorId: document.getElementById("addEventOperadorId").innerText
 
                 };
-
+                //alert("Aluno: " + eventToAdd.Aluno + " - AlunoId: " + eventToAdd.AlunoId + " - OperadorId: " + eventToAdd.OperadorId);
                 if (checkForSpecialChars(eventToAdd.title) || checkForSpecialChars(eventToAdd.description)) {
                     alert("please enter characters: A to Z, a to z, 0 to 9, spaces");
                 }
                 else {
-                    alert("sending " + eventToAdd.title + " - " + eventToAdd.alunoId);
-
+                    //alert("Aluno: " + eventToAdd.Aluno + " - AlunoId: " + eventToAdd.AlunoId + " - OperadorId: " + eventToAdd.OperadorId);
                     PageMethods.addEvent(eventToAdd, addSuccess);
                     $(this).dialog("close");
                 }

@@ -6,12 +6,14 @@ using System.Web;
 //Do not use this object, it is used just as a go between between javascript and asp.net
 public class ImproperCalendarEvent
 {
+    public Int32 Id { get; set; }
+    public String Status { get; set; }
+    public String Auditoria { get; set; }
+    public Int32 AlunoId { get; set; }
+    public String Aluno { get; set; }
+    public String Observacao { get; set; }
+    public String DataAgendamento { get; set; }
+    public String DataAgendamentoFinal { get; set; }
+    public Int32 OperadorId { get; set; }
 
-    public int id { get; set; }
-    public string title { get; set; }
-    public string description { get; set; }
-    public string start { get; set; }
-    public string end { get; set; }
-    public int AlunoId { get; set; }
-    
 }

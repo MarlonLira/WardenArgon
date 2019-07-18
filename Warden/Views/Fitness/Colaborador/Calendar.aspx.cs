@@ -5,24 +5,24 @@ using System.Text.RegularExpressions;
 
 namespace Warden.Views.Fitness.Colaborador {
     public partial class Calendar : FitnessPge {
-        //this method only updates title and description
+        //this method only updates Aluno and Observacao
         //this is called when a event is clicked on the calendar
         [System.Web.Services.WebMethod(true)]
         public static string UpdateEvent(CalendarEvent cevent) {
 
             List<int> idList = (List<int>)System.Web.HttpContext.Current.Session["idList"];
-            if (idList != null && idList.Contains(cevent.id)) {
-                if (CheckAlphaNumeric(cevent.title) && CheckAlphaNumeric(cevent.description)) {
-                    EventDAO.updateEvent(cevent.id, cevent.title, cevent.description);
+            if (idList != null && idList.Contains(cevent.Id)) {
+                if (CheckAlphaNumeric(cevent.Aluno) && CheckAlphaNumeric(cevent.Observacao)) {
+                    EventDAO.updateEvent(cevent.Id, cevent.Aluno, cevent.Observacao);
 
-                    return "updated event with id:" + cevent.id + " update title to: " + cevent.title +
-                    " update description to: " + cevent.description;
+                    return "updated event with id:" + cevent.Id + " update Aluno to: " + cevent.Aluno +
+                    " update Observacao to: " + cevent.Observacao;
                 }
 
             }
 
-            return "unable to update event with id:" + cevent.id + " title : " + cevent.title +
-                " description : " + cevent.description;
+            return "unable to update event with id:" + cevent.Id + " Aluno : " + cevent.Aluno +
+                " Observacao : " + cevent.Observacao;
         }
 
         //this method only updates start and end time
@@ -30,16 +30,16 @@ namespace Warden.Views.Fitness.Colaborador {
         [System.Web.Services.WebMethod(true)]
         public static string UpdateEventTime(ImproperCalendarEvent improperEvent) {
             List<int> idList = (List<int>)System.Web.HttpContext.Current.Session["idList"];
-            if (idList != null && idList.Contains(improperEvent.id)) {
-                EventDAO.updateEventTime(improperEvent.id,
-                    DateTime.ParseExact(improperEvent.start, "dd-MM-yyyy hh:mm:ss tt", CultureInfo.InvariantCulture),
-                    DateTime.ParseExact(improperEvent.end, "dd-MM-yyyy hh:mm:ss tt", CultureInfo.InvariantCulture));
+            if (idList != null && idList.Contains(improperEvent.Id)) {
+                EventDAO.updateEventTime(improperEvent.Id,
+                    DateTime.ParseExact(improperEvent.DataAgendamento, "dd-MM-yyyy hh:mm:ss tt", CultureInfo.InvariantCulture),
+                    DateTime.ParseExact(improperEvent.DataAgendamentoFinal, "dd-MM-yyyy hh:mm:ss tt", CultureInfo.InvariantCulture));
 
-                return "updated event with id:" + improperEvent.id + "update start to: " + improperEvent.start +
-                    " update end to: " + improperEvent.end;
+                return "updated event with id:" + improperEvent.Id + "update start to: " + improperEvent.DataAgendamento +
+                    " update end to: " + improperEvent.DataAgendamentoFinal;
             }
 
-            return "unable to update event with id: " + improperEvent.id;
+            return "unable to update event with id: " + improperEvent.Id;
         }
 
         //called when delete button is pressed
@@ -67,15 +67,18 @@ namespace Warden.Views.Fitness.Colaborador {
         public static int addEvent(ImproperCalendarEvent improperEvent) {
 
             CalendarEvent cevent = new CalendarEvent() {
-                title = improperEvent.title,
-                description = improperEvent.description,
+                Aluno = improperEvent.Aluno,
+                Status = "AT",
+                Auditoria = Global.Funcionario.Usuario + " - " + DateTime.UtcNow.AddHours(-3) + " - INCLUIR",
+                Observacao = improperEvent.Observacao,
                 AlunoId = improperEvent.AlunoId,
-                start = DateTime.ParseExact(improperEvent.start, "dd-MM-yyyy hh:mm:ss tt", CultureInfo.InvariantCulture),
-                end = DateTime.ParseExact(improperEvent.end, "dd-MM-yyyy hh:mm:ss tt", CultureInfo.InvariantCulture)
+                OperadorId = improperEvent.OperadorId,
+                DataAgendamento = DateTime.ParseExact(improperEvent.DataAgendamento, "dd-MM-yyyy hh:mm:ss tt", CultureInfo.InvariantCulture),
+                DataAgendamentoFinal = DateTime.ParseExact(improperEvent.DataAgendamentoFinal, "dd-MM-yyyy hh:mm:ss tt", CultureInfo.InvariantCulture)
 
             };
 
-            if (CheckAlphaNumeric(cevent.title) && CheckAlphaNumeric(cevent.description)) {
+            if (CheckAlphaNumeric(cevent.Aluno) && CheckAlphaNumeric(cevent.Observacao)) {
                 int key = EventDAO.addEvent(cevent);
 
                 List<int> idList = (List<int>)System.Web.HttpContext.Current.Session["idList"];

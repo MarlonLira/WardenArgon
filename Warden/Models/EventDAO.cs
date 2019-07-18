@@ -26,7 +26,7 @@ public class EventDAO
        
         List<CalendarEvent> events = new List<CalendarEvent>();
         SqlConnection con = new SqlConnection(connectionString);
-        SqlCommand cmd = new SqlCommand("SELECT event_id, aluno_id, description, title, event_start, event_end FROM event where event_start>=@start AND event_end<=@end", con);
+        SqlCommand cmd = new SqlCommand("EXEC [fitness].[stp_agenda_2gether_pesquisar] @start, @end ", con);
         cmd.Parameters.AddWithValue("@start", start);
         cmd.Parameters.AddWithValue("@end", end);
         
@@ -37,12 +37,13 @@ public class EventDAO
             while (reader.Read())
             {
                 CalendarEvent cevent = new CalendarEvent();
-                cevent.id = (int)reader["event_id"];
-                cevent.title = (string)reader["title"];
-                cevent.description = (string)reader["description"];
-                cevent.start = (DateTime)reader["event_start"];
-                cevent.end = (DateTime)reader["event_end"];
+                cevent.Id = (int)reader["id"];
+                cevent.Aluno = (string)reader["aluno"];
+                cevent.Observacao = (string)reader["observacao"];
+                cevent.DataAgendamento = (DateTime)reader["data_agendamento"];
+                cevent.DataAgendamentoFinal = (DateTime)reader["data_agendamento_final"];
                 cevent.AlunoId = (int)reader["aluno_id"];
+                cevent.OperadorId = (int)reader["operador_id"];
                 events.Add(cevent);
             }
         }
@@ -105,12 +106,13 @@ public class EventDAO
 
         //insert
         SqlConnection con = new SqlConnection(connectionString);
-        SqlCommand cmd = new SqlCommand("INSERT INTO event(title, description, event_start, event_end, aluno_id) VALUES(@title, @description, @event_start, @event_end, @aluno_id)", con);
-        cmd.Parameters.AddWithValue("@title", cevent.title);
-        cmd.Parameters.AddWithValue("@description", cevent.description);
-        cmd.Parameters.AddWithValue("@event_start", cevent.start);
-        cmd.Parameters.AddWithValue("@event_end", cevent.end);
+        SqlCommand cmd = new SqlCommand("EXEC [fitness].[stp_agenda_2gether_incluir] @id, @status, @auditoria, @aluno_id, @aluno, @observacao, @data_agendamento, @data_agendamento_final, @operador_id", con);
+        cmd.Parameters.AddWithValue("@aluno", cevent.Aluno);
+        cmd.Parameters.AddWithValue("@observacao", cevent.Observacao);
+        cmd.Parameters.AddWithValue("@data_agendamento", cevent.DataAgendamento);
+        cmd.Parameters.AddWithValue("@data_agendamento_final", cevent.DataAgendamentoFinal);
         cmd.Parameters.AddWithValue("@aluno_id", cevent.AlunoId);
+        cmd.Parameters.AddWithValue("@operador_id", cevent.OperadorId);
 
         int key = 0;
         using (con)
@@ -119,11 +121,11 @@ public class EventDAO
             cmd.ExecuteNonQuery();
 
             //get primary key of inserted row
-            cmd = new SqlCommand("SELECT max(event_id) FROM event where title=@title AND description=@description AND event_start=@event_start AND event_end=@event_end AND aluno_id = @aluno_id", con);
-            cmd.Parameters.AddWithValue("@title", cevent.title);
-            cmd.Parameters.AddWithValue("@description", cevent.description);
-            cmd.Parameters.AddWithValue("@event_start", cevent.start);
-            cmd.Parameters.AddWithValue("@event_end", cevent.end);
+            cmd = new SqlCommand("SELECT max(event_id) FROM [fitness].[tbl_agenda_2gether] where aluno=@aluno AND observacao=@observacao AND data_agendamento=@data_agendamento AND data_agendamento_final=@data_agendamento_final AND aluno_id = @aluno_id", con);
+            cmd.Parameters.AddWithValue("@aluno", cevent.Aluno);
+            cmd.Parameters.AddWithValue("@observacao", cevent.Observacao);
+            cmd.Parameters.AddWithValue("@data_agendamento", cevent.DataAgendamento);
+            cmd.Parameters.AddWithValue("@data_agendamento_final", cevent.DataAgendamentoFinal);
             cmd.Parameters.AddWithValue("@aluno_id", cevent.AlunoId);
 
             key = (int)cmd.ExecuteScalar();

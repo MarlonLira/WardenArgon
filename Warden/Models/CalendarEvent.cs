@@ -8,11 +8,14 @@ using System.Web;
 /// </summary>
 public class CalendarEvent
 {
-    public int id { get; set; }
-    public string title { get; set; }
-    public string description { get; set; }
-    public DateTime start { get; set; }
-    public DateTime end { get; set; }
-    public int AlunoId { get; set; }
-    
+    public Int32 Id { get; set; }
+    public String Status { get; set; }
+    public String Auditoria { get; set; }
+    public Int32 AlunoId { get; set; }
+    public String Aluno { get; set; }
+    public String Observacao { get; set; }
+    public DateTime DataAgendamento { get; set; }
+    public DateTime DataAgendamentoFinal { get; set; }
+    public Int32 OperadorId { get; set; }
+
 }

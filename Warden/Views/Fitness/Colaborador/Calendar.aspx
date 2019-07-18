@@ -19,7 +19,6 @@
         
 <div class="main-panel">
     <div class="position-relative">
-                      <!-- Hero for FREE version -->
         <section class="section section-lg section-hero section-shaped" style="padding-top:15px">
             <div class="container shape-container d-flex align-items-center py-lg">
                 <div class="col px-0" >
@@ -31,6 +30,7 @@
                         
                 <div id="updatedialog" title="Atualizar ou Apagar Evento" style="text-align:left">
                     <div class="style1">
+                        <label id="operadorId"></label>
                         <label class="alignRight" title="Inicio: "> Id: <span class="alignLeft" id="alunoId"></span></label>
                         <usc:TextBoxUsc runat="server" ID="TextBoxUsc1" ComponentId="eventName" Title="Testando" IsHtml="true"/>
                         <usc:TextBoxUsc runat="server" ID="TextBoxUsc6" ComponentId="eventDesc" Title="Descrição" IsHtml="true" IsTextArea="true"/>
@@ -42,7 +42,8 @@
                 
                 <div id="addDialog" title="Adicionar Evento" style="text-align:left">
                     <div class="style1">
-                        <label class="alignRight" title="Inicio: "> Id: <label class="alignLeft" id="addEventAlunoId"><%=this.SelectedAluno.Id %></label></label>
+                        <label class="alignRight"> FuncionarioId:<label class="alignRight" id="addEventOperadorId"><%=this.GlobalFuncionario.Id %></label></label>
+                        <label class="alignRight" title="Inicio: "> Id: <label c id="addEventAlunoId"><%=this.SelectedAluno.Id %></label></label>
                         <usc:TextBoxUsc runat="server" ID="TextBoxUsc3" ComponentId="addEventName" Title="Nome" IsHtml="true"/>
                         <usc:TextBoxUsc runat="server" ID="TextBoxUsc2" ComponentId="addEventDesc" Title="Descrição" IsTextArea="true" IsHtml="true"/>
                         <label class="alignRight" title="Inicio: "> Inicio: <span class="alignLeft" id="addEventStartDate"></span></label>

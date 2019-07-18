@@ -696,6 +696,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\Help.cs" />
+    <Compile Include="Models\Agenda.cs" />
     <Compile Include="Models\CalendarEvent.cs" />
     <Compile Include="Models\EventDAO.cs" />
     <Compile Include="Models\ImproperCalendarEvent.cs" />

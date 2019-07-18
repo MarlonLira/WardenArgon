@@ -79,6 +79,8 @@ C:\Users\suporte\Desktop\Warden\Warden\obj\Debug\Warden.csproj.CopyComplete
 C:\Users\suporte\Desktop\Warden\Warden\obj\Debug\Warden.dll
 C:\Users\suporte\Desktop\Warden\Warden\obj\Debug\Warden.pdb
 C:\Users\suporte\Desktop\Warden\Warden\obj\Debug\Warden.csprojAssemblyReference.cache
+C:\Web\Warden\Warden\bin\Newtonsoft.Json.dll
+C:\Web\Warden\Warden\obj\Debug\Warden.csprojAssemblyReference.cache
 C:\Users\Academia Brilhante\Desktop\Warden\WardenArgon\Warden\bin\Warden.dll.config
 C:\Users\Academia Brilhante\Desktop\Warden\WardenArgon\Warden\bin\Warden.dll
 C:\Users\Academia Brilhante\Desktop\Warden\WardenArgon\Warden\bin\Warden.pdb
@@ -120,6 +122,3 @@ C:\Users\Academia Brilhante\Desktop\Warden\WardenArgon\Warden\obj\Debug\Warden.c
 C:\Users\Academia Brilhante\Desktop\Warden\WardenArgon\Warden\obj\Debug\Warden.csproj.CopyComplete
 C:\Users\Academia Brilhante\Desktop\Warden\WardenArgon\Warden\obj\Debug\Warden.dll
 C:\Users\Academia Brilhante\Desktop\Warden\WardenArgon\Warden\obj\Debug\Warden.pdb
-C:\Users\Academia Brilhante\Desktop\Warden\WardenArgon\Warden\obj\Debug\Warden.csprojAssemblyReference.cache
-C:\Web\Warden\Warden\bin\Newtonsoft.Json.dll
-C:\Web\Warden\Warden\obj\Debug\Warden.csprojAssemblyReference.cache

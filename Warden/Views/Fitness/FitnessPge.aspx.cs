@@ -1,4 +1,5 @@
-﻿using Brasdat.Gestor.Library.Business.Classes.Fitness;
+﻿using Brasdat.Gestor.Library.Business.Classes.Administracao;
+using Brasdat.Gestor.Library.Business.Classes.Fitness;
 using System;
 
 namespace Warden.Views.Fitness {
@@ -15,6 +16,17 @@ namespace Warden.Views.Fitness {
                     Aluno = (AlunoPst)Session["Aluno"];
                 }
                 return Aluno;
+            }
+        }
+
+        public FuncionarioPst GlobalFuncionario {
+            get { FuncionarioPst funcionario = new FuncionarioPst();
+
+                if (Global.Funcionario != null) {
+                    funcionario = Global.Funcionario;
+                }
+
+                return funcionario;
             }
         }
     }
