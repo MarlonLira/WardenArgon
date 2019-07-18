@@ -122,3 +122,4 @@ C:\Users\Academia Brilhante\Desktop\Warden\WardenArgon\Warden\obj\Debug\Warden.c
 C:\Users\Academia Brilhante\Desktop\Warden\WardenArgon\Warden\obj\Debug\Warden.csproj.CopyComplete
 C:\Users\Academia Brilhante\Desktop\Warden\WardenArgon\Warden\obj\Debug\Warden.dll
 C:\Users\Academia Brilhante\Desktop\Warden\WardenArgon\Warden\obj\Debug\Warden.pdb
+C:\Users\Academia Brilhante\Desktop\Warden\WardenArgon\Warden\obj\Debug\Warden.csprojAssemblyReference.cache

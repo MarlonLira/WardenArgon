@@ -15,8 +15,8 @@ public class JsonResponse : IHttpHandler, IRequiresSessionState
         DateTime DataAgendamento = new DateTime(1970, 1, 1);
         DateTime DataAgendamentoFinal = new DateTime(1970, 1, 1);
 
-        DataAgendamento = DataAgendamento.AddSeconds(double.Parse(context.Request.QueryString["data_agendamento"]));
-        DataAgendamentoFinal = DataAgendamentoFinal.AddSeconds(double.Parse(context.Request.QueryString["data_agendamento_final"]));
+        DataAgendamento = DataAgendamento.AddSeconds(double.Parse(context.Request.QueryString["start"]));
+        DataAgendamentoFinal = DataAgendamentoFinal.AddSeconds(double.Parse(context.Request.QueryString["end"]));
         
         String result = String.Empty;
 
