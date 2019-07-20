@@ -71,12 +71,18 @@ public class JsonResponse : IHttpHandler, IRequiresSessionState
         return    "{" +
                   "Id: '" + cevent.Id + "'," +
                   "AlunoId: '" + cevent.AlunoId + "'," +
-                  "operadorId: '" + cevent.OperadorId + "'," +
+                  "OperadorId: '" + cevent.OperadorId + "'," +
                   "Aluno: '" + HttpContext.Current.Server.HtmlEncode(cevent.Aluno) + "'," +
                   "data_agendamento:  " + ConvertToTimestamp(cevent.DataAgendamento).ToString() + "," +
                   "data_agendamento_final: " + ConvertToTimestamp(cevent.DataAgendamentoFinal).ToString() + "," +
                   "allDay:" + allDay + "," +
                   "Observacao: '" + HttpContext.Current.Server.HtmlEncode(cevent.Observacao) + "'" +
+                  "id: '" + cevent.AlunoId + "'," +
+                  "title: '" + HttpContext.Current.Server.HtmlEncode(cevent.Aluno) + "'," +
+                  "start:  " + ConvertToTimestamp(cevent.DataAgendamento).ToString() + "," +
+                  "end: " + ConvertToTimestamp(cevent.DataAgendamentoFinal).ToString() + "," +
+                  "allDay:" + allDay + "," +
+                  "description: '" + HttpContext.Current.Server.HtmlEncode(cevent.Observacao) + "'" +
                   "},";
     }
 

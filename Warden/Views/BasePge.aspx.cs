@@ -7,11 +7,11 @@ namespace Warden.Views {
         protected override void OnLoad(EventArgs e) {
             base.OnLoad(e);
 
-            if (Global.Funcionario == null & Global.Aluno == null) {
+            /*if (Global.Funcionario == null & Global.Aluno == null) {
                 Session.Clear();
                 Session.Add("Error", "Sua Conexão Expirou!");
                 Response.Redirect("~/Views/Login.aspx", false);
-            }
+            }*/
 
             #region AutoCrypto
 

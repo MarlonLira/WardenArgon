@@ -122,16 +122,6 @@ public class EventDAO
         {
             con.Open();
             key = Convert.ToInt32(cmd.ExecuteScalar());
-
-            //get primary key of inserted row
-            cmd = new SqlCommand("SELECT max(id) FROM [fitness].[tbl_agenda_2gether] where aluno=@alun AND observacao=@observa AND data_agendamento=@data_agenda AND data_agendamento_final=@data_agenda_final AND aluno_id = @alunoId", con);
-            cmd.Parameters.AddWithValue("@alun", cevent.Aluno);
-            cmd.Parameters.AddWithValue("@observa", cevent.Observacao);
-            cmd.Parameters.AddWithValue("@data_agenda", cevent.DataAgendamento);
-            cmd.Parameters.AddWithValue("@data_agenda_final", cevent.DataAgendamentoFinal);
-            cmd.Parameters.AddWithValue("@alunoId", cevent.AlunoId);
-
-            key = Convert.ToInt32(cmd.ExecuteScalar());
         }
 
         return key;

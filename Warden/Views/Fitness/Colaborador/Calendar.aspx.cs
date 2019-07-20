@@ -15,14 +15,14 @@ namespace Warden.Views.Fitness.Colaborador {
                 if (CheckAlphaNumeric(cevent.Aluno) && CheckAlphaNumeric(cevent.Observacao)) {
                     EventDAO.updateEvent(cevent.Id, cevent.Aluno, cevent.Observacao);
 
-                    return "updated event with id:" + cevent.Id + " update Aluno to: " + cevent.Aluno +
-                    " update Observacao to: " + cevent.Observacao;
+                    return "updated event with id:" + cevent.Id + " update title to: " + cevent.Aluno +
+                    " update description to: " + cevent.Observacao;
                 }
 
             }
 
-            return "unable to update event with id:" + cevent.Id + " Aluno : " + cevent.Aluno +
-                " Observacao : " + cevent.Observacao;
+            return "unable to update event with id:" + cevent.Id + " title : " + cevent.Aluno +
+                " description : " + cevent.Observacao;
         }
 
         //this method only updates start and end time

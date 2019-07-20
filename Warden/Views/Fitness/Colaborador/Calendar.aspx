@@ -30,7 +30,7 @@
                         
                 <div id="updatedialog" title="Atualizar ou Apagar Evento" style="text-align:left">
                     <div class="style1">
-                        <label id="operadorId"></label>
+                        <label  class="alignRight">OperadorId: <label class="alignLeft"  id="operadorId"></label></label>
                         <label class="alignRight" title="Inicio: "> Id: <span class="alignLeft" id="alunoId"></span></label>
                         <usc:TextBoxUsc runat="server" ID="TextBoxUsc1" ComponentId="eventName" Title="Testando" IsHtml="true"/>
                         <usc:TextBoxUsc runat="server" ID="TextBoxUsc6" ComponentId="eventDesc" Title="Descrição" IsHtml="true" IsTextArea="true"/>
