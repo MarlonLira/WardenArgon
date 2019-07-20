@@ -33,6 +33,7 @@ namespace Warden.Component.UserControls.Form {
 
             Aluno = new AlunoPst() { Filters = new List<BaseMdl.Filter>() };
             Aluno.Filters.Add(new BaseMdl.Filter("[status] = 'AT'", CompareModeTypes.EXPRESSION));
+            Aluno.Filters.Add(new BaseMdl.Filter("[empresa_id]", CompareModeTypes.EQUAL, Global.Funcionario.Empresa.Id));
             if (!String.IsNullOrEmpty(txt_matricula.Text)) {
                 Aluno.Filters.Add(new BaseMdl.Filter("[codigo]", CompareModeTypes.EQUAL, txt_matricula.Text));
             }

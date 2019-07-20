@@ -19,7 +19,7 @@
                     card_control.AlunoRow = Row;
                     card_control.Aluno = Row["nome"].ToString();
                     card_control.Matricula =" Matricula: " +  Row["codigo"].ToString();
-                    card_control.Date = "23/06/2019";
+                    card_control.Date = "Horario do Agendamento: " +  Convert.ToDateTime(Row["data_agendamento"]).ToShortTimeString();
                     card_control.Href = "?Matricula=" + Row["codigo"].ToString() + "&Empresa=" + Row["empresa_id"].ToString();
 
                 %>

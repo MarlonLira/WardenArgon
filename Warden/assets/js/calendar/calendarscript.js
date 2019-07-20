@@ -9,26 +9,42 @@ if (AutoWidth < 300) {
 }
 
 function updateEvent(event, element) {
-    alert(event.Aluno + "UpdateEvent");
+    //alert(event.title + " UpdateEvent " + event.Aluno);
 
     if ($(this).data("qtip")) $(this).qtip("destroy");
 
-    currentUpdateEvent = event;
+    currentUpdateEvent = ConvertEvent(event);
 
     $('#updatedialog').dialog('open');
 
-    $("#eventName").val(event.Aluno);
-    $("#eventDesc").val(event.Observacao);
-    $("#eventId").val(event.Id);
-    $("#eventStart").text("" + event.DataAgendamento.toLocaleString());
+    $("#eventName").val(currentUpdateEvent.Aluno);
+    $("#eventDesc").val(currentUpdateEvent.Observacao);
+    $("#eventId").val(currentUpdateEvent.Id);
+    $("#eventStart").text("" + currentUpdateEvent.DataAgendamento.toLocaleString());
+    $("#operadorId").val(currentUpdateEvent.OperadorId);
+    $("#alunoId").val(currentUpdateEvent.AlunoId);
 
-    if (event.DataAgendamentoFinal === null) {
+    if (event.end === null) {
         $("#eventEnd").text("");
     }
     else {
-        $("#eventEnd").text("" + event.DataAgendamentoFinal.toLocaleString());
+        $("#eventEnd").text("" + currentUpdateEvent.DataAgendamentoFinal.toLocaleString());
     }
-    alert(currentUpdateEvent.Aluno + "currentUpdateEvent");
+    //alert(currentUpdateEvent.Aluno + " - currentUpdateEvent - " + currentUpdateEvent.AlunoId + " - " + currentUpdateEvent.OperadorId);
+}
+
+function ConvertEvent(event) {
+    var NewEvent = {
+        Id: event.id,
+        AlunoId: event.alunoId,
+        OperadorId: event.operadorId,
+        Aluno: event.title,
+        Observacao: event.description,
+        DataAgendamento: event.start,
+        DataAgendamentoFinal: event.end
+    };
+
+    return NewEvent;
 }
 
 function updateSuccess(updateResult) {
@@ -45,18 +61,18 @@ function addSuccess(addResult) {
 
     if (addResult != -1) {
         var PushEvent = {
-            Aluno: $("#addEventName").val(),
-            DataAgendamento: addStartDate,
-            DataAgendamentoFinal: addEndDate,
-            Id: addResult,
-            Observacao: $("#addEventDesc").val(),
-            AlunoId: $("#addEventAlunoId").val(),
-            OperadorId: $("#addEventOperadorId").val(),
+            title: $("#addEventName").val(),
+            start: addStartDate,
+            end: addEndDate,
+            id: addResult,
+            description: $("#addEventDesc").val(),
+            alunoId: $("#addEventAlunoId").val(),
+            operadorId: $("#addEventOperadorId").val(),
             allDay: globalAllDay
         }
 
         $('#calendar').fullCalendar('renderEvent', PushEvent, true);
-        alert(PushEvent.Aluno + "currentUpdateEvent");
+        //alert(PushEvent.Aluno + "currentUpdateEvent");
 
         $('#calendar').fullCalendar('unselect');
     }
@@ -69,7 +85,7 @@ function UpdateTimeSuccess(updateResult) {
 
 
 function selectDate(start, end, allDay) {
-
+    
     $('#addDialog').dialog('open');
     $("#addEventStartDate").text("" + start.toLocaleString());
     $("#addEventEndDate").text("" + end.toLocaleString());
@@ -77,13 +93,15 @@ function selectDate(start, end, allDay) {
     addStartDate = start;
     addEndDate = end;
     globalAllDay = allDay;
-    alert(allDay + " selectDate");
+    //alert(allDay + " selectDate");
 
 }
 
-function updateEventOnDropResize(event, allDay) {
+function updateEventOnDropResize(eventx, allDay) {
+    event = ConvertEvent(eventx);
 
-    alert("allday: " + allDay);
+    //alert("Aluno: " + event.Aluno);
+
     var eventToUpdate = {
         Id: event.Id,
         DataAgendamento: event.DataAgendamento
@@ -108,7 +126,7 @@ function updateEventOnDropResize(event, allDay) {
 
     eventToUpdate.DataAgendamento = eventToUpdate.DataAgendamento.format("dd-MM-yyyy hh:mm:ss tt");
     eventToUpdate.DataAgendamentoFinal = eventToUpdate.DataAgendamentoFinal.format("dd-MM-yyyy hh:mm:ss tt");
-    alert(eventToUpdate.DataAgendamento + eventToUpdate.DataAgendamentoFinal + "updateEventOnDropResize");
+    
     PageMethods.UpdateEventTime(eventToUpdate, UpdateTimeSuccess);
 
 }
@@ -185,7 +203,7 @@ $(document).ready(function() {
         buttons: {
             "Salvar": function() {
                 //alert("aqui");
-                //alert("sent:" + addStartDate.format("dd-MM-yyyy hh:mm:ss tt") + "==" + addStartDate.toLocaleString());
+               // alert("sent: " + $("#addEventName").val() );
                 var eventToAdd = {
                     Aluno: $("#addEventName").val(),
                     Observacao: $("#addEventDesc").val(),
@@ -196,7 +214,7 @@ $(document).ready(function() {
                     OperadorId: document.getElementById("addEventOperadorId").innerText
 
                 };
-                //alert("Aluno: " + eventToAdd.Aluno + " - AlunoId: " + eventToAdd.AlunoId + " - OperadorId: " + eventToAdd.OperadorId);
+                
                 if (checkForSpecialChars(eventToAdd.Aluno) || checkForSpecialChars(eventToAdd.Observacao)) {
                     alert("please enter characters: A to Z, a to z, 0 to 9, spaces");
                 }
@@ -247,7 +265,7 @@ $(document).ready(function() {
         eventRender: function (event, element) {
             //alert(event.Aluno);
             element.qtip({
-                content: event.Observacao,
+                content: event.description,
                 position: { corner: { tooltip: 'bottomLeft', target: 'topRight'} },
                 style: {
                     border: {

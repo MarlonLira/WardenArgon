@@ -58,22 +58,22 @@ namespace Warden.Views.Fitness.Colaborador {
         protected global::Warden.Component.Common.TextBox.TextBoxUsc TextBoxUsc6;
         
         /// <summary>
-        /// Controle TextBoxUsc3.
+        /// Controle txt_aluno.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.TextBox.TextBoxUsc TextBoxUsc3;
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_aluno;
         
         /// <summary>
-        /// Controle TextBoxUsc2.
+        /// Controle txt_descricao.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::Warden.Component.Common.TextBox.TextBoxUsc TextBoxUsc2;
+        protected global::Warden.Component.Common.TextBox.TextBoxUsc txt_descricao;
         
         /// <summary>
         /// Controle jsonDiv.

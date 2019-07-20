@@ -69,20 +69,14 @@ public class JsonResponse : IHttpHandler, IRequiresSessionState
             }
         }
         return    "{" +
-                  "Id: '" + cevent.Id + "'," +
-                  "AlunoId: '" + cevent.AlunoId + "'," +
-                  "OperadorId: '" + cevent.OperadorId + "'," +
-                  "Aluno: '" + HttpContext.Current.Server.HtmlEncode(cevent.Aluno) + "'," +
-                  "data_agendamento:  " + ConvertToTimestamp(cevent.DataAgendamento).ToString() + "," +
-                  "data_agendamento_final: " + ConvertToTimestamp(cevent.DataAgendamentoFinal).ToString() + "," +
-                  "allDay:" + allDay + "," +
-                  "Observacao: '" + HttpContext.Current.Server.HtmlEncode(cevent.Observacao) + "'" +
-                  "id: '" + cevent.AlunoId + "'," +
+                  "id: '" + cevent.Id + "'," +
                   "title: '" + HttpContext.Current.Server.HtmlEncode(cevent.Aluno) + "'," +
                   "start:  " + ConvertToTimestamp(cevent.DataAgendamento).ToString() + "," +
                   "end: " + ConvertToTimestamp(cevent.DataAgendamentoFinal).ToString() + "," +
                   "allDay:" + allDay + "," +
-                  "description: '" + HttpContext.Current.Server.HtmlEncode(cevent.Observacao) + "'" +
+                  "description: '" + HttpContext.Current.Server.HtmlEncode(cevent.Observacao) + "'," +
+                  "alunoId: '" + cevent.AlunoId + "'," +
+                  "operadorId: '" + cevent.OperadorId + "'" +
                   "},";
     }
 

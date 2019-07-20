@@ -5,6 +5,10 @@ using System.Text.RegularExpressions;
 
 namespace Warden.Views.Fitness.Colaborador {
     public partial class Calendar : FitnessPge {
+
+        protected override void OnLoad(EventArgs e) {
+            base.OnLoad(e);
+        }
         //this method only updates Aluno and Observacao
         //this is called when a event is clicked on the calendar
         [System.Web.Services.WebMethod(true)]

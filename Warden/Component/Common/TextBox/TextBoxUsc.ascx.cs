@@ -14,7 +14,7 @@ namespace Warden.Component.Common.TextBox {
 
         #region Atributos
 
-        public Boolean ReadOnly { set { txt_control.ReadOnly = value; } }
+        public Boolean ReadOnly { set { this.pnl_Control.Enabled = value; } } 
         public String Style { get; set; }
         public String Placeholder { get; set; }
         public Int32 Size { get; set; }
@@ -36,6 +36,8 @@ namespace Warden.Component.Common.TextBox {
                 txt_control.TextMode = value;
             }
         }
+
+        public String Value { get; set; }
         public String Text {
             get { return this.txt_control.Text; }
             set { this.txt_control.Text = value; }

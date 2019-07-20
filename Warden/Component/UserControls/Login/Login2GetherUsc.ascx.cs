@@ -36,7 +36,7 @@ namespace Warden.Component.UserControls.Login {
                     Session["Error"] = null;
                     Session["User"] = true;
                     Session.Add("App", "2gether");
-                    Response.Redirect("./Fitness/Colaborador/Atendimento.aspx", false);
+                    Response.Redirect("./Default.aspx", false);
                 }
 
             } catch (Exception Err) {

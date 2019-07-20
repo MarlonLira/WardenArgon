@@ -9,10 +9,7 @@ namespace Warden.Views.Fitness.Colaborador {
             base.OnLoad(e);
             if (Session["Table"] == null) {
                 DataTable Table = new DataTable();
-                Table = Sql.ExecuteReader("SELECT TOP 10 * FROM [FITNESS].[VIW_ALUNO] " +
-                                          " WHERE [STATUS] = 'AT' " +
-                                          " AND CODIGO IS NOT NULL " +
-                                          " ORDER BY ID DESC");
+                Table = Sql.ExecuteReader("EXEC [fitness].[stp_agenda_2gether_pesquisar]");
                 Session["Table"] = Table;
             }
         }
