@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Data;
 using System.Data.SqlClient;
+using Brasdat.Gestor.Library.Core.Classes.Helpers;
+using Warden.Helper;
 
 /// <summary>
 /// EventDAO class is the main class which interacts with the database. SQL Server express edition
@@ -17,7 +19,7 @@ using System.Data.SqlClient;
 public class EventDAO
 {
     //change the connection string as per your database connection. 198.38.83.33; Initial Catalog=hiacademia_web; Integrated Security=True
-    //private static string connectionString = "Data Source=198.38.83.33;Initial Catalog=hiacademia_web;Persist Security Info=True;User ID=higestor_sa;Password=Root1526";
+    //private static string connectionString = CryptoHlp.Decrypt("+82kjar9seJikiHEK4mH+UowXzFkVQlXzYeyZSRUKcJSKDuKaHeS2Ua6HAV0u4PY1VjADjvckGF/nkQO4U0ZXU0mKs4JiGG3xWVANW6hVBi8Frubo1f6NRKWryxk4uNMtgJRTuSHrfnPH8JWR5jpcR6yQ7NUXo2Fy7CtGCyT/iw=");
     private static string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=gestor2;Persist Security Info=True;User ID=sa;Password=Root1526";
 
     //this method retrieves all events within range start-end
@@ -100,31 +102,34 @@ public class EventDAO
     }
 
 	//this method adds events to the database
-    public static int addEvent(CalendarEvent cevent)
+    public static object addEvent(CalendarEvent cevent)
     {
-        //add event to the database and return the primary key of the added event row
+        object Result;
+        try {
+            //add event to the database and return the primary key of the added event row
 
-        //insert
-        SqlConnection con = new SqlConnection(connectionString);
-        SqlCommand cmd = new SqlCommand("EXEC [fitness].[stp_agenda_2gether_incluir] @id OUTPUT, @status, @auditoria, @aluno_id, @aluno, @observacao, @data_agendamento, @data_agendamento_final, @operador_id", con);
-        cmd.Parameters.AddWithValue("@aluno", cevent.Aluno);
-        cmd.Parameters.AddWithValue("@status", cevent.Status);
-        cmd.Parameters.AddWithValue("@auditoria", cevent.Auditoria);
-        cmd.Parameters.AddWithValue("@observacao", cevent.Observacao);
-        cmd.Parameters.AddWithValue("@data_agendamento", cevent.DataAgendamento);
-        cmd.Parameters.AddWithValue("@data_agendamento_final", cevent.DataAgendamentoFinal);
-        cmd.Parameters.AddWithValue("@aluno_id", cevent.AlunoId);
-        cmd.Parameters.AddWithValue("@operador_id", cevent.OperadorId);
-        cmd.Parameters.AddWithValue("@id", SqlDbType.Int);
-
-        Int32 key = 0;
-        using (con)
-        {
-            con.Open();
-            key = Convert.ToInt32(cmd.ExecuteScalar());
+            //insert
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand("EXEC [fitness].[stp_agenda_2gether_incluir] @id OUTPUT, @status, @auditoria, @aluno_id, @aluno, @observacao, @data_agendamento, @data_agendamento_final, @operador_id", con);
+            cmd.Parameters.AddWithValue("@aluno", cevent.Aluno);
+            cmd.Parameters.AddWithValue("@status", cevent.Status);
+            cmd.Parameters.AddWithValue("@auditoria", cevent.Auditoria);
+            cmd.Parameters.AddWithValue("@observacao", cevent.Observacao);
+            cmd.Parameters.AddWithValue("@data_agendamento", cevent.DataAgendamento);
+            cmd.Parameters.AddWithValue("@data_agendamento_final", cevent.DataAgendamentoFinal);
+            cmd.Parameters.AddWithValue("@aluno_id", cevent.AlunoId);
+            cmd.Parameters.AddWithValue("@operador_id", cevent.OperadorId);
+            cmd.Parameters.AddWithValue("@id", SqlDbType.Int);
+            
+            using (con) {
+                con.Open();
+                Result = cmd.ExecuteScalar();
+            }
+        } catch (Exception Err) {
+            throw new Exception(Err.Message);
         }
 
-        return key;
+        return Result;
 
     }
 }

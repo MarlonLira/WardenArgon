@@ -137,6 +137,37 @@ namespace Warden.Helper {
             return WordType;
         }
 
+        public static String WordCheck(object ObjectWord) {
+            String Word = "";
+            String WordType = "";
+
+            if (ObjectWord != DBNull.Value && !String.IsNullOrEmpty(Convert.ToString(ObjectWord))) {
+                Word = Convert.ToString(ObjectWord);
+            }
+
+            foreach (Char Letter in Word.ToCharArray()) {
+
+                if (Char.IsNumber(Letter)) {
+                    if (WordType == "Number" || String.IsNullOrEmpty(WordType)) {
+                        WordType = "Number";
+                    } else {
+                        WordType = "Erro";
+                        break;
+                    }
+                }
+                if (Char.IsLetter(Letter) && !Char.IsSymbol(Letter)) {
+                    if (WordType == "Letter" || String.IsNullOrEmpty(WordType)) {
+                        WordType = "Letter";
+                    } else {
+                        WordType = "Erro";
+                        break;
+                    }
+                }
+            }
+
+            return WordType;
+        }
+
         public static int RandomNumber(int min, int max) {
             Random random = new Random();
             return random.Next(min, max);

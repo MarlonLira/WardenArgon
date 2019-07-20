@@ -7,6 +7,7 @@ namespace Warden.Views {
             if (Session["Error"] != null) {
                 lbl_erro.Text = (String)Session["Error"];
             }
+            
         }
     }
 }

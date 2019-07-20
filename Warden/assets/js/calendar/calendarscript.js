@@ -47,6 +47,10 @@ function ConvertEvent(event) {
     return NewEvent;
 }
 
+function isNumber(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
 function updateSuccess(updateResult) {
     //alert(updateResult);
 }
@@ -57,9 +61,14 @@ function deleteSuccess(deleteResult) {
 
 function addSuccess(addResult) {
 // if addresult is -1, means event was not added
-//    alert("added key: " + addResult);
+    if (isNumber(addResult)) {
+        Result = addResult;
+    } else {
+        CheckResult = addResult.split('/');
+        Result = CheckResult[0];
+    }
 
-    if (addResult != -1) {
+    if (Result > 0) {
         var PushEvent = {
             title: $("#addEventName").val(),
             start: addStartDate,
@@ -75,6 +84,8 @@ function addSuccess(addResult) {
         //alert(PushEvent.Aluno + "currentUpdateEvent");
 
         $('#calendar').fullCalendar('unselect');
+    } else {
+        alert(CheckResult[1])
     }
 
 }
@@ -220,6 +231,7 @@ $(document).ready(function() {
                 }
                 else {
                     //alert("Aluno: " + eventToAdd.Aluno + " - AlunoId: " + eventToAdd.AlunoId + " - OperadorId: " + eventToAdd.OperadorId);
+
                     PageMethods.addEvent(eventToAdd, addSuccess);
                     $(this).dialog("close");
                 }

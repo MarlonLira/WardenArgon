@@ -68,35 +68,39 @@ namespace Warden.Views.Fitness.Colaborador {
         //this is called when a mouse is clicked on open space of any day or dragged 
         //over mutliple days
         [System.Web.Services.WebMethod]
-        public static int addEvent(ImproperCalendarEvent improperEvent) {
+        public static object addEvent(ImproperCalendarEvent improperEvent) {
+            object Result = -1;
+            String CheckTypeResult = "";
 
-            CalendarEvent cevent = new CalendarEvent() {
-                Aluno = improperEvent.Aluno,
-                Status = "AT",
-                Auditoria = Global.Funcionario.Usuario + " - " + DateTime.UtcNow.AddHours(-3) + " - INCLUIR",
-                Observacao = improperEvent.Observacao,
-                AlunoId = improperEvent.AlunoId,
-                OperadorId = improperEvent.OperadorId,
-                DataAgendamento = DateTime.ParseExact(improperEvent.DataAgendamento, "dd-MM-yyyy hh:mm:ss tt", CultureInfo.InvariantCulture),
-                DataAgendamentoFinal = DateTime.ParseExact(improperEvent.DataAgendamentoFinal, "dd-MM-yyyy hh:mm:ss tt", CultureInfo.InvariantCulture)
+            try {
+                CalendarEvent cevent = new CalendarEvent() {
+                    Aluno = improperEvent.Aluno,
+                    Status = "AT",
+                    Auditoria = Global.Funcionario.Usuario + " - " + DateTime.UtcNow.AddHours(-3) + " - INCLUIR",
+                    Observacao = improperEvent.Observacao,
+                    AlunoId = improperEvent.AlunoId,
+                    OperadorId = improperEvent.OperadorId,
+                    DataAgendamento = DateTime.ParseExact(improperEvent.DataAgendamento, "dd-MM-yyyy hh:mm:ss tt", CultureInfo.InvariantCulture),
+                    DataAgendamentoFinal = DateTime.ParseExact(improperEvent.DataAgendamentoFinal, "dd-MM-yyyy hh:mm:ss tt", CultureInfo.InvariantCulture)
 
-            };
+                };
 
-            if (CheckAlphaNumeric(cevent.Aluno) && CheckAlphaNumeric(cevent.Observacao)) {
-                int key = EventDAO.addEvent(cevent);
+                if (CheckAlphaNumeric(cevent.Aluno) && CheckAlphaNumeric(cevent.Observacao)) {
+                    Result = EventDAO.addEvent(cevent);
+                    CheckTypeResult = Helper.Help.WordCheck(Result);
+                    List<int> idList = (List<int>)System.Web.HttpContext.Current.Session["idList"];
 
-                List<int> idList = (List<int>)System.Web.HttpContext.Current.Session["idList"];
+                    if (idList != null && CheckTypeResult == "Number") {
+                        idList.Add(Convert.ToInt32(Result));
+                    }
 
-                if (idList != null) {
-                    idList.Add(key);
+                    return Result;
                 }
-
-                return key;//return the primary key of the added cevent object
-
+            } catch (Exception Err) {
+                throw new Exception(Err.Message);
             }
 
-            return -1;//return a negative number just to signify nothing has been added
-
+            return Result; 
         }
 
         private static bool CheckAlphaNumeric(string str) {
