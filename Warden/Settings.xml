@@ -21,13 +21,13 @@
     <param_id>CONNECTION_STRING_MASTER</param_id>
 
     <!--param_value>Data Source = LOCALHOST\SQLEXPRESS; Connection Timeout = 10; Initial Catalog = gestor2; User Id= sa; Password = Root1526; MultipleActiveResultSets=True; Pooling=True;</param_value-->
-    <param_value>+82kjar9seJReUz+17KZKsCI5xUFmbjDCPirtHupAuh/5p7PjNCi4U2y/di5Vpjtni+O2ba8Iw0nXhm0a/tbkaUsvOTws/HuspLzXVAui9SnQFNWHzvLgVHhzPt2Yn9Sqd/QN8q4L+f3tVWm9Zlcgx6yQ7NUXo2FrL8J1XbatioG83BfQqaqbFIlzXkeoLqYUtj80yk0pz2Mr15PIbWcifcaZxVh9b1p</param_value>
+    <!--param_value>+82kjar9seJReUz+17KZKsCI5xUFmbjDCPirtHupAuh/5p7PjNCi4U2y/di5Vpjtni+O2ba8Iw0nXhm0a/tbkaUsvOTws/HuspLzXVAui9SnQFNWHzvLgVHhzPt2Yn9Sqd/QN8q4L+f3tVWm9Zlcgx6yQ7NUXo2FrL8J1XbatioG83BfQqaqbFIlzXkeoLqYUtj80yk0pz2Mr15PIbWcifcaZxVh9b1p</param_value-->
 
     <!--param_value>Data Source = LOCALHOST\SQLEXPRESS; Connection Timeout = 10; Initial Catalog = gestor2_web; User Id= sa; Password = Root1526; MultipleActiveResultSets=True; Pooling=True;</param_value-->
     <!--param_value>+82kjar9seJReUz+17KZKsCI5xUFmbjDCPirtHupAuh/5p7PjNCi4U2y/di5Vpjtni+O2ba8Iw0nXhm0a/tbkaUsvOTws/HuspLzXVAui9STBIN6bbXBHLcMzm6HZ83SpyhJcK8oDq/rhT/IE3nE9AsziI20XIb8vwYQ6yHI8N7mO7JGhaoJa6h8X6rEajdztbO/7rhoKHXkL+BDvA3SojZaxBsloXYZwZU1r0af7gg=</param_value-->
 
     <!-- 198.38.83.33; hiacademia_web; -->
-    <!--param_value>+82kjar9seIEUB0txFGd0Mi9NCJp7KOEewH+dvOL/q9Nsv3YuVaY7Z4vjtm2vCMNJ14ZtGv7W5GlLLzk8LPx7tjq5h+0VFaPkkC5HpdexmZ/ZKvJpRH+Pvkc1/faO7ecDt3A3LuWwc2lmbk0UGDXkfe1Vab1mVyDHrJDs1RejYWsvwnVdtq2KgbzcF9CpqpsUiXNeR6guphS2PzTKTSnPYyvXk8htZyJAVkF243XmqvunaHQWOmWjLXiLPHncgfAQFVTxE/cnS+IR3Hq6DPvCWvmd0WoBIc6</param_value-->
+    <param_value>+82kjar9seIEUB0txFGd0Mi9NCJp7KOEewH+dvOL/q9Nsv3YuVaY7Z4vjtm2vCMNJ14ZtGv7W5GlLLzk8LPx7tjq5h+0VFaPkkC5HpdexmZ/ZKvJpRH+Pvkc1/faO7ecDt3A3LuWwc2lmbk0UGDXkfe1Vab1mVyDHrJDs1RejYWsvwnVdtq2KgbzcF9CpqpsUiXNeR6guphS2PzTKTSnPYyvXk8htZyJAVkF243XmqvunaHQWOmWjLXiLPHncgfAQFVTxE/cnS+IR3Hq6DPvCWvmd0WoBIc6</param_value>
 
   </higsetting>
   <higsetting>

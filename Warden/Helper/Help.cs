@@ -86,7 +86,7 @@ namespace Warden.Helper {
 
         #region Others
         public static String FormatUrl(String Url) {
-            String Result = (HttpContext.Current.Request.Url.Authority + @"/2gether" + Url.Replace(@"~/", @"/"));
+            String Result = (HttpContext.Current.Request.Url.Authority + @"/" + Url.Replace(@"~/", @"/"));
             while (Result.IndexOf(@"//") > -1) {
                 Result = Result.Replace(@"//", @"/");
                 Result = Result.Replace("../", "/");
