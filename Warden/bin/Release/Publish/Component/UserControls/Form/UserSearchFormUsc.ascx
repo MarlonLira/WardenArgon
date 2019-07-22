@@ -29,14 +29,16 @@
                                   </div>
                                 </div>
                               </div>
+                    <usc:ButtonUsc ID="btn_pesquisar" runat="server" Text="Pesquisar"/>
+
                         </div>
                     <div>
-                      <usc:ButtonUsc ID="btn_pesquisar" runat="server" Text="Pesquisar"/>
+                      
                     </div>
                   </div>
             </form>
         </div>
     </div>
-</div>
+
 
 </asp:Panel>

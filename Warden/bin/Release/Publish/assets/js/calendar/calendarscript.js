@@ -2,28 +2,53 @@
 var addStartDate;
 var addEndDate;
 var globalAllDay;
+var AutoWidth = screen.width / 4;
+
+if (AutoWidth < 300) {
+    AutoWidth = 300;
+}
 
 function updateEvent(event, element) {
-    //alert(event.description);
+    //alert(event.title + " UpdateEvent " + event.Aluno);
 
     if ($(this).data("qtip")) $(this).qtip("destroy");
 
-    currentUpdateEvent = event;
+    currentUpdateEvent = ConvertEvent(event);
 
     $('#updatedialog').dialog('open');
-    $("#eventName").val(event.title);
-    $("#eventDesc").val(event.description);
-    $("#eventId").val(event.id);
-    $("#eventStart").text("" + event.start.toLocaleString());
+
+    $("#eventName").val(currentUpdateEvent.Aluno);
+    $("#eventDesc").val(currentUpdateEvent.Observacao);
+    $("#eventId").val(currentUpdateEvent.Id);
+    $("#eventStart").text("" + currentUpdateEvent.DataAgendamento.toLocaleString());
+    $("#operadorId").val(currentUpdateEvent.OperadorId);
+    $("#alunoId").val(currentUpdateEvent.AlunoId);
 
     if (event.end === null) {
         $("#eventEnd").text("");
     }
     else {
-        $("#eventEnd").text("" + event.end.toLocaleString());
+        $("#eventEnd").text("" + currentUpdateEvent.DataAgendamentoFinal.toLocaleString());
     }
+    //alert(currentUpdateEvent.Aluno + " - currentUpdateEvent - " + currentUpdateEvent.AlunoId + " - " + currentUpdateEvent.OperadorId);
+}
 
-    return false;
+function ConvertEvent(event) {
+    var NewEvent = {
+        Id: event.id,
+        AlunoId: event.alunoId,
+        OperadorId: event.operadorId,
+        Aluno: event.title,
+        Observacao: event.description,
+        DataAgendamento: event.start,
+        DataAgendamentoFinal: event.end
+    };
+
+    return NewEvent;
+}
+
+function isNumber(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
 }
 
 function updateSuccess(updateResult) {
@@ -36,32 +61,42 @@ function deleteSuccess(deleteResult) {
 
 function addSuccess(addResult) {
 // if addresult is -1, means event was not added
-//    alert("added key: " + addResult);
+    if (isNumber(addResult)) {
+        Result = addResult;
+    } else {
+        CheckResult = addResult.split('|');
+        Result = CheckResult[0].trim();
+    }
 
-    if (addResult != -1) {
-        $('#calendar').fullCalendar('renderEvent',
-						{
-						    title: $("#addEventName").val(),
-						    start: addStartDate,
-						    end: addEndDate,
-						    id: addResult,
-						    description: $("#addEventDesc").val(),
-						    allDay: globalAllDay
-						},
-						true // make the event "stick"
-					);
+    if (Result > 0) {
+        var PushEvent = {
+            title: $("#addEventName").val(),
+            start: addStartDate,
+            end: addEndDate,
+            id: addResult,
+            description: $("#addEventDesc").val(),
+            alunoId: $("#addEventAlunoId").val(),
+            operadorId: $("#addEventOperadorId").val(),
+            allDay: globalAllDay
+        }
 
+        $('#calendar').fullCalendar('renderEvent', PushEvent, true);
+        //alert(PushEvent.Aluno + "currentUpdateEvent");
 
         $('#calendar').fullCalendar('unselect');
+    } else {
+        alert(CheckResult[1])
     }
+
 }
 
 function UpdateTimeSuccess(updateResult) {
     //alert(updateResult);
 }
 
-function selectDate(start, end, allDay) {
 
+function selectDate(start, end, allDay) {
+    
     $('#addDialog').dialog('open');
     $("#addEventStartDate").text("" + start.toLocaleString());
     $("#addEventEndDate").text("" + end.toLocaleString());
@@ -69,50 +104,57 @@ function selectDate(start, end, allDay) {
     addStartDate = start;
     addEndDate = end;
     globalAllDay = allDay;
-    //alert(allDay);
+    //alert(allDay + " selectDate");
+
 }
 
-function updateEventOnDropResize(event, allDay) {
+function updateEventOnDropResize(eventx, allDay) {
+    event = ConvertEvent(eventx);
 
-    //alert("allday: " + allDay);
+    //alert("Aluno: " + event.Aluno);
+
     var eventToUpdate = {
-        id: event.id,
-        start: event.start
+        Id: event.Id,
+        DataAgendamento: event.DataAgendamento
+
     };
 
-    if (event.end === null) {
-        eventToUpdate.end = eventToUpdate.start;
+    if (allDay) {
+        eventToUpdate.DataAgendamento.setHours(0, 0, 0);
+
+    }
+
+    if (event.DataAgendamentoFinal === null) {
+        eventToUpdate.DataAgendamentoFinal = eventToUpdate.DataAgendamento;
+
     }
     else {
-        eventToUpdate.end = event.end;
+        eventToUpdate.DataAgendamentoFinal = event.DataAgendamentoFinal;
+        if (allDay) {
+            eventToUpdate.DataAgendamentoFinal.setHours(0, 0, 0);
+        }
     }
 
-    var endDate;
-    if (!event.allDay) {
-        endDate = new Date(eventToUpdate.end + 60 * 60000);
-        endDate = endDate.toJSON();
-    }
-    else {
-        endDate = eventToUpdate.end.toJSON();
-    }
-
-    eventToUpdate.start = eventToUpdate.start.toJSON();
-    eventToUpdate.end = eventToUpdate.end.toJSON(); //endDate;
-    eventToUpdate.allDay = event.allDay;
-
+    eventToUpdate.DataAgendamento = eventToUpdate.DataAgendamento.format("dd-MM-yyyy hh:mm:ss tt");
+    eventToUpdate.DataAgendamentoFinal = eventToUpdate.DataAgendamentoFinal.format("dd-MM-yyyy hh:mm:ss tt");
+    
     PageMethods.UpdateEventTime(eventToUpdate, UpdateTimeSuccess);
+
 }
 
 function eventDropped(event, dayDelta, minuteDelta, allDay, revertFunc) {
+
     if ($(this).data("qtip")) $(this).qtip("destroy");
 
-    updateEventOnDropResize(event);
+    updateEventOnDropResize(event, allDay);
 }
 
 function eventResized(event, dayDelta, minuteDelta, revertFunc) {
+
     if ($(this).data("qtip")) $(this).qtip("destroy");
 
     updateEventOnDropResize(event);
+
 }
 
 function checkForSpecialChars(stringToCheck) {
@@ -120,60 +162,38 @@ function checkForSpecialChars(stringToCheck) {
     return pattern.test(stringToCheck); 
 }
 
-function isAllDay(startDate, endDate) {
-    var allDay;
-
-    if (startDate.format("HH:mm:ss") == "00:00:00" && endDate.format("HH:mm:ss") == "00:00:00") {
-        allDay = true;
-        globalAllDay = true;
-    }
-    else {
-        allDay = false;
-        globalAllDay = false;
-    }
-    
-    return allDay;
-}
-
-function qTipText(start, end, description) {
-    var text;
-
-    if (end !== null)
-        text =  "<strong>Start:</strong> " + start.format("MM/DD/YYYY hh:mm T") + "<br/><strong>End:</strong> " + end.format("MM/DD/YYYY hh:mm T") + "<br/><br/>" + description;
-    else
-        text =  "<strong>Start:</strong> " + start.format("MM/DD/YYYY hh:mm T") + "<br/><strong>End:</strong><br/><br/>" + description;
-
-    return text;
-}
-
 $(document).ready(function() {
+
     // update Dialog
     $('#updatedialog').dialog({
         autoOpen: false,
-        width: 470,
+        width: AutoWidth,
         buttons: {
-            "update": function() {
+            "Atualizar": function() {
                 //alert(currentUpdateEvent.title);
                 var eventToUpdate = {
-                    id: currentUpdateEvent.id,
-                    title: $("#eventName").val(),
-                    description: $("#eventDesc").val()
+                    Id: currentUpdateEvent.Id,
+                    Aluno: $("#eventName").val(),
+                    Observacao: $("#eventDesc").val(),
+                    AlunoId: $("#alunoId").val(),
+                    OperadorId: $("#operadorId").val()
+                    
                 };
 
-                if (checkForSpecialChars(eventToUpdate.title) || checkForSpecialChars(eventToUpdate.description)) {
+                if (checkForSpecialChars(eventToUpdate.Aluno) || checkForSpecialChars(eventToUpdate.Observacao)) {
                     alert("please enter characters: A to Z, a to z, 0 to 9, spaces");
                 }
                 else {
                     PageMethods.UpdateEvent(eventToUpdate, updateSuccess);
                     $(this).dialog("close");
 
-                    currentUpdateEvent.title = $("#eventName").val();
-                    currentUpdateEvent.description = $("#eventDesc").val();
+                    currentUpdateEvent.Aluno = $("#eventName").val();
+                    currentUpdateEvent.Observacao = $("#eventDesc").val();
                     $('#calendar').fullCalendar('updateEvent', currentUpdateEvent);
                 }
 
             },
-            "delete": function() {
+            "Deletar": function() {
 
                 if (confirm("do you really want to delete this event?")) {
 
@@ -181,85 +201,99 @@ $(document).ready(function() {
                     $(this).dialog("close");
                     $('#calendar').fullCalendar('removeEvents', $("#eventId").val());
                 }
+
             }
+
         }
     });
 
     //add dialog
     $('#addDialog').dialog({
         autoOpen: false,
-        width: 470,
+        width: AutoWidth,
         buttons: {
-            "Add": function() {
-                //alert("sent:" + addStartDate.format("dd-MM-yyyy hh:mm:ss tt") + "==" + addStartDate.toLocaleString());
+            "Salvar": function() {
+                //alert("aqui");
+               // alert("sent: " + $("#addEventName").val() );
                 var eventToAdd = {
-                    title: $("#addEventName").val(),
-                    description: $("#addEventDesc").val(),
-                    start: addStartDate.toJSON(),
-                    end: addEndDate.toJSON(),
+                    Aluno: $("#addEventName").val(),
+                    Observacao: $("#addEventDesc").val(),
+                    DataAgendamento: addStartDate.format("dd-MM-yyyy hh:mm:ss tt"),
+                    DataAgendamentoFinal: addEndDate.format("dd-MM-yyyy hh:mm:ss tt"),
+                    //alunoId: $("#addEventAlunoId").val()
+                    AlunoId: document.getElementById("addEventAlunoId").innerText,
+                    OperadorId: document.getElementById("addEventOperadorId").innerText
 
-                    allDay: isAllDay(addStartDate, addEndDate)
                 };
                 
-                if (checkForSpecialChars(eventToAdd.title) || checkForSpecialChars(eventToAdd.description)) {
+                if (checkForSpecialChars(eventToAdd.Aluno) || checkForSpecialChars(eventToAdd.Observacao)) {
                     alert("please enter characters: A to Z, a to z, 0 to 9, spaces");
                 }
                 else {
-                    //alert("sending " + eventToAdd.title);
+                    //alert("Aluno: " + eventToAdd.Aluno + " - AlunoId: " + eventToAdd.AlunoId + " - OperadorId: " + eventToAdd.OperadorId);
 
                     PageMethods.addEvent(eventToAdd, addSuccess);
                     $(this).dialog("close");
                 }
+
             }
+
         }
     });
+
 
     var date = new Date();
     var d = date.getDate();
     var m = date.getMonth();
     var y = date.getFullYear();
-    var options = {
-        weekday: "long", year: "numeric", month: "short",
-        day: "numeric", hour: "2-digit", minute: "2-digit"
-    };
 
-    $('#calendar').fullCalendar({
+    //formatação do Url
+    var host = window.location.hostname;
+    var protocol = window.location.protocol;
+    var port = window.location.port;
+    var FormatUrl;
+
+    if (!port) {
+        FormatUrl = protocol + "//" + host + "/2gether/JsonResponse.ashx";
+    } else {
+        FormatUrl = protocol + "//" + host + ":" + port + "/JsonResponse.ashx";
+    }
+
+    var calendar = $('#calendar').fullCalendar({
         theme: true,
         header: {
-            left: 'prev,next today customBtn',
+            left: 'prev,next today',
             center: 'title',
             right: 'month,agendaWeek,agendaDay'
         },
-        customButtons: {
-            customBtn: {
-                text: 'Custom Button',
-                click: function() {
-                    alert('This custom button is hot! 🔥\nNow go have fun!');
-                }
-            }
-        },
-        defaultView: 'agendaWeek',
         eventClick: updateEvent,
         selectable: true,
         selectHelper: true,
         select: selectDate,
         editable: true,
-        events: "JsonResponse.ashx",
+        events: FormatUrl,
         eventDrop: eventDropped,
         eventResize: eventResized,
-        eventRender: function(event, element) {
-            //alert(event.title);
+        eventRender: function (event, element) {
+            //alert(event.Aluno);
             element.qtip({
-                content: {
-                    text: qTipText(event.start, event.end, event.description),
-                    title: '<strong>' + event.title + '</strong>'
-                },
-                position: {
-                    my: 'bottom left',
-                    at: 'top right'
-                },
-                style: { classes: 'qtip-shadow qtip-rounded' }
+                content: event.description,
+                position: { corner: { tooltip: 'bottomLeft', target: 'topRight'} },
+                style: {
+                    border: {
+                        width: 1,
+                        radius: 3,
+                        color: '#2779AA'
+
+                    },
+                    padding: 10,
+                    textAlign: 'center',
+                    tip: true, // Give it a speech bubble tip with automatic corner detection
+                    name: 'cream' // Style it according to the preset 'cream' style
+                }
+
             });
         }
+
     });
 });

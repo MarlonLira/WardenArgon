@@ -44,7 +44,14 @@ namespace Warden.Views.Fitness {
             
         }
         public void Atendimento() {
-            Response.Redirect("~/views/fitness/Etapas.aspx");
+            CalendarEvent Agenda = new CalendarEvent();
+            DateTime CurrentDate = DateTime.UtcNow.AddHours(-3);
+            Agenda = EventDAO.getEvents(AlunoEdit.Id);
+            if (Agenda.DataAgendamento.Date <= CurrentDate.Date) {
+                Response.Redirect("~/views/fitness/etapas.aspx");
+            } else {
+                txt_erro.Text = "O aluno está marcado para o dia: " + Agenda.DataAgendamento.ToShortDateString();
+            }
         }
 
         public void MarcarProxEtapa() {
@@ -54,7 +61,6 @@ namespace Warden.Views.Fitness {
 
         public void LoadEtapa() {
 
-            Response.Redirect("~/views/fitness/etapas.aspx");
         }
     }
 }

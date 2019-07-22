@@ -24,6 +24,7 @@ namespace Warden.Component.Common.Card {
         public AlunoPst AlunoEdit { get; set; }
         public List<TableColumnUsc> TableColumns { get; set; }
         public String UrlImg { get; set; }
+        public String SmallText { get; set; }
         public String Class { get; set; }
         public DateTime Time { get; set; }
         public String Href { get; set; }
@@ -111,8 +112,11 @@ namespace Warden.Component.Common.Card {
 
         public String LoadTime() {
             String TimeToString = "";
-            TimeToString = DateTime.Now.ToShortTimeString();
 
+            if (!String.IsNullOrEmpty(SmallText)) {
+                TimeToString = SmallText;
+            }
+            TimeToString += DateTime.Now.ToShortTimeString();
             return TimeToString;
         }
         private void CarregarAluno(String Matricula, String Empresa) {

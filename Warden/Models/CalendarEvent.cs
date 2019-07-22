@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Brasdat.Gestor.Library.Business.Classes.Administracao;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,5 +18,7 @@ public class CalendarEvent
     public DateTime DataAgendamento { get; set; }
     public DateTime DataAgendamentoFinal { get; set; }
     public Int32 OperadorId { get; set; }
+    public String OperadorNome { get; set; }
+    public Int32 Etapa { get; set; }
 
 }

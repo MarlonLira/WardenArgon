@@ -75,7 +75,7 @@ namespace Warden.Views.Fitness.Colaborador {
             try {
                 CalendarEvent cevent = new CalendarEvent() {
                     Aluno = improperEvent.Aluno,
-                    Status = "AT",
+                    Status = "AB",
                     Auditoria = Global.Funcionario.Usuario + " - " + DateTime.UtcNow.AddHours(-3) + " - INCLUIR",
                     Observacao = improperEvent.Observacao,
                     AlunoId = improperEvent.AlunoId,

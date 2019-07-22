@@ -2,24 +2,14 @@
 
 <asp:Content ID="ctt_aluno" ContentPlaceHolderID="MainContent" runat="server">
      <usc:UserProfileUsc runat="server" ID="profile_control" IsReadOnly="true"/>
-    <div class="row" style="padding-top: 20px; padding-left:20px">
 
-        <usc:SquareButtonUsc 
-            runat="server" 
-            Title="Marcar Proxima Etapa" 
-            Category="---- Etapa ----"
-            IsButton="true"
-            BtnText="Selecionar"
-            ID="btn_prox_etapa"
-         />
-
-        <usc:SquareButtonUsc 
-            runat="server" 
-            Title="Verificar Etapa Atual" 
-            Category="---- Etapa ----"
-            IsButton="true"
-            BtnText="Selecionar"
-            ID="btn_verif_etapa"
-         />
+    <div class="content" style="padding-top:15px; background-color:gray">
+        <h5 class="card-title"><b>OPÇÕES</b></h5>
+        <usc:CardInitUsc runat="server" />
+            <usc:ButtonUsc runat="server" Text="Atendimento" ID="btn_atendimento"/>
+            <usc:ButtonUsc runat="server" Text="Marcar Atendimento" ID="btn_marcar_atendimento"/>
+            <usc:ButtonUsc runat="server" Text="Verificar Progresso" ID="btn_verif_progresso"/>
+        <usc:CardCloseUsc runat="server" />
+        <usc:LabelUsc runat="server" ID="txt_erro" />
     </div>
 </asp:Content>

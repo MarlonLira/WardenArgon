@@ -19,8 +19,8 @@ using Warden.Helper;
 public class EventDAO
 {
     //change the connection string as per your database connection. 198.38.83.33; Initial Catalog=hiacademia_web; Integrated Security=True
-    //private static string connectionString = CryptoHlp.Decrypt("+82kjar9seJikiHEK4mH+UowXzFkVQlXzYeyZSRUKcJSKDuKaHeS2Ua6HAV0u4PY1VjADjvckGF/nkQO4U0ZXU0mKs4JiGG3xWVANW6hVBi8Frubo1f6NRKWryxk4uNMtgJRTuSHrfnPH8JWR5jpcR6yQ7NUXo2Fy7CtGCyT/iw=");
-    private static string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=gestor2;Persist Security Info=True;User ID=sa;Password=Root1526";
+    private static string connectionString = CryptoHlp.Decrypt("+82kjar9seJikiHEK4mH+UowXzFkVQlXzYeyZSRUKcJSKDuKaHeS2Ua6HAV0u4PY1VjADjvckGF/nkQO4U0ZXU0mKs4JiGG3xWVANW6hVBi8Frubo1f6NRKWryxk4uNMtgJRTuSHrfnPH8JWR5jpcR6yQ7NUXo2Fy7CtGCyT/iw=");
+    //private static string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=gestor2;Persist Security Info=True;User ID=sa;Password=Root1526";
 
     //this method retrieves all events within range start-end
     public static List<CalendarEvent> getEvents(DateTime start, DateTime end)
@@ -50,15 +50,43 @@ public class EventDAO
             }
         }
         return events;
-        //side note: if you want to show events only related to particular users,
-        //if user id of that user is stored in session as Session["userid"]
-        //the event table also contains a extra field named 'user_id' to mark the event for that particular user
-        //then you can modify the SQL as:
-        //SELECT event_id, description, title, event_start, event_end FROM event where user_id=@user_id AND event_start>=@start AND event_end<=@end
-        //then add paramter as:cmd.Parameters.AddWithValue("@user_id", HttpContext.Current.Session["userid"]);
     }
 
-	//this method updates the event title and description
+    public static CalendarEvent getEvents(Int32 AlunoId) {
+
+        CalendarEvent cevent = new CalendarEvent();
+        SqlConnection con = new SqlConnection(connectionString);
+        SqlCommand cmd = new SqlCommand("EXEC [fitness].[stp_agenda_2gether_pesquisar] @start, @end, @aluno_id ", con);
+        cmd.Parameters.AddWithValue("@start", DBNull.Value);
+        cmd.Parameters.AddWithValue("@end", DBNull.Value);
+        cmd.Parameters.AddWithValue("@aluno_id", AlunoId);
+
+        using (con) {
+            con.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read()) {
+
+                cevent.Id = Convert.ToInt32(reader["id"]);
+                cevent.Aluno = Convert.ToString(reader["aluno"]);
+                cevent.Observacao = Convert.ToString(reader["observacao"]);
+                cevent.DataAgendamento = Convert.ToDateTime(reader["data_agendamento"]);
+                cevent.DataAgendamentoFinal = Convert.ToDateTime(reader["data_agendamento_final"]);
+                cevent.OperadorId = Convert.ToInt32(reader["operador_id"]);
+                cevent.OperadorNome = Convert.ToString(reader["operador_nome"]);
+                if (reader["aluno_id"] != DBNull.Value && reader["aluno_id"] != null) {
+                    cevent.AlunoId = Convert.ToInt32(reader["aluno_id"]);
+                }
+
+                if (reader["etapa"] != DBNull.Value && reader["etapa"] != null) {
+                    cevent.Etapa = Convert.ToInt32(reader["etapa"]);
+                } else {
+                    cevent.Etapa = 0;
+                }
+            }
+        }
+        return cevent;
+    }
+
     public static void updateEvent(int Id, String Aluno, String Observacao)
     {
         SqlConnection con = new SqlConnection(connectionString);

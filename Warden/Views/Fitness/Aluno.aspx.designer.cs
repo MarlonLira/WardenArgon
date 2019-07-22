@@ -47,5 +47,14 @@ namespace Warden.Views.Fitness {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::Warden.Component.Common.Button.ButtonUsc btn_verif_progresso;
+        
+        /// <summary>
+        /// Controle txt_erro.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::Warden.Component.Common.Label.LabelUsc txt_erro;
     }
 }
